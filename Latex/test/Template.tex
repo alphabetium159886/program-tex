@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, left=3.17cm, right=3.17cm, top=2.54cm, bottom=2.54cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{chemformula}
+\usepackage{cite}
+\usepackage[colorlinks, linkcolor=black, anchorcolor=black, citecolor=black]{hyperref}
+\usepackage{graphicx}
+\setlength{\parskip}{0.5em}
+\title{Place Your Project Title at Here}
+\author{\textup{Sanlinc}}
+\begin{document}
+
+    %——————————————————————————————————设置公式编号———————————————————————————————————————%
+    \numberwithin{equation}{subsection}
+    \renewcommand\theequation{\thesubsection.\arabic{equation}}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \newtheorem{mythm}{定理}[section]  %定义一个定理环境
+    %\maketitle  
+
+\begin{titlepage}
+	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+	\includegraphics[width=12.5cm]{sc_logo.jpg}\\[1cm] 
+	\center 
+	\quad\\[1.5cm]
+	\textsl{\Large University of Chinese Academy of Sciences }\\[0.5cm] 
+	\textsl{\large School of Electrical and Electronic Engineering}\\[0.5cm] 
+	\makeatletter
+	\HRule \\[0.4cm]
+	{ \huge \bfseries \@title}\\[0.4cm] 
+	\HRule \\[1.5cm]
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft} \large
+			\emph{Author:}\\
+			\@author 
+		\end{flushleft}
+	\end{minipage}
+	~
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushright} \large
+			\emph{Supervisor:} \\
+			\textup{Prof Yang}
+		\end{flushright}
+	\end{minipage}\\[3cm]
+	\makeatother
+	{\large An Assignment submitted for the UCAS:}\\[0.5cm]
+	{\large \emph{Place Your Course Code and Course Name at Here}}\\[0.5cm]
+	{\large \today}\\[2cm] 
+	\vfill 
+\end{titlepage}
+
+\thispagestyle{empty}
+\clearpage     %另起一页  
+\pagenumbering{roman}
+\tableofcontents        %输出目录
+\clearpage     %另起一页 
+\pagestyle{headings}
+\pagenumbering{arabic}
+
+\end{document}

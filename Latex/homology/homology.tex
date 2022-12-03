@@ -1,0 +1,42 @@
+\documentclass[12pt, a4paper, oneside]{ctexart}
+\usepackage{amsmath, amsthm, amssymb, graphicx}
+\usepackage[bookmarks=true, colorlinks, citecolor=blue, linkcolor=black]{hyperref}
+\usepackage[margin = 25mm]{geometry}
+\usepackage{setspace}
+\usepackage{cite}
+% 导言区
+\title{《同调论简史》调研报告}
+\date{\today}
+\author{202011010101 孙陶庵 物理2001}
+\begin{document}
+\begin{spacing}{2.0}
+\maketitle
+\section{起源和解释}
+同调论（homology theory）是拓扑空间「圈的同调」之直觉几何想法的公理化研究。它可以宽泛地定义为研究拓扑空间的同调理论。
+直觉上，同调是取一个等价关系，如果链 C - D 是一个高一维链的边界，则链 C 与 D 是同调的。最简单的例子是在图论中，有 C 和 D 两组顶点集，考虑到从 P到 Q 的有向边 E 的边际是 Q-P。从 D 到 C 的一些边的集合，每一个与前一个相连，是一个同调。
+一般的，一个 k-链视为形式组合
+$\Sigma a_i d_i$
+其中 $a_i$ 是整数而 $d_{i}$ 是 X 上的 k-维单形。这里的边际取一个单形的边界；它导致一个高维概念，
+k=1 即类似于图论情形中的裂项和。这个解释是1900年的风格，从技术上讲有些原始。
+此时，黎曼注意到，如果M是一张定向曲面，则M上存在复结构称为黎曼曲面。
+设$f:M\rightarrow C $是M上的一个全纯函数\cite{key}
+同调理论是从欧拉多面体公式或欧拉特征开始的。
+接着是黎曼在 1857 年对属和 n 重连通性数值不变量的定义，
+和贝蒂在 1871 年证明“同调数”独立于基选择的证明。
+同调理论本身被开发为一种处理流形的方法,
+可以在给定的 n 维流形上绘制的闭环，
+但不会连续变形为彼此。这些口子有时也是可以重新粘合在一起的。
+\section{应用}
+在传感器网络中，传感器可以通过随时间动态变化的自组织网络来传递信息。
+用以了解这组本地测量和通信路径，
+计算网络拓扑的同源性来评估例如覆盖中的漏洞。
+在物理学的动力系统理论中，庞加莱是最早考虑动力系统的不变流形与其拓扑不变量之间相互作用的人之一。
+莫尔斯理论将流形上梯度流的动力学与同调性联系起来。
+KAM定理确立了周期性轨道可以遵循复杂的轨迹。
+在拓扑数据分析中，通过将云中的最近邻点链接到三角剖分中，可以创建流形的单纯近似，并且可以计算其单纯同调。
+寻找在多个长度尺度上使用各种三角测量策略稳健地计算同源性的技术是持久同源性的主题。\cite{enwiki:1085794346}
+\end{spacing}
+\bibliographystyle{IEEEtran}
+\bibliography{homo}
+
+\end{document}
