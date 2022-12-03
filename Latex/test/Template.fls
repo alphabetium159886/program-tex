@@ -968,6 +968,8 @@ INPUT Template.toc
 OUTPUT Template.toc
 INPUT C:\MiKTeX\fonts\vf\adobe\times\ptmb8t.vf
 INPUT C:\MiKTeX\fonts\tfm\adobe\times\ptmb8r.tfm
+INPUT C:\MiKTeX\fonts\vf\adobe\times\ptmr8t.vf
+INPUT C:\MiKTeX\fonts\tfm\adobe\times\ptmr8r.tfm
 INPUT Template.aux
 INPUT .\Template.out
 INPUT .\Template.out

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.1)  3 DEC 2022 20:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.1)  3 DEC 2022 22:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -691,22 +691,29 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 
  [1
 
+]
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.63 \end{document}
+                    [1
+
 ] (Template.aux)
 Package rerunfilecheck Info: File `Template.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22016 strings out of 478547
- 421549 string characters out of 2858251
+ 22017 strings out of 478547
+ 421555 string characters out of 2858251
  693703 words of memory out of 3000000
  39841 multiletter control sequences out of 15000+600000
- 503031 words of font info for 70 fonts, out of 8000000 for 9000
+ 504109 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  115i,5n,118p,482b,414s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/MiKTeX/fonts/enc/dvips/base/8r.enc}<C:/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Template.pdf (2 pages, 124522 bytes).
+Output written on Template.pdf (3 pages, 125111 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
+ 44 PDF objects out of 1000 (max. 8388607)
  4 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
