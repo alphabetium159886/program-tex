@@ -1,0 +1,143 @@
+\documentclass[12pt, a4paper, oneside]{article}
+\usepackage{amsmath, amsthm, amssymb, graphicx}
+\usepackage[bookmarks=true, colorlinks, citecolor=blue, linkcolor=black]{hyperref}
+\usepackage[margin = 25mm]{geometry}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{cite}
+\usepackage{ctex}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+\title{Title}
+\date{\today}
+\author{Alphabetium}
+\begin{document}
+\begin{spacing}{2.0}
+\maketitle
+
+
+\section{用定义函数的形式写出jacobi方法}
+
+\begin{lstlisting}[language=Python, caption=0.1s]
+    import numpy as np
+
+    def jacobi(A, b, x0, max_iter=1000, eps=1e-8):
+        """
+        Jacobi method for solving linear equations Ax = b.
+        A: coefficient matrix
+        b: constant vector
+        x0: initial approximation
+        max_iter: maximum number of iterations
+        eps: tolerance for stopping criterion
+        """
+        n = A.shape[0]  # dimension of the problem
+        x = x0.copy()  # make a copy of the initial approximation
+        for k in range(max_iter):
+            x1 = np.zeros_like(x)
+            for i in range(n):
+                x1[i] = (b[i] - np.dot(A[i, :i], x[:i]) - np.dot(A[i, i+1:], x[i+1:])) / A[i, i]
+            if np.linalg.norm(x1 - x) < eps:
+                break
+            x = x1
+        return x
+    
+\end{lstlisting}
+Q:详细解释np.dot(A[i, :i], x[:i])\\
+A:\\
+np.dot(A[i, :i], x[:i]) 是计算向量内积的 numpy 函数。在这里，它用于计算 $A$ 矩阵第 $i$ 行的前 $i$ 个元素和当前迭代向量 $x$ 的前 $i$ 个分量的内积。
+
+具体来说，A[i, :i] 是 $A$ 矩阵第 $i$ 行的前 $i$ 个元素，x[:i] 是当前迭代向量 $x$ 的前 $i$ 个分量，因此 np.dot(A[i, :i], x[:i]) 就是这两个向量的内积。它的计算公式为：
+
+$\sum_{j=0}^{i-1} A_{ij} x_j$
+
+其中，$A_{ij}$ 是矩阵 $A$ 的第 $i$ 行第 $j$ 列的元素，$x_j$ 是向量 $x$ 的第 $j$ 个分量。\\
+
+Q:详细解释np.dot(A[i, i+1:], x[i+1:])\\
+A:\\
+np.dot(A[i, i+1:], x[i+1:]) 同样是计算向量内积的 numpy 函数。在这里，它用于计算 $A$ 矩阵第 $i$ 行的后 $n-i-1$ 个元素和当前迭代向量 $x$ 的后 $n-i-1$ 个分量的内积。
+
+具体来说，A[i, i+1:] 是 $A$ 矩阵第 $i$ 行的后 $n-i-1$ 个元素，x[i+1:] 是当前迭代向量 $x$ 的后 $n-i-1$ 个分量，因此 np.dot(A[i, i+1:], x[i+1:]) 就是这两个向量的内积。它的计算公式为：
+
+$\sum_{j=i+1}^{n-1} A_{ij} x_j$
+
+其中，$A_{ij}$ 是矩阵 $A$ 的第 $i$ 行第 $j$ 列的元素，$x_j$ 是向量 $x$ 的第 $j$ 个分量。\\
+Q:你可以帮我看我的代码哪里有问题吗?\\
+\begin{lstlisting}
+    def Jacobi(A, b, x_0, eps , max_iter):
+    n = len(A)
+    x = x_0.copy()
+
+    for i in range(max_iter):
+        x1 = np.zeros(n)
+        for j in range(n):
+            s1 = np.dot(A[j,:j],x1[:j])
+            x1[j] = (b[j] - s1) / A[j, j]
+        if np.allclose(x, x1, rtol=eps):
+            return x1
+        x = x1
+    return x
+\end{lstlisting}
+A:\\
+您的 Jacobi 方法代码看起来没有明显的问题，但是我注意到在计算 $s1$ 的时候，您的代码中写成了 np.dot(A[j,:j],x1[:j])，
+这里应该是 np.dot(A[j,:j],x[:j])，因为 $x_1$ 还没有被更新。
+
+另外，您使用了 np.allclose(x, x1, rtol=eps) 来判断两个向量是否相等。这里需要注意的是，allclose 函数比较的是两个向量之间的相对误差，而不是绝对误差。
+这意味着，当两个向量的分量值都很小的时候，相对误差可能会比绝对误差更重要，因为分母比分子大很多。如果您更关心绝对误差，
+可以使用 np.linalg.norm(x1 - x, ord=np.inf) < eps 来代替 allclose 函数。\\
+Q：我们注意到jacobi方法的数学表示是$x^{(k+1)}_i  = \frac{1}{a_{ii}} \left(b_i -\sum_{j\ne i}a_{ij}x^{(k)}_j\right)$，
+看起来只需要减去一个$\sum_{j\ne i}a_{ij}x^{(k)}_j$也就是我算法里面的a1，那为何我只减去了a1没有办法达成，
+还需要再减去np.dot(A[j, j+1:], x[j+1:])才可以正常使用？\\
+A:\\
+您提到的Jacobi方法数学公式中确实只有一个$\sum_{j\ne i}a_{ij}x^{(k)}j$，但是在Python代码实现时，我们需要将其分解成两部分，即$a_1 = \sum{j=1}^{i-1} a_{ij}x^{(k)}j$和$a_2 = \sum{j=i+1}^{n} a_{ij}x^{(k)}_j$。
+
+这是因为在Python中，使用numpy进行矩阵运算时，使用的是向量化运算，即一次性计算整个向量，而不是逐个元素计算。因此，我们需要将矩阵的某些部分单独取出来进行运算。
+
+具体来说，np.dot(A[j, :i], x[:i])对应的是$a_1$，它计算的是矩阵A第j行前i个元素和向量$x$前i个元素的点积，对应的就是公式中的$\sum_{j=1}^{i-1} a_{ij}x^{(k)}j$；np.dot(A[j, i+1:], x[i+1:])对应的是$a_2$，它计算的是矩阵A第j行i+1到n个元素和向量$x$的i+1到n个元素的点积，对应的就是公式中的$\sum{j=i+1}^{n} a_{ij}x^{(k)}_j$。
+
+因此，在实现Jacobi方法的Python代码中，需要将这两个部分分别计算并相加，才能得到正确的结果。
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{spacing}{}
+
+\bibliographystyle{IEEEtran}
+\bibliography{lecktion0}
+
+\end{document}

@@ -1,0 +1,277 @@
+\documentclass[12pt, a4paper, oneside]{article}
+\usepackage{amsmath, amsthm, amssymb, graphicx}
+\usepackage[bookmarks=true, colorlinks, citecolor=blue, linkcolor=black]{hyperref}
+\usepackage[margin = 25mm]{geometry}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{cite}
+\usepackage{ctex}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\title{Homework 0:Nobel Laureates Related to Lasers}
+\date{\today}
+\author{}
+\begin{document}
+\begin{spacing}{2.0}
+\maketitle
+
+
+\section{Nobel prizes in Physics}
+
+
+
+
+
+弱全纯函数（weakly holomorphic function）是指在模形式理论中的一类函数，它们并不是全纯函数，但是在某些特定的条件下可以被视为是全纯函数的一种“推广”。
+
+具体来说，对于一个离散子群 $\Gamma\subseteq \operatorname{SL}(2,\mathbb{Z})$，定义上半平面 $\mathcal{H}$ 上的函数 $f$，如果 $f$ 满足以下条件：
+
+在 $\mathcal{H}$ 上的每个 $\gamma\in\Gamma$ 变换下，$f$ 变换成一个相差常数因子的函数，即 $f|{k}\gamma = (c{\gamma}z+d_{\gamma})^kf$，其中 $k$ 是一个自然数，$c_{\gamma},d_{\gamma}\in \mathbb{C}$，且 $c_{\gamma}d_{\gamma}^{-1}$ 为 $\gamma$ 的行列式值；
+
+$f$ 在每个 $z\in \mathbb{Q}$ 处有一个“极点”，即存在一个正整数 $N$，使得 $(z-z_0)^N f(z)$ 在 $z_0$ 处有一个可去奇点，其中 $z_0$ 是一个有理数。
+
+那么我们称 $f$ 是 $\Gamma$ 关于权为 $k$ 的弱全纯模形式（weakly holomorphic modular form）。通常情况下，弱全纯模形式被视为全纯模形式的一种“推广”，因为它们在某些重要的数学应用中也扮演着重要的角色。
+
+\section{Nobel prizes in Physics}
+
+在热平衡状态下，空腔中的自发辐射和受激辐射的功率密度之比为：
+
+$\frac{W_s}{W_j} = \frac{g_1}{g_0}\exp\left(-\frac{h\nu}{kT}\right)$
+
+其中，$W_s$ 是自发辐射功率密度，$W_j$ 是受激辐射功率密度，$g_1$ 和 $g_0$ 分别是激发态和基态的统计权重，$\nu$ 是辐射频率，$h$ 是普朗克常数，$k$ 是玻尔兹曼常数，$T$ 是温度。
+
+对于可见光的波长 $\lambda = 0.5\ \mu\text{m}$，相应的频率 $\nu$ 可以通过光速和波长的关系求得：
+
+$\nu = \frac{c}{\lambda} = \frac{3 \times 10^8\ \text{m/s}}{0.5 \times 10^{-6}\ \text{m}} = 6 \times 10^{14}\ \text{Hz}$
+
+根据普朗克公式，辐射功率密度 $W$ 和辐射频率 $\nu$ 的关系为：
+
+$W(\nu) = \frac{2h\nu^3}{c^2} \frac{1}{\exp\left(\frac{h\nu}{kT}\right)-1}$
+
+将波长 $\lambda$ 对应的频率 $\nu$ 带入上式，得到该波长下的辐射功率密度为：
+
+$W(\lambda) = \frac{2hc^2}{\lambda^5} \frac{1}{\exp\left(\frac{hc}{\lambda kT}\right)-1}$
+
+因此，可见光波长为 $0.5\ \mu\text{m}$ 的自发辐射功率密度为：
+
+$W_s(\lambda) = \frac{2hc^2}{\lambda^5} \frac{1}{\exp\left(\frac{hc}{\lambda kT}\right)-1}$
+
+对于受激辐射功率密度，需要知道空腔内的受激辐射数密度 $n(\nu)$，即相同频率下的光子数密度。在热平衡状态下，$n(\nu)$ 与 $W(\nu)$ 的比值为：
+
+$\frac{n(\nu)}{W(\nu)} = \frac{1}{h\nu/kT}$
+
+因此，受激辐射功率密度为：
+将自发辐射和受激辐射的功率密度代入比值公式中，得到：
+
+$\frac{W_s}{W_j} = \frac{g_1}{g_0}\exp\left(-\frac{h\nu}{kT}\right) = \frac{g_1}{g_0}\exp\left(-\frac{hc}{\lambda kT}\right)$
+
+其中，$g_1$ 和 $g_0$ 分别为激发态和基态的统计权重，需要根据具体系统来确定。对于热平衡的黑体辐射，所有的能级都被充分激发，$g_1$ 和 $g_0$ 均为简并度，即：
+
+$g_1 = g_0 = \frac{8\pi V}{h^3} \left(\frac{2\pi m kT}{h^2}\right)^{3/2}$
+
+其中，$V$ 是空腔体积，$m$ 是辐射粒子的质量。
+
+将数值代入比值公式中，得到：
+
+$\frac{W_s}{W_j} = \exp\left(-\frac{hc}{\lambda kT}\right) = \exp\left(-\frac{6.626 \times 10^{-34}\ \text{J}\cdot\text{s} \times 3 \times 10^8\ \text{m/s}}{0.5 \times 10^{-6}\ \text{m} \times 1.38 \times 10^{-23}\ \text{J/K} \times 1500\ \text{K}}\right) \approx 4.82 \times 10^{-11}$
+
+因此，可见光波长为 $0.5\ \mu\text{m}$ 的自发辐射功率密度与受激辐射功率密度之比约为 $4.82 \times 10^{-11}$。
+\section{3}
+
+考虑一个具有面积$A$的平面区域，其法线方向为$\mathbf{n}$，表面上的任意一点与法线的夹角为$\theta$，如下图所示：
+
+假设该表面是一个完美的余弦辐射体，其辐射出射度为$M_{\lambda}$，单位为$W/(m^2\cdot sr\cdot nm)$。我们需要推导出它的表达式。
+
+首先考虑一个单位面积上的辐射能量。由基本电磁理论可知，一个振荡频率为$\nu$、振幅为$E$的电磁波在介质中的能流密度为：
+其中，$\epsilon_0$是真空介电常数，$c$是光速。
+
+根据辐射出射度的定义，单位面积上在某一频率范围内沿某一方向辐射的能量为：
+
+�
+�
+=
+�
+�
+cos
+⁡
+�
+�
+�
+⋅
+�
+�
+⋅
+�
+�
+dE=M 
+λ
+​
+ cosθdA⋅dλ⋅dt
+其中，$d\lambda$是波长的微元，$dt$是时间的微元。这里将$dA$乘以$\cos{\theta}$是因为辐射方向与表面法线的夹角为$\theta$，只有与该方向垂直的电磁波才能被视为真正的辐射。
+
+假设表面上存在一个微元$dA_0$，其法线方向为$\mathbf{n_0}$，与辐射方向的夹角为$\alpha$。根据余弦定理可知：
+
+其中，$\cos{\beta} = \cos{\theta_0}$，$\sin{\beta} = \sqrt{1 - \cos^2{\theta_0}}$，$\cos{\gamma} = \cos{\phi_0 - \phi}$，$\theta_0$和$\phi_0$是微元$dA_0$法线的天顶角和方位角，$\phi$是辐射方
+
+接下来，我们需要将$d\Omega$用角度$\theta$和$d\theta$表示出来。如下图所示，假设我们关注单位时间内，从立体角$\Omega$内某一点$P$向外发射的能量，设该点与坐标系原点的距离为$r$。
+
+
+显然，对于单位面积的投影面积$ds$，$P$点到该面积的距离为$r\cos\theta$。因此，该面积接收到的来自$P$点的辐射功率为：
+
+$$ dP = \frac{dE}{dt}\cdot ds = \frac{dE}{dt}\cdot r^2\cos\theta d\Omega $$
+
+其中，$d\Omega$表示单位面积在球面上对应的立体角元素，它与$d\theta$和$d\phi$相关，具体地：
+
+$$ d\Omega = \sin\theta d\theta d\phi $$
+
+将$d\Omega$代入上式得：
+
+$$ dP = \frac{dE}{dt}\cdot r^2\cos\theta \sin\theta d\theta d\phi $$
+
+将$dE$代入上式得：
+
+$$ dP = \frac{q^2}{6\pi\epsilon_0c^3}\beta^2\sin^2\theta \cos\theta d\theta d\phi $$
+
+最终，我们得到了余弦辐射体的辐射出射度表达式：
+
+$$ \frac{dP}{d\Omega} = \frac{q^2}{6\pi\epsilon_0c^3}\beta^2\sin^2\theta \cos\theta $$
+
+其中，$\beta$为辐射体的速度与光速的比值
+
+
+
+\section{11}
+朗伯辐射体是指一个均匀的热辐射表面，它的辐射出射度表达式为：
+
+$$ \frac{dP}{d\Omega} = \frac{2\pi k_B^2 T^4}{h^3c^2}\cos\theta $$
+
+其中，$dP$为单位时间内辐射在$\Omega$立体角内的功率，$d\Omega$为立体角元素，$k_B$为玻尔兹曼常数，$T$为表面的温度，$h$为普朗克常数，$c$为光速，$\theta$为法向量与$\mathbf{n}$的夹角。
+
+为了推导上述表达式，我们假设辐射体是均匀、各向同性的。考虑一个面积为$A$的小面元$dS$，该小面元在$\mathbf{n}$方向上的投影面积为$dS\cos\theta$。设辐射体在频率为$\nu$到$\nu+d\nu$的波段内辐射的平均能量密度为$u(\nu)$，则该小面元在单位时间内辐射出的功率为：
+
+$$ dP = A dS\cos\theta u(\nu) c $$
+
+将普朗克黑体辐射公式代入上式，得到：
+
+$$ dP = \frac{2\pi h\nu^3}{c^2}\frac{1}{e^{\frac{h\nu}{k_BT}}-1}A dS\cos\theta $$
+
+根据能量守恒，辐射出的能量应等于该小面元吸收的能量。假设该小面元在频率为$\nu$到$\nu+d\nu$的波段内吸收的平均能量密度为$u'(\nu)$，则有：
+
+$$ dP = A dS\cos\theta u'(\nu) c $$
+
+将普朗克黑体辐射公式代入上式，得到：
+
+$$ dP = \frac{2\pi h\nu^3}{c^2}\frac{1}{e^{\frac{h\nu}{k_BT}}-1}A dS\cos\theta $$
+
+将两式相等，得到：
+
+$$ u(\nu) = u'(\nu) $$
+
+因此，辐射体在所有方向上的辐射能量密度$u(\nu)$与吸收能量密度$u'(\nu)$相等，且与方向无关。将辐射能量密度代入辐射出射度表达式中，得到：
+
+$$ \frac{dP}{d\Omega} = \frac{2\pi}{c}u(\nu)\cos\theta = \frac{2\pi k_B^2 T^4}{h^3c^2}\cos\theta $$
+
+其中，$u(\nu)$为普朗克黑体辐射公式中的辐
+
+根据朗伯体的定义，表面每个微小立体角$d\Omega$上的辐射强度相等，即$I(\theta,\phi)=I_0$，其中$I_0$为表面上某一点的辐射强度，因此有：
+
+$$dI(\theta,\phi)=I_0 \cos\theta \cdot d\Omega=I_0 \cos\theta \cdot \sin\theta d\theta d\phi$$
+
+其中$d\Omega$可以用$\sin\theta d\theta d\phi$表示，代入普朗克黑体辐射公式，有：
+
+$$dE=\frac{h\nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT}-1} \cdot \cos\theta \cdot \sin\theta d\theta d\phi d\nu A$$
+
+对$dE$在球坐标系下进行积分，可得总辐射能量$E$：
+
+$$E=\int_0^{2\pi}\int_0^{\frac{\pi}{2}}\int_0^{\infty}\frac{h\nu^3}{c^2} \cdot \frac{1}{e^{h\nu/kT}-1} \cdot \cos\theta \cdot \sin\theta d\theta d\phi d\nu A$$
+
+化简并代入普朗克黑体辐射公式中的积分，有：
+
+$$E=\frac{4\pi k^4}{c^2h^3}\cdot T^4\cdot A$$
+
+将表面积$A$代入，得到表面单位面积上的辐射能量为：
+
+$$j^*=E/A=\frac{4\pi k^4}{c^2h^3}\cdot T^4$$
+
+其中$j^*$即为朗伯辐射体的辐射出射度表达式。\\
+根据定义，光通量$F$和光强度$I$之间的关系为：
+
+$$F = K_m \int_{\lambda_1}^{\lambda_2} V(\lambda) I(\lambda) d\lambda$$
+
+其中，$K_m$为光通量系数，其值为683 lm/W，$\lambda_1$和$\lambda_2$分别为可见光的最短波长和最长波长，分别为400 nm和700 nm。
+
+将已知条件代入上式，得到：
+
+$$100 \text{ lm} = 683 \text{ lm/W} \cdot 0.50 \cdot I(0.510 \mu \text{m}) \cdot 10^3 \text{ W/m}^2$$
+
+解得波长为$0.510 \mu \text{m}$的绿光的光强度为：
+
+$$I(0.510 \mu \text{m}) = \frac{100 \text{ lm}}{683 \text{ lm/W} \cdot 0.50 \cdot 10^3 \text{ W/m}^2} = 0.292 \text{ W/m}^2$$
+
+将该光强度代入普朗克-爱因斯坦定理，可得该波长下单位面积的辐射能量为：
+
+$$E = h \nu \cdot \frac{I(0.510 \mu \text{m})}{c} = \frac{h c}{\lambda} \cdot I(0.510 \mu \text{m}) = 2.246 \times 10^{-19} \text{ J/m}^2$$
+
+因此，在1 min时间内，屏幕接受的辐射能量为：
+
+$$E_{\text{total}} = E \cdot A \cdot t = 2.246 \times 10^{-19} \text{ J/m}^2 \cdot A \cdot 60 \text{ s}$$
+
+其中，$A$为屏幕的面积。
+
+根据普朗克-爱因斯坦关系$E=h\nu$，其中$h$为普朗克常数，$\nu$为光子的频率。由于给定的是波长$\lambda$，可以使用$c=\lambda \nu$将其转换为频率$\nu$，其中$c$为光速。因此，可以将$E=h\nu$重写为$E=\frac{hc}{\lambda}$。
+
+题目中给出绿光波长为$0.510\mu\text{m}$，代入上式可得$E=\frac{hc}{\lambda}=2.441\times10^{-19}\text{ J}$。题目中还给出绿光的光通量为$100\text{ lm}$，因此绿光的辐射照度$I(\lambda)$为$I(\lambda)=\frac{100\text{ lm}}{\text{m}^2}=100\text{ lx}$，其中$1\text{ lx}=1\text{ lm/m}^2$。
+
+根据辐射照度$I(\lambda)$的定义，可以得到在波长为$\lambda$的光的垂直入射面上的光辐射功率密度$P(\lambda)$为$P(\lambda)=I(\lambda)V(\lambda)$，其中$V(\lambda)$为视见函数。题目中给出绿光的视见函数为$V(0.510\mu\text{m})=0.50$。
+
+因此，波长为$0.510\mu\text{m}$的绿光在垂直入射面上的光辐射功率密度$P(\lambda)$为$P(\lambda)=I(\lambda)V(\lambda)=100\text{ lx} \cdot 0.50=50\text{ W/m}^2$。
+
+最后，根据辐射能量密度的定义$E=P(\lambda)\cdot t$，其中$t$为时间，可以求出在1 min时间内屏幕接受的辐射能量为$E=P(\lambda)\cdot t=50\text{ W/m}^2 \cdot 60\text{ s}=3000\text{ J/m}^2=3\text{ mJ/m}^2$。
+
+将波长为$0.510 \mu m$的绿光的辐射能量密度代入可得$E = \frac{hc}{\lambda} \cdot I(0.510 \mu \text{m}) = 2.246 \times 10^{-19} \text{ J/m}^2$。
+
+
+$$u(\lambda, T) = \frac{8\pi hc}{\lambda^5} \cdot \frac{1}{\mathrm{e}^{\frac{hc}{\lambda k_B T}}-1}$$
+
+
+
+
+根据光的频率和波长之间的关系$f=c/\lambda$，其中$c$是光速，可以计算出相应的频率：
+
+对于中心波长为$0.5 \mu m$的光波，其频率为$f=c/\lambda=3\times 10^8 \text{m/s} / (0.5\times 10^{-6} \text{m})=6\times 10^{14} \text{Hz}$，而谱线宽度为$1 nm$，因此其频率宽度可以通过以下公式计算：
+
+$$\Delta f = \frac{\Delta \lambda}{\lambda^2}c = \frac{1\times 10^{-9} \text{m}}{(0.5\times 10^{-6} \text{m})^2}3\times 10^8 \text{m/s} = 12 \times 10^{12} \text{Hz}$$
+
+因此，中心波长为$0.5 \mu m$、谱线宽度为$1 nm$的光波的频率宽度为$12 \times 10^{12} \text{Hz}$。
+
+对于中心波长为$1 \mu m$的光波，其频率为$f=c/\lambda=3\times 10^8 \text{m/s} / (1\times 10^{-6} \text{m})=3\times 10^{14} \text{Hz}$，而谱线宽度为$1 nm$，因此其频率宽度可以通过以下公式计算：
+
+$$\Delta f = \frac{\Delta \lambda}{\lambda^2}c = \frac{1\times 10^{-9} \text{m}}{(1\times 10^{-6} \text{m})^2}3\times 10^8 \text{m/s} = 3 \times 10^{12} \text{Hz}$$
+
+因此，中心波长为$1 \mu m$、谱线宽度为$1 nm$的光波的频率宽度为$3 \times 10^{12} \text{Hz}$。
+
+对于中心波长为$10 \mu m$的光波，其频率为$f=c/\lambda=3\times 10^8 \text{m/s} / (10\times 10^{-6} \text{m})=3\times 10^{13} \text{Hz}$，而谱线宽度为$1 nm$，因此其频率宽度可以通过以下公式计算：
+
+$$\Delta f = \frac{\Delta \lambda}{\lambda^2}c = \frac{1\times 10^{-9} \text{m}}{(10\times 10^{-6} \text{m})^2}3\times 10^8 \text{m/s} = 3 \times 10^{10} \text{Hz}$$
+
+因此，中心波长为$10 \mu m$、谱线宽度为$1 nm$的光波的频率宽度为$3 \times 10^{10} \text{Hz}$。
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{spacing}{}
+
+\bibliographystyle{IEEEtran}
+\bibliography{lecktion0}
+
+\end{document}
+

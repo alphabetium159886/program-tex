@@ -1,0 +1,11 @@
+\contentsline {section}{\numberline {1}Newton-Raphson method}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}code}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Principle explanation\cite {key2}\cite {key3}}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}code-explanation}{4}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Gauss-Seidel method}{5}{section.2}%
+\contentsline {section}{\numberline {3}Jacobian method}{6}{section.3}%
+\contentsline {section}{\numberline {4}Convergence speed for iterative methods}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Newton-Raphson method}{6}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Gauss-Seidel method}{7}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Jacobi method}{8}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Convergence Rate Comparison of Different Algorithms}{8}{section.5}%

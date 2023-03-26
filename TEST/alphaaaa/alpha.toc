@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {1}實驗目的：约1页}{2}{section.1}%
+\contentsline {section}{\numberline {2}實驗原理:黑體輻射：约1-2页}{2}{section.2}%
+\contentsline {section}{\numberline {3}实验仪器：约1-2页}{3}{section.3}%
+\contentsline {section}{\numberline {4}实验内容：约2-3页}{3}{section.4}%
+\contentsline {section}{\numberline {5}short}{4}{section.5}%
+\contentsline {section}{\numberline {6}Code}{5}{section.6}%

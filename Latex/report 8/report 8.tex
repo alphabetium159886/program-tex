@@ -1,0 +1,70 @@
+\documentclass[12pt, a4paper, oneside]{ctexart}
+\usepackage{amsmath, amsthm, amssymb, graphicx}
+\usepackage[bookmarks=true, colorlinks, citecolor=blue, linkcolor=black]{hyperref}
+\usepackage[margin = 25mm]{geometry}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{cite}
+\usepackage{ctex}
+\usepackage{float}
+
+\title{宇宙射线$\mu$子实验数据处理}
+\date{\today}
+\author{phys.2001 孙陶庵 202011010101 }
+\begin{document}
+\begin{spacing}{2.0}
+\maketitle
+\section{实验结果}
+\subsection{alpha}
+\begin{center}
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|l|l|l|l|} 
+        \hline
+        degree & $\tau /\mu s$ & $\delta \tau/\mu s$ & $\chi^2$  \\ 
+        \hline
+        0  & 2.1805                                        & 0.0214                                                             & 5.5721                        \\ 
+        \hline
+        5  & 2.0586                                        & 0.0381                                                             & 1.4370                        \\ 
+        \hline
+        10 & 2.2193                                        & 0.0583                                                             & 0.7371                        \\ 
+        \hline
+        15 & 2.1553                                        & 0.0553                                                             & 0.7012                        \\ 
+        \hline
+        20 & 2.1445                                        & 0.0557                                                             & 0.7381                        \\ 
+        \hline
+        25 & 2.2971                                        & 0.0668                                                             & 0.5935                        \\ 
+        \hline
+        30 & 2.1111                                        & 0.0580                                                             & 0.6199                        \\ 
+        \hline
+        35 & 2.219                                         & 0.0558                                                             & 0.8695                        \\ 
+        \hline
+        40 & 2.1774                                        & 0.0521                                                             & 0.858                         \\ 
+        \hline
+        45 & 2.1082                                        & 0.0437                                                             & 1.2445                        \\ 
+        \hline
+        50 & 2.2074                                        & 0.0574                                                             & 0.702                         \\ 
+        \hline
+        55 & 2.0759                                        & 0.0459                                                             & 0.9506                        \\
+        \hline
+        \end{tabular}
+        \end{table}
+\end{center}
+
+
+
+
+\section{Thinking}
+
+1.解释实验测量的$\mu$子衰变寿命曲线具有一定分布的物理原因？\\ 
+因为高能量的 $\mu$ 子具有较高的速度，在狭义相对论下，$\mu$ 子寿命会有增长，低能下 $\mu$ 子自然衰变寿命短。\\
+2. 该实验如何保证测量的 2 个信号恰是同一$\mu$子的到达与衰变信号？\\
+来自宇宙线的 $\mu$ 子通量很低，每次击中探测器的事例可以看作单 $\mu$ 子处理，因此将测量的 2 个信号看作同一 $\mu$ 子产生的。
+
+
+\end{spacing}{}
+
+\bibliographystyle{IEEEtran}
+\bibliography{lecktion0}
+
+\end{document}

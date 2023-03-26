@@ -1,0 +1,88 @@
+\documentclass[12pt, a4paper, oneside]{ctexart}
+\usepackage{amsmath, amsthm, amssymb, graphicx}
+\usepackage[bookmarks=true, colorlinks, citecolor=blue, linkcolor=black]{hyperref}
+\usepackage[margin = 25mm]{geometry}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{cite}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\title{Homework 0:Nobel Laureates Related to Lasers}
+\date{\today}
+\author{物理2001孙陶庵202011010101\\https://github.com/xingxia1/test1}
+\begin{document}
+\begin{spacing}{2.0}
+\maketitle
+
+
+\section{Nobel prizes in Physics}
+
+这个公式的推导涉及到等离子体中电子和离子相互作用的库伦势能（Coulomb potential energy），这里给出简要的推导过程：
+
+对于一个电子，它受到其它电子和离子的库伦势能作用，因此它在等离子体中的势能可以写成：
+$U_e = - \sum_{i \neq j}^N \frac{e^2}{4 \pi \epsilon_0 r_{ij}}$
+
+其中 $N$ 是等离子体中电子的总数，$r_{ij}$ 是第 $i$ 个电子和第 $j$ 个离子之间的距离。
+
+为了求出 $U_e$ 的平均值，我们需要知道等离子体中任意两个电子之间的距离 $r_{ij}$ 的平均值。通常情况下，等离子体的电子云比较均匀，因此可以假设电子间的距离服从某种均匀分布，这种假设下可以得到：
+$\langle r_{ij} \rangle = \frac{3}{5} n^{-1/3}$
+
+其中 $n$ 是电子数密度。这个公式表示，等离子体中任意两个电子间的平均距离和电子数密度的立方根成反比。
+
+将 $\langle r_{ij} \rangle$ 代入上式，并将求和式中的 $j$ 替换为离子总数 $N_i$，得到：
+$U_e = - \frac{3}{5} \frac{e^2}{4 \pi \epsilon_0} \frac{N_i}{n^{1/3}}$
+
+将离子总数 $N_i$ 表示为 $N_i = n V_i$，其中 $V_i$ 是离子平均体积，代入上式，并将离子平均体积表示为 $V_i = 1/n$（假设离子云均匀），得到：
+$U_e = - \frac{3}{5} e^2 (n^{1/3}) (\frac{e}{m})$
+
+这个式子就是等离子体中自由电子的平均电势能。
+\section[short]{title}
+根据库仑定律，电场强度与电荷之间的关系为：
+
+$E = \frac{1}{4\pi\epsilon_0}\frac{q}{r^2}$
+
+其中，$\epsilon_0$为真空中的介电常数，$q$为电荷量，$r$为距离。
+
+在本题中，假定等离子体中在1cm处发生了1$\%$的电荷分离，也就是说，在1cm立方体内出现了电荷为 $q = 0.01en$，其中 $e$ 为元电荷，$n$为等离子体的密度，因此电场的大小为：
+
+$E = \frac{1}{4\pi\epsilon_0}\frac{0.01en}{(0.01m)^2} = \frac{10^8}{4\pi\epsilon_0}ne$
+
+其中，$m = 0.01m$为立方体的边长。代入等离子体的密度 $n = 10^{20}m^{-3}$，以及真空中的介电常数 $\epsilon_0 = 8.85\times10^{-12}F/m$，得到电场强度的估计值为：
+
+$E \approx 1.13\times10^8 V/m$
+
+
+
+根据等离子体物理的基本方程，带电粒子的平均能量可以通过以下公式计算：
+
+$\frac{3}{2}k_BT = \frac{3}{2}\frac{1.38\times10^{-23}J}{1.6\times10^{-19}C} \times 1\times10^3eV = 1.035\times10^{-16}J$
+
+其中，$k_B$是玻尔兹曼常数，$T$是等离子体温度，$1.6\times10^{-19}C$是电子电荷量，$1\times10^3eV$是1 keV的能量。
+
+根据等离子体基本方程，等离子体的平均势能可以通过以下公式计算：
+
+$\frac{3}{2}n k_BT = \frac{3}{2} \times 10^{19}m^{-3} \times \frac{3}{2}\frac{1.38\times10^{-23}J}{1.6\times10^{-19}C} \times 1\times10^3eV = 1.553\times10^{-7}J/m^3$
+
+判断是否满足理想等离子体条件，可以计算等离子体的等离子体参数：
+
+$\Gamma = \frac{e^2}{4\pi\epsilon_0ak_BT}$
+
+其中，$e$是电子电荷量，$\epsilon_0$是真空介电常数，$a$是等离子体的电子瑞利长度，$a=\sqrt{\frac{k_BT}{4\pi n e^2}}$。
+
+代入数值，可以得到：
+
+$a = \sqrt{\frac{1\times10^3eV}{4\pi\times10^{19}m^{-3}\times1.6\times10^{-19}C^2}} = 3.3\times10^{-8}m$
+
+$\Gamma = \frac{(1.6\times10^{-19}C)^2}{4\pi\times8.85\times10^{-12}C^2/Nm^2\times3.3\times10^{-8}m\times1\times10^3eV} = 0.12$
+
+当$\Gamma<<1$时，等离子体可以被视为理想等离子体。在这种情况下，粒子之间的相互作用可以被忽略，粒子之间的平均距离远大于它们的热波长，等离子体可以被视为弱相互作用系统。因此，根据上述计算，这个等离子体可以被视为理想等离子体。
+
+
+
+
+\end{spacing}{}
+
+\bibliographystyle{IEEEtran}
+\bibliography{lecktion0}
+
+\end{document}
