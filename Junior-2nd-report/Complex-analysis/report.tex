@@ -32,6 +32,11 @@ Runge定理可进一步推广：可以将A取作Riemann球体$C\cup{\infty}$ 的
 由Weierstrass定理，存在一列有理函数${p_n}$，使得$p_n$在$K_c$中一致收敛于$f(z)$。
 由于有理函数是全纯函数，所以$p_n$也是在$K$的邻域内全纯的。因此，对于任意给定的$\epsilon > 0$，
 存在一个整数$N$，使得当$n > N$时，$p_n(z)$在$K$的邻域内与$f(z)$的差的绝对值小于$\epsilon$。因此，我们可以得到一个逼近式：
+\begin{center}
+    $f(z) = \displaystyle\lim_{n \to \infty}p_n(z)$，对于$z\in K$
+\end{center}
+
+    
 2.假设$f(z)$在开集$\Omega$中全纯，且$K \subset \Omega$是紧致的。根据留数定理，对于$z\in \Omega - K$，有
 
 \begin{center}
@@ -48,6 +53,20 @@ $f(z) = \displaystyle\sum_{n = 1}^{N}\frac{1}{2\pi i}\int_{\gamma_n}\frac{f(\zet
 \begin{center}
 $\displaystyle f(z) = \lim_{n \to \infty}p_n(z)$，对于$z\in K$
 \end{center}
+
+然而，我们需要证明的是对于$z\in K$，上式仍然成立，即$f(z)$可以被某些函数的积分表示出来。因此，我们需要在$\Omega-K$中找到一条曲线，使得$f(z)$在该曲线上的积分可以逼近$f(z)$在$K$上的值。
+由于$\gamma$不与K相交，因此最后一个积分中的被积函数$F(z,t)$在$K\times[0,1]$上是联合连续的，并且由于K是紧致的，对于任意给定的$\epsilon>0$，存在$\delta>0$使得：
+\begin{center}
+    $\displaystyle\sup_{z\in K}|F(z, t_1)-F(z, t_2)|<\epsilon$, whenever $|t_1-t_2|<\delta$
+\end{center}
+
+我们可以看到积分$\displaystyle\int_0^1 F(z, t) \mathrm{dt}$的黎曼和在K上均匀逼近它。
+由于这些黎曼和中的每一个都是具有奇点$\gamma$的有理函数，因此引理得以证明。
+最后，将极点推向无穷远的过程是通过使用$K^c$连通这一事实完成的。
+
+
+
+
 3.考虑完全包含在$\Omega-K$中的一条线段$\gamma$。我们需要找到一系列有奇点的有理函数，
 它们在$K$上一致逼近积分$\displaystyle\int_{\gamma}\frac{f(\zeta)}{\zeta-z}d\zeta$。
 
