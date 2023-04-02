@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.1)  26 MAR 2023 13:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.5.1)  28 MAR 2023 22:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -455,6 +455,12 @@ File: UTF8.chr 2021/10/16 4.8.5
 
 LaTeX Warning: Label `fig:side:b' multiply defined.
 
+
+LaTeX Warning: Label `fig:side:a' multiply defined.
+
+
+LaTeX Warning: Label `fig:side:b' multiply defined.
+
 )
 \openout1 = `2nd-report.aux'.
 
@@ -639,29 +645,29 @@ Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on in
  [2] (C:\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) [3]
-<Eular-IM.jpg, id=224, 402.303pt x 307.74976pt>
+<Eular-IM.jpg, id=241, 383.63326pt x 311.36325pt>
 File: Eular-IM.jpg Graphic file (type jpg)
 <use Eular-IM.jpg>
 Package pdftex.def Info: Eular-IM.jpg  used on input line 119.
-(pdftex.def)             Requested size: 227.62204pt x 174.12311pt.
+(pdftex.def)             Requested size: 227.62204pt x 184.7432pt.
  [4] [5
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.146  
-              y(1) = y0; <./Eular-IM.jpg>]
-<EE.jpg, id=291, 410.7345pt x 313.17pt>
+l.145  
+              y = zeros(size(t)); <./Eular-IM.jpg>]
+<EE.jpg, id=306, 382.42876pt x 311.9655pt>
 File: EE.jpg Graphic file (type jpg)
 <use EE.jpg>
 Package pdftex.def Info: EE.jpg  used on input line 169.
-(pdftex.def)             Requested size: 227.62204pt x 173.55814pt.
+(pdftex.def)             Requested size: 227.62204pt x 185.68127pt.
  [6] [7
 pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.199  
-                  t = t + h; <./EE.jpg>]
-<Runge_Kutta411.jpg, id=347, 383.63326pt x 301.125pt>
+l.197  
+                  y_next = res(end) + h*(k1 + 2 * k2 + 2 * k3 + k4)/6; <./EE.jpg>]
+<Runge_Kutta411.jpg, id=360, 383.63326pt x 301.125pt>
 File: Runge_Kutta411.jpg Graphic file (type jpg)
 <use Runge_Kutta411.jpg>
 Package pdftex.def Info: Runge_Kutta411.jpg  used on input line 214.
@@ -670,24 +676,19 @@ Package pdftex.def Info: Runge_Kutta411.jpg  used on input line 214.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.226     $
-           t_{n+1} = t_n + h$ \\ <./Runge_Kutta411.jpg>]
-Overfull \hbox (15.53818pt too wide) in paragraph at lines 231--232
-[]\C70/rm/m/n/12/65 ˆ \C70/rm/m/n/12/95 Ù \C70/rm/m/n/12/59 * \C70/rm/m/n/12/8d v \C70/rm/m/n/12/5b û \C70/rm/m/n/12/57 ( \C70/rm/m/n/12/66 / \C70/rm/m/n/12/5b f \C70/rm/m/n/12/4e ^^M \C70/rm/m/n/12/5b å \C70/rm/m/n/12/4e _ \C70/rm/m/n/12/51 ô \C70/rm/m/n/12/4e ^^M \C70/rm/m/n/12/51 ˙ \C70/rm/m/n/12/67 e \C70/rm/m/n/12/4e Ü|\C70/rm/m/n/12/ff ^^L| \C70/rm/m/n/12/4e ^^@ \C70/rm/m/n/12/76 Ù \C70/rm/m/n/12/62 • \C70/rm/m/n/12/95 ^^Y \C70/rm/m/n/12/4e _ \C70/rm/m/n/12/77  \C70/rm/m/n/12/5f ó \C70/rm/m/n/12/4e ^^M \C70/rm/m/n/12/66 / \C70/rm/m/n/12/5f à \C70/rm/m/n/12/61 ¬|\C70/rm/m/n/12/ff ^^L| \C70/rm/m/n/12/4e  \C70/rm/m/n/12/97 b \C70/rm/m/n/12/76 Ñ \C70/rm/m/n/12/90 ˝ \C70/rm/m/n/12/66 /\OT1/cmr/m/n/12 python|\C70/rm/m/n/12/ff ^^L|
- []
-
-[9] [10] [11] [12] [13] [14]
-<EIM-ddd.png, id=561, 462.528pt x 346.896pt>
+l.224     $
+           k_4 = \ f\!\left(t_n + h, y_n + hk_3\right)$.\\ <./Runge_Kutta411.jpg>] [9] [10] [11] [12] [13] [14]
+<EIM-ddd.png, id=572, 462.528pt x 346.896pt>
 File: EIM-ddd.png Graphic file (type png)
 <use EIM-ddd.png>
 Package pdftex.def Info: EIM-ddd.png  used on input line 414.
 (pdftex.def)             Requested size: 138.75946pt x 104.0696pt.
-<EE-ddd.png, id=563, 462.528pt x 346.896pt>
+<EE-ddd.png, id=574, 462.528pt x 346.896pt>
 File: EE-ddd.png Graphic file (type png)
 <use EE-ddd.png>
 Package pdftex.def Info: EE-ddd.png  used on input line 420.
 (pdftex.def)             Requested size: 138.75946pt x 104.0696pt.
-<Runge_Kutta4 ddd.png, id=564, 462.528pt x 346.896pt>
+<Runge_Kutta4 ddd.png, id=575, 462.528pt x 346.896pt>
 File: Runge_Kutta4 ddd.png Graphic file (type png)
 <use Runge_Kutta4 ddd.png>
 Package pdftex.def Info: Runge_Kutta4 ddd.png  used on input line 426.
@@ -696,36 +697,57 @@ Package pdftex.def Info: Runge_Kutta4 ddd.png  used on input line 426.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.435 ...3]ÔºåÂÖ∂Ë∑ùÁ¶ª‰∏∫ 0.2688736413071916„ÄÇ\\
-                                                  
+l.434 \begin{center}
+                    
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.435 ...3]ÔºåÂÖ∂Ë∑ùÁ¶ª‰∏∫ 0.2688736413071916„ÄÇ\\
-                                                  
+l.434 \begin{center}
+                    
 pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.435 ...3]ÔºåÂÖ∂Ë∑ùÁ¶ª‰∏∫ 0.2688736413071916„ÄÇ\\
-                                                   <./EIM-ddd.png> <./EE-ddd.png> <./Runge_Kutta4 ddd.png>] [16] (2nd-report.aux)
+l.434 \begin{center}
+                     <./EIM-ddd.png> <./EE-ddd.png> <./Runge_Kutta4 ddd.png>]
+<EE-dfit.png, id=601, 462.528pt x 346.896pt>
+File: EE-dfit.png Graphic file (type png)
+<use EE-dfit.png>
+Package pdftex.def Info: EE-dfit.png  used on input line 445.
+(pdftex.def)             Requested size: 138.75946pt x 104.0696pt.
+<Runge_Kutta4-fit.png, id=602, 462.528pt x 346.896pt>
+File: Runge_Kutta4-fit.png Graphic file (type png)
+<use Runge_Kutta4-fit.png>
+Package pdftex.def Info: Runge_Kutta4-fit.png  used on input line 451.
+(pdftex.def)             Requested size: 138.75946pt x 104.0696pt.
+ [16
+pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.465 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.465 
+       <./EE-dfit.png> <./Runge_Kutta4-fit.png>] [17] (2nd-report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `2nd-report.out' has not changed.
-(rerunfilecheck)             Checksum: 75C80DDA5E21A28063382FE5BB0EDD43;1329.
+(rerunfilecheck)             Checksum: 4201FE9CCB9AC42ECC27CB9CEA577FA1;1517.
  ) 
 Here is how much of TeX's memory you used:
- 18249 strings out of 478547
- 292863 string characters out of 2858251
- 981224 words of memory out of 3000000
- 35593 multiletter control sequences out of 15000+600000
- 519781 words of font info for 214 fonts, out of 8000000 for 9000
+ 18453 strings out of 478547
+ 295626 string characters out of 2858251
+ 980347 words of memory out of 3000000
+ 35765 multiletter control sequences out of 15000+600000
+ 524371 words of font info for 231 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,9n,78p,808b,2594s stack positions out of 10000i,1000n,20000p,200000b,80000s
-<C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on 2nd-report.pdf (16 pages, 845763 bytes).
+<C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on 2nd-report.pdf (17 pages, 944200 bytes).
 PDF statistics:
- 1019 PDF objects out of 1200 (max. 8388607)
- 319 named destinations out of 1000 (max. 500000)
- 339 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1078 PDF objects out of 1200 (max. 8388607)
+ 324 named destinations out of 1000 (max. 500000)
+ 393 words of extra memory for PDF output out of 10000 (max. 10000000)
 

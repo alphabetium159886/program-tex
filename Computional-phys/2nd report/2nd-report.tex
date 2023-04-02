@@ -37,7 +37,7 @@
 
 \title{使用隐式欧拉法求解常微分方程问题}
 \date{\today}
-\author{Alphabetium}
+\author{202011010101物理2001孙陶庵}
 \begin{document}
 \begin{spacing}{2.0}
 \tableofcontents
@@ -228,7 +228,7 @@ $    function y = Euler\_Explicit(f, y0, h)$是函数主体，解释如下：
 
 \end{center}
 \section{处理三种方法的误差-代码实现}
-时间太赶实在是学不完也写不出来了，一直报错也看得不是很懂，下面的都是python，主要是分析误差。
+主要是分析误差。
 \subsection{隐式欧拉法}
 \begin{lstlisting}[language=Python, caption=隐式欧拉法]
     import numpy as np
@@ -428,7 +428,7 @@ $    function y = Euler\_Explicit(f, y0, h)$是函数主体，解释如下：
         \label{fig:side:b}
       \end{minipage}
 \end{figure}
-
+\subsection{误差分析}
 我将数据处理的档案加到附件里
 输出结果为：
 \begin{center}
@@ -436,7 +436,41 @@ $    function y = Euler\_Explicit(f, y0, h)$是函数主体，解释如下：
     EIM.txt: 最接近 0 的值是 [0.1, -0.03759539961851743]，其距离为 0.13759539961851744。\\
     runge.txt: 最接近 0 的值是 [0.44999999999999984, -0.06431906956574363]，其距离为 0.5143190695657435。
 \end{center}
-比较上面三张图片及处理完的数据可以看出隐式欧拉法在步长的选取上可以选择的精度最小，说明在这三种方法中最为精确。
+比较上面三张图片及处理完的数据可以看出隐式欧拉法(EIM)在步长的选取上可以选择的精度最小，说明在这三种方法中最为精确。
+同时，我们也可以通过这个图形来选择一个合适的步长，使得数值解的绝对误差达到一个满意的精度水平。
+\subsection{收敛性分析}
+\begin{figure}[H]
+    \begin{minipage}[t]{0.5\linewidth}
+        \centering
+        \includegraphics[scale=0.3]{EE-dfit.png}
+        \caption{显式欧拉法}
+        \label{fig:side:a}
+      \end{minipage}%
+      \begin{minipage}[t]{0.5\linewidth}
+        \centering
+        \includegraphics[scale=0.3]{Runge_Kutta4-fit.png}
+        \caption{Runge}
+        \label{fig:side:b}
+      \end{minipage}
+\end{figure}
+
+收敛应该指的是随着步长 $h$ 的减小，数值解 $y_n$ 逐渐接近精确解 $y(x_n)$，即 $\lim_{h \to 0} = y(x_n) $。
+
+为了判断一个数值方法是否收敛，可以考虑不同步长 $h$ 下的数值解和精确解之间的误差，并观察误差随着步长 $h$ 的变化情况。
+
+如果误差随着 $h$ 的减小而减小，那么这个数值方法就是收敛的。
+
+图形反映了步长(h)和数值解的误差之间的关系。横轴表示步长(h)，纵轴表示数值解的绝对误差。
+通过这个图形，我们可以了解到，当步长减小时，数值解的绝对误差会逐渐减小。
+
+拟合直线的斜率可以表示误差随步长$h$的变化率，因此可以通过拟合直线来估计误差的收敛阶。
+其绝对值越小，误差随步长$h$的变化越慢，收敛阶就越高。拟合直线截距的意义则是误差的常数项。
+如果误差本身存在常数项，那么通过拟合直线的截距就可以得到误差的常数项大小。
+也就是误差与步长的关系，从而评估数值方法的收敛速度和精度。通过拟合出的直线，我们可以得到收敛阶的估计，
+也就是该数值方法在每次步长减小一半时误差的减小速率。一般来说，收敛阶越高，数值方法的收敛速度越快，精度越高。
+
+
+
 
 \end{spacing}{}
 

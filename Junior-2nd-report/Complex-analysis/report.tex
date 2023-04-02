@@ -1,0 +1,50 @@
+\documentclass[12pt, a4paper, oneside]{article}
+\usepackage{amsmath, amsthm, amssymb, graphicx}
+\usepackage[bookmarks=true, colorlinks, citecolor=blue, linkcolor=black]{hyperref}
+\usepackage[margin = 25mm]{geometry}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{cite}
+\usepackage{ctex}
+
+\title{Runge's Approximation Theorem学习报告}
+\date{\today}
+\author{202011010101 孙陶庵}
+\begin{document}
+\begin{spacing}{2.0}
+\maketitle
+
+\section{理论介绍}
+如果K是C中的紧子集，使得$C\setminus K$是一个连通集合，并且f在包含K的开放区域上为全纯函数，则存在一系列多项式$(p_{n})$，它们在K上一致逼近f。
+
+Runge定理可进一步推广：可以将A取作Riemann球体$C\cup{\infty}$ 的子集，并要求A还与K的无界连通分量相交(其中现在包括$\infty$)。
+也就是说，在以上给出的表述中，有理函数可能会在无穷远处具有极点；而在其它的表述中，可以选择把极点放置于$C\setminus K$ 的任意一个无界连通分量内部。\\
+
+1.在紧集合K的邻域内全纯的任何函数都可以被奇点在Kc中的有理函数一致逼近。如果$K_c$是连通的，则在K的邻域内全纯的任何函数都可以被多项式一致逼近。\\
+2.假设$f$在开集$\Omega$中全纯，且$K \subset  \Omega$是紧致的。那么，在$\Omega - K$中存在有限条线段$\gamma_1\cdots\gamma_N$，使得对于所有的 $z\in K$, 都有
+
+\begin{center}
+    $f(z) = \sum_{N}^{n = 1}\frac{1}{2\pi i}\int_{\gamma_n}\frac{f(\zeta)}{\zeta - z}d\zeta$
+\end{center}
+3.对于任何完全包含在$\Omega-K$中的线段$\gamma$，存在一系列有奇点的有理函数，它们在K上一致逼近积分$\int_{\gamma_n}\frac{f(\zeta)}{\zeta - z}d\zeta$。
+\section{证明部分}
+
+\section{Lemma5.10，相对比较应用层面的}
+If $K^c$ is connected and $z_0 \notin K$, then the function $1/(z − z_0)$ can be approximated uniformly on K by polynomials.
+首先选择一个点$z_1$位于一个以原点为中心且包含K的圆盘D之外，则
+\begin{center}
+    $\frac{1}{z-z_1} = -\frac{1}{z_1}\frac{1}{1-z/z_1} = \sum_{n = 1}^{\infty}-\frac{z^n}{z_1^{n+1}}$
+\end{center}
+对于$z\in K$一致收敛。这也说明对于任何幂级数$\frac{1}{(z-z_1)^k}$也可以通过多项式在K上近似。
+在处理的过程中可以发现这个方法和洛朗级数展开有点类似，以下是他们的一些不同处\\
+1.Runge定理是近似理论中的一个结果，它指出在具有连通补集的紧集上任何全纯函数都可以用奇点在紧集外部的有理函数一致逼近。
+换句话说，它给出了一个给定函数可以被特定类型函数逼近的条件。
+
+2.Laurent级数是表示解析于环形区域（即两个同心圆之间区域）上的函数所使用到技术。
+Laurent级数展开将这样一个函数表示为两个系列之和：正幂次$(z-z_0)$项系列和负幂次$(z-z_0)$项系列。
+\end{spacing}{}
+
+\bibliographystyle{IEEEtran}
+\bibliography{lecktion0}
+
+\end{document}
