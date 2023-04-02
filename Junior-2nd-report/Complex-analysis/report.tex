@@ -24,21 +24,58 @@ Runge定理可进一步推广：可以将A取作Riemann球体$C\cup{\infty}$ 的
 2.假设$f$在开集$\Omega$中全纯，且$K \subset  \Omega$是紧致的。那么，在$\Omega - K$中存在有限条线段$\gamma_1\cdots\gamma_N$，使得对于所有的 $z\in K$, 都有
 
 \begin{center}
-    $f(z) = \sum_{N}^{n = 1}\frac{1}{2\pi i}\int_{\gamma_n}\frac{f(\zeta)}{\zeta - z}d\zeta$
+    $f(z) = \displaystyle\sum_{N}^{n = 1}\frac{1}{2\pi i}\displaystyle\int_{\gamma_n}\frac{f(\zeta)}{\zeta - z}d\zeta$
 \end{center}
-3.对于任何完全包含在$\Omega-K$中的线段$\gamma$，存在一系列有奇点的有理函数，它们在K上一致逼近积分$\int_{\gamma_n}\frac{f(\zeta)}{\zeta - z}d\zeta$。
+3.对于任何完全包含在$\Omega-K$中的线段$\gamma$，存在一系列有奇点的有理函数，它们在K上一致逼近积分$\displaystyle\int_{\gamma_n}\frac{f(\zeta)}{\zeta - z}d\zeta$。
 \section{证明部分}
+1.假设$f(z)$是在紧致集合$K$的邻域内全纯的函数。令$K_c$表示$K$的补集，也就是$f(z)$的奇点集。
+由Weierstrass定理，存在一列有理函数${p_n}$，使得$p_n$在$K_c$中一致收敛于$f(z)$。
+由于有理函数是全纯函数，所以$p_n$也是在$K$的邻域内全纯的。因此，对于任意给定的$\epsilon > 0$，
+存在一个整数$N$，使得当$n > N$时，$p_n(z)$在$K$的邻域内与$f(z)$的差的绝对值小于$\epsilon$。因此，我们可以得到一个逼近式：
+2.假设$f(z)$在开集$\Omega$中全纯，且$K \subset \Omega$是紧致的。根据留数定理，对于$z\in \Omega - K$，有
 
-\section{Lemma5.10，相对比较应用层面的}
+\begin{center}
+$f(z) = \displaystyle\frac{1}{2\pi i}\int_{\partial D} \frac{f(\zeta)}{\zeta - z} d\zeta$
+\end{center}
+
+其中$\partial D$是包含$z$的简单封闭曲线，且完全包含在$\Omega - K$中。因为$\partial D$是有限条线段$\gamma_1,\cdots,\gamma_N$的拼接，所以我们有
+
+\begin{center}
+$f(z) = \displaystyle\sum_{n = 1}^{N}\frac{1}{2\pi i}\int_{\gamma_n}\frac{f(\zeta)}{\zeta - z}d\zeta$，对于$z\in K$
+\end{center}
+
+其中$\gamma_n$是$\partial D$上的一条线段，且完全包含在$\Omega - K$中。
+\begin{center}
+$\displaystyle f(z) = \lim_{n \to \infty}p_n(z)$，对于$z\in K$
+\end{center}
+3.考虑完全包含在$\Omega-K$中的一条线段$\gamma$。我们需要找到一系列有奇点的有理函数，
+它们在$K$上一致逼近积分$\displaystyle\int_{\gamma}\frac{f(\zeta)}{\zeta-z}d\zeta$。
+
+我们可以将$\gamma$分割成若干条小线段，每条小线段的长度都足够小，使得每个小线段都被包含在$\Omega-K$中。
+
+对于每条小线段，我们可以使用Cauchy积分定理，得到：
+\begin{center}
+    $\displaystyle \displaystyle\int_{\gamma'}\frac{f(\zeta)}{\zeta-z}\mathrm{d\zeta} = \frac{1}{2\pi i} \displaystyle\int_{\partial U}\frac{f(\zeta)}{\zeta - z}\mathrm{d\zeta}$
+\end{center}
+其中，$\gamma'$是小线段，$\partial U$是包围$\gamma'$的简单闭曲线，$U$是$\partial U$所包围的区域。
+
+由于$f$在$\Omega$中全纯，因此对于任何小线段$\gamma'$，上式右侧的积分是有意义的。由于$\gamma'$被包含在$\Omega-K$中，因此$\partial U$不会与$K$有交集。
+
+我们可以通过局部展开$\frac{1}{\zeta-z}$为幂级数的方式，将上式右侧的积分展开为$f$的幂级数。这样我们就得到了一系列在$U$中全纯的函数，它们在$K$上一致逼近了$\displaystyle\int_{\gamma'}\frac{f(\zeta)}{\zeta-z}d\zeta$。
+
+对于整个$\gamma$，我们只需要对每条小线段分别进行上述操作，并将得到的一系列函数拼接起来，就可以得到一系列有奇点的有理函数，它们在$K$上一致逼近了$\displaystyle\int_{\gamma}\frac{f(\zeta)}{\zeta-z}d\zeta$。
+
+
+\section{由Lemma5.10处理相对比较应用层面的}
 If $K^c$ is connected and $z_0 \notin K$, then the function $1/(z − z_0)$ can be approximated uniformly on K by polynomials.
 首先选择一个点$z_1$位于一个以原点为中心且包含K的圆盘D之外，则
 \begin{center}
-    $\frac{1}{z-z_1} = -\frac{1}{z_1}\frac{1}{1-z/z_1} = \sum_{n = 1}^{\infty}-\frac{z^n}{z_1^{n+1}}$
+    $\displaystyle\frac{1}{z-z_1} = -\frac{1}{z_1}\frac{1}{1-z/z_1} = \sum_{n = 1}^{\infty}-\frac{z^n}{z_1^{n+1}}$
 \end{center}
 对于$z\in K$一致收敛。这也说明对于任何幂级数$\frac{1}{(z-z_1)^k}$也可以通过多项式在K上近似。
 在处理的过程中可以发现这个方法和洛朗级数展开有点类似，以下是他们的一些不同处\\
 1.Runge定理是近似理论中的一个结果，它指出在具有连通补集的紧集上任何全纯函数都可以用奇点在紧集外部的有理函数一致逼近。
-换句话说，它给出了一个给定函数可以被特定类型函数逼近的条件。
+换句话说，它给出了一个给定函数可以被特定类型函数逼近的条件。\\
 
 2.Laurent级数是表示解析于环形区域（即两个同心圆之间区域）上的函数所使用到技术。
 Laurent级数展开将这样一个函数表示为两个系列之和：正幂次$(z-z_0)$项系列和负幂次$(z-z_0)$项系列。

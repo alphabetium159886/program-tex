@@ -51,7 +51,7 @@
 对于第一项，由于$(Q_n)$是$g$在$V$上的一致收敛序列，因此我们可以找到$N_1$，
 使得对于任何$n \geq N_1$，$|Q_n(z) - g(z)| < \frac{\epsilon}{2}$，对于所有$z \in K$。对于第二项，
 由于$g$在$V$中是有界的，因此存在常数$M$，使得$|g(z)| \leq M$，对于所有$z \in V$。因此，我们可以找到$N_2$，
-使得对于任何$n \geq N_2$，$|g(z_w) - \frac{1}{w}| < \frac{\epsilon}{2M}$，对于所有$w \in K$。现在令$N = \max{N_1, N_2}$，
+使得对于任何$n \geq N_2$，$|g(z_w) - \frac{1}{w}| < \frac{\epsilon}{2M}$，对于所有$w \in K$。现在令$N = \displaystyle\max{N_1, N_2}$，
 对于任何$n \geq N$，我们有：
 
 \begin{equation}
@@ -83,36 +83,36 @@
 
 其中 $\epsilon$ 是任意给定的正实数。具体地，我们可以选择 $P_n(z)$ 为 $n$ 次 Lagrange 插值多项式，即
 \begin{center}
-    $P_n(z) = \sum_{k = 0}^{n}f(z_k) \cdot {\textstyle \prod_{j\neq k}}\frac{z - z_j}{z_k - z_j} $
+    $P_n(z) = \displaystyle\sum_{k = 0}^{n}f(z_k) \cdot {\textstyle \displaystyle\prod_{j\neq k}}\frac{z - z_j}{z_k - z_j} $
 \end{center}
 其中 $z_0, z_1, \ldots, z_n$ 是 $D$ 中的任意 $n+1$ 个点。由于 $f$ 在 $D$ 中有界，因此存在一个正实数 $C$，使得对于任何 $n$ 和 $z \in D$，
 \begin{center}
-    $|P_n(z)|\leq C\cdot \max_{0\leq k\leq n}|f(z_k)| $
+    $|P_n(z)|\leq C\cdot \displaystyle\max_{0\leq k\leq n}|f(z_k)| $
 \end{center}
 因此，只需要选择足够多的插值点，我们就可以让 $|f(z) - P_n(z)|$ 小于任意给定的正实数 $\epsilon$。这证明了 $f$ 可以在 $D$ 中用全纯多项式近似。
 
 接下来我们可以尝试计算一下 $P_n(z)$ 在 $n \to \infty$ 时的极限。为了简化计算，
 我们可以选择取 $z_k$ 为 $n$ 个单位根，即 $z_k = e^{2 \pi i k/n}$，$k = 0, 1, \ldots, n-1$。此时 $P_n(z)$ 可以写成：
 \begin{center}
-    $P_n(z) = \sum_{k = 0}^{n-1}\frac{1}{(z_k + 1)^2} \cdot {\textstyle \prod_{j\neq k}}\frac{z - z_j}{z_k - z_j} $
+    $P_n(z) = \displaystyle\sum_{k = 0}^{n-1}\frac{1}{(z_k + 1)^2} \cdot {\textstyle \displaystyle\prod_{j\neq k}}\frac{z - z_j}{z_k - z_j} $
 \end{center}
 我们可以把 $P_n(z)$ 分解成两个部分：$P_n(z) = A_n(z) + B_n(z)$，其中
 
 \begin{center}
-    $A_n(z) = \frac{1}{n}\sum_{k = 0}^{n-1}\frac{1}{(z_k + 1)^2}$
+    $A_n(z) = \frac{1}{n}\displaystyle\sum_{k = 0}^{n-1}\frac{1}{(z_k + 1)^2}$
 \end{center}
 
 \begin{center}
-    $B_n(z) = \sum_{k = 0}^{n-1}\frac{1}{(z - z_k)(z_k + 1)^2}\cdot {\textstyle \prod_{j\neq k}}\frac{z_k - z_j}{z - z_j} $
+    $B_n(z) = \displaystyle\sum_{k = 0}^{n-1}\frac{1}{(z - z_k)(z_k + 1)^2}\cdot {\textstyle \displaystyle\prod_{j\neq k}}\frac{z_k - z_j}{z - z_j} $
 \end{center}
 
 首先，我们来计算 $A_n(z)$ 在 $n \to \infty$ 时的极限。显然，
 \begin{center}
-    $\lim_{n\to \infty}A_n(z) = \frac{1}{n}\sum_{k = 0}^{n-1}\frac{1}{(z_k + 1)^2}$
+    $\displaystyle\lim_{n\to \infty}A_n(z) = \frac{1}{n}\displaystyle\sum_{k = 0}^{n-1}\frac{1}{(z_k + 1)^2}$
 \end{center}
 由于 $z_k = e^{2 \pi i k/n}$，我们有
 \begin{center}
-    $\lim_{n\to \infty}A_n(z) = \frac{1}{2\pi i}\int_{|\omega| = 1}\frac{1}{(\omega + 1)^2}\mathrm{d\omega}$
+    $\displaystyle\lim_{n\to \infty}A_n(z) = \frac{1}{2\pi i}\displaystyle\int_{|\omega| = 1}\frac{1}{(\omega + 1)^2}\mathrm{d\omega}$
 \end{center}
 
 其中积分路径可以是任何一条围绕 $-1$ 的圆。容易计算得到上式等于 $\frac{1}{4}$。
@@ -121,13 +121,13 @@
 
 
 \begin{center}
-    $\lim_{n\to \infty}\frac{z_k - z_j}{z - z_j} = \frac{e^{2\pi ik/n}-e^{2\pi ij/n}}{z - e^{2\pi ij/n}} = \frac{\sin(\frac{2\pi (k-j)}{n})}{z - e^{2\pi ij/n}}\to 0$
+    $\displaystyle\lim_{n\to \infty}\frac{z_k - z_j}{z - z_j} = \frac{e^{2\pi ik/n}-e^{2\pi ij/n}}{z - e^{2\pi ij/n}} = \frac{\sin(\frac{2\pi (k-j)}{n})}{z - e^{2\pi ij/n}}\to 0$
 \end{center}
 
 当 $n \to \infty$ 时，我们可以把 $B_n(z)$ 写成：
 
 \begin{center}
-    $B_n(z) = \frac{1}{n}\sum_{k = 0}^{n-1}\frac{1}{(z - z_k)(z_k + 1)^2} + \mathcal{O}(1/n)$
+    $B_n(z) = \frac{1}{n}\displaystyle\sum_{k = 0}^{n-1}\frac{1}{(z - z_k)(z_k + 1)^2} + \mathcal{O}(1/n)$
 \end{center}
 
 其中 $\mathcal{O}(1/n)$ 表示随着 $n$ 的增大，上式右侧的项在绝对值意义下不超过某个与 $n$ 无关的常数。
@@ -135,26 +135,26 @@
 
 
 \begin{center}
-    $\frac{1}{n}\sum_{k = 0}^{n-1}\frac{1}{(z-z_k)(z_k - 1)^2} = \frac{1}{n}\sum_{k = 0}^{n-1}\frac{1}{z_k-z}\cdot \frac{1}{(z_k+1)^2} \cdot{\textstyle \prod_{l\neq k}}\frac{z_k - z_l}{z_k + 1}$
+    $\frac{1}{n}\displaystyle\sum_{k = 0}^{n-1}\frac{1}{(z-z_k)(z_k - 1)^2} = \frac{1}{n}\displaystyle\sum_{k = 0}^{n-1}\frac{1}{z_k-z}\cdot \frac{1}{(z_k+1)^2} \cdot{\textstyle \displaystyle\prod_{l\neq k}}\frac{z_k - z_l}{z_k + 1}$
 \end{center}
 
 考虑当 $n \to \infty$ 时，上式右侧的和式会趋近于一个积分。具体来说，我们可以把 $\frac{1}{z_k-z}$ 看成是 $z$ 点处的 Cauchy 核
-，$\frac{1}{(z_k+1)^2}$ 看成是 $-1$ 点处的一个常数项，而 $\prod_{l \neq k} \frac{z_k-z_l}{z_k+1}$ 可以看成是一些 $z_k$ 点处的一个多项式
+，$\frac{1}{(z_k+1)^2}$ 看成是 $-1$ 点处的一个常数项，而 $\displaystyle\prod_{l \neq k} \frac{z_k-z_l}{z_k+1}$ 可以看成是一些 $z_k$ 点处的一个多项式
 。因此，上式右侧会趋近于：
 
 
 \begin{center}
-    $\frac{1}{2\pi i} = \int_{|\omega| = 1}\frac{1}{\omega - z}\cdot \frac{1}{(\omega+1)^2}\cdot P(\omega)\mathrm{d\omega}$
+    $\frac{1}{2\pi i} = \displaystyle\int_{|\omega| = 1}\frac{1}{\omega - z}\cdot \frac{1}{(\omega+1)^2}\cdot P(\omega)\mathrm{d\omega}$
 \end{center}
 
 其中 $P(w)$ 是一个无穷次可导的函数，且在 $w=-1$ 处有非零的 Taylor 展开式。这样的一个函数被称为一个 Stokes 函数，
 它在复平面上有很多有趣的性质。容易证明，当 $z$ 不在某些特殊的点上时，上式右侧等于 $\frac{1}{(z+1)^2}$。因此，我们得到：
 
 \begin{center}
-    $\lim_{n\to \infty}B_n(z) = \frac{1}{4} + \mathcal{O}(1/n)$
+    $\displaystyle\lim_{n\to \infty}B_n(z) = \frac{1}{4} + \mathcal{O}(1/n)$
 \end{center}
 
-综上所述，我们证明了对于 $f(z) = \frac{1}{(z+1)^2}$，存在一列 Runge 函数 $B_n(z)$，满足 $\lim_{n \to \infty} B_n(z) = f(z)$ 
+综上所述，我们证明了对于 $f(z) = \frac{1}{(z+1)^2}$，存在一列 Runge 函数 $B_n(z)$，满足 $\displaystyle\lim_{n \to \infty} B_n(z) = f(z)$ 
 对于几乎所有的 $z$ 成立。
 
 

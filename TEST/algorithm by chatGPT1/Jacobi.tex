@@ -125,7 +125,46 @@ A:\\
 
 
 
+\section{123}
+一根光纤中的模式频率可以使用波动方程计算：
 
+$\nabla^2\vec{E}-\frac{1}{c^2}\frac{\partial^2\vec{E}}{\partial t^2} = 0$
+
+其中，$\vec{E}$是电场，$c$是真空中的光速，$\nabla^2$是拉普拉斯算子。
+
+假设电场可分为径向和方位角两个部分，则我们可以写成：
+
+$\vec{E}(r,\theta,z,t)=\vec{E}(r)e^{-i\beta z}e^{i\omega t}\vec{u}(\theta)$
+
+其中$r$是距离光纤轴线的径向距离，$\theta$是方位角度数，$z$是沿着光纤的距离，$\beta$ 是传播常数, $\omega $ 是角频率, $\vec {u } (\theta ) $ 是方位角单位矢量。
+
+将这个表达式代入波动方程并简化后得到：
+
+$
+    \frac {1}{r}\frac {\partial }{\partial r}\left(r \frac {\partial \vec {E}}{\partial r }\right)+(\beta ^ 2-\frac {\omega ^ 2}{c ^ 2} n ^ 2 (r)) \ vec { E}=0
+$
+
+其中$n(r)$表示在径向距离$r $处的折射率。
+
+该方程可以通过适当的边界条件求解，例如，在芯层-包层边界处电场及其导数的连续性。
+
+模式频率与其角频率$\omega$有关：
+
+$
+    \omega =\frac {2\pi c}{\lambda}
+$
+
+其中，$\lambda $是光在光纤中的波长。
+
+因此，模式频率可以表示为：
+
+$
+    f=\frac {\omega }{2\pi}=\frac {c}{\lambda}
+$
+
+其中$f$是模式的频率。
+
+总之，在光纤中的模式频率与其波长有关，并且可以使用波动方程和适当的边界条件进行计算。该频率由光纤的折射率分布以及芯区域大小和形状决定。\\
 
 
 

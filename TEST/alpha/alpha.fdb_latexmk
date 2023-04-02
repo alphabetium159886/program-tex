@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex alpha"] 1680437470 "alpha.aux" "alpha.bbl" "alpha" 1680437471
+["bibtex alpha"] 1680448100 "alpha.aux" "alpha.bbl" "alpha" 1680448100
   "C:/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "alpha.aux" 1680437467 1147 27902005f03dcc65969d5581b9073be3 "pdflatex"
+  "alpha.aux" 1680448098 1147 27902005f03dcc65969d5581b9073be3 "pdflatex"
   "lecktion0.bib" 0 -1 0 ""
   (generated)
   "alpha.bbl"
   "alpha.blg"
-["pdflatex"] 1680437465 "c:/Users/toby1/OneDrive/program-tex/TEST/alpha/alpha.tex" "alpha.pdf" "alpha" 1680437471
+["pdflatex"] 1680448096 "c:/Users/toby1/OneDrive/program-tex/TEST/alpha/alpha.tex" "alpha.pdf" "alpha" 1680448100
   "C:/MiKTeX/fonts/sfd/ttf2pk/UGBK.sfd" 1458473944 185547 bcd31d5d273400b38612a969fcab55f9 ""
   "C:/MiKTeX/fonts/sfd/ttf2pk/Unicode.sfd" 1458473944 107591 c249c63d38b8b55408aee52d643b0c18 ""
   "C:/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -102,7 +102,6 @@
   "C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1247596667 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247596667 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
-  "C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1247596667 32587 65067f817f408bc71a7312f3d9828a9b ""
   "C:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1247596667 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
   "C:/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "C:/MiKTeX/tex/generic/atbegshi/atbegshi.sty" 1575571100 24708 5584a51a7101caf7e6bbf1fc27d8f7b1 ""
@@ -206,11 +205,11 @@
   "C:/WINDOWS/Fonts/msyh.ttc" 1575709707 19647736 ff2e53a6131130a07589812ea5b5b0d0 ""
   "C:/WINDOWS/Fonts/simhei.ttf" 1621163458 9753388 6abc0fcfbaa40600f9cecca3afeb3aa7 ""
   "C:/WINDOWS/Fonts/simsun.ttc" 1575709707 18214472 19674afc0754c3df8182b89fe7f0156d ""
-  "alpha.aux" 1680437467 1147 27902005f03dcc65969d5581b9073be3 "pdflatex"
+  "alpha.aux" 1680448098 1147 27902005f03dcc65969d5581b9073be3 "pdflatex"
   "alpha.bbl" 0 -1 0 "bibtex alpha"
-  "alpha.out" 1680437467 358 632f3f8600e733a642b4960d7ebdc02a "pdflatex"
-  "alpha.tex" 1680437459 8730 607864d7440d93cc8d8eab2031107a8a ""
-  "c:/Users/toby1/OneDrive/program-tex/TEST/alpha/alpha.tex" 1680437459 8730 607864d7440d93cc8d8eab2031107a8a ""
+  "alpha.out" 1680448098 358 632f3f8600e733a642b4960d7ebdc02a "pdflatex"
+  "alpha.tex" 1680448095 9016 28c228b410b20c2be081229566c181b0 ""
+  "c:/Users/toby1/OneDrive/program-tex/TEST/alpha/alpha.tex" 1680448095 9016 28c228b410b20c2be081229566c181b0 ""
   (generated)
   "alpha.aux"
   "alpha.log"
