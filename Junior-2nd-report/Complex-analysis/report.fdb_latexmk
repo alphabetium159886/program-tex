@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex report"] 1680450334 "report.aux" "report.bbl" "report" 1680450334
+["bibtex report"] 1680602841 "report.aux" "report.bbl" "report" 1680602841
   "C:/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
   "lecktion0.bib" 0 -1 0 ""
-  "report.aux" 1680450332 1086 5d0c113fb942ad66a7a8f2abb88b029d "pdflatex"
+  "report.aux" 1680602838 1086 5d0c113fb942ad66a7a8f2abb88b029d "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
-["pdflatex"] 1680450329 "c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/Complex-analysis/report.tex" "report.pdf" "report" 1680450334
+["pdflatex"] 1680602835 "c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/Complex-analysis/report.tex" "report.pdf" "report" 1680602841
   "C:/MiKTeX/fonts/sfd/ttf2pk/UGBK.sfd" 1458473944 185547 bcd31d5d273400b38612a969fcab55f9 ""
   "C:/MiKTeX/fonts/sfd/ttf2pk/Unicode.sfd" 1458473944 107591 c249c63d38b8b55408aee52d643b0c18 ""
   "C:/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -216,11 +216,11 @@
   "C:/WINDOWS/Fonts/msyh.ttc" 1575709707 19647736 ff2e53a6131130a07589812ea5b5b0d0 ""
   "C:/WINDOWS/Fonts/simhei.ttf" 1621163458 9753388 6abc0fcfbaa40600f9cecca3afeb3aa7 ""
   "C:/WINDOWS/Fonts/simsun.ttc" 1575709707 18214472 19674afc0754c3df8182b89fe7f0156d ""
-  "c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/Complex-analysis/report.tex" 1680450329 6972 3b5b3738dd2c3f592399385a8eb7b51d ""
-  "report.aux" 1680450332 1086 5d0c113fb942ad66a7a8f2abb88b029d "pdflatex"
+  "c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/Complex-analysis/report.tex" 1680602833 6998 f20c65ce4868e0e657814376279305fa ""
+  "report.aux" 1680602838 1086 5d0c113fb942ad66a7a8f2abb88b029d "pdflatex"
   "report.bbl" 0 -1 0 "bibtex report"
-  "report.out" 1680450332 334 036357b78ee1af7c6d5e3976f43435bf "pdflatex"
-  "report.tex" 1680450329 6972 3b5b3738dd2c3f592399385a8eb7b51d ""
+  "report.out" 1680602838 334 036357b78ee1af7c6d5e3976f43435bf "pdflatex"
+  "report.tex" 1680602833 6998 f20c65ce4868e0e657814376279305fa ""
   (generated)
   "report.aux"
   "report.log"
