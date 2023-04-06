@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  6 APR 2023 22:57
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  6 APR 2023 23:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/Complex-analysis/report.tex
-(c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/Complex-analysis/report.tex
+**c:/Users/toby1/OneDrive/program-tex/TEST/mittern-exam/mitternexam.tex
+(c:/Users/toby1/OneDrive/program-tex/TEST/mittern-exam/mitternexam.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-04-20> (C:\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -261,11 +261,7 @@ File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 File: listings.cfg 2020/03/24 1.8d listings configuration
 ))
 Package: listings 2020/03/24 1.8d (Carsten Heinz)
- (C:\MiKTeX\tex/latex/cite\cite.sty
-LaTeX Info: Redefining \cite on input line 302.
-LaTeX Info: Redefining \nocite on input line 332.
-Package: cite 2015/02/27  v 5.5
-) (C:\MiKTeX\tex/latex/ctex\ctex.sty (C:\MiKTeX\tex/latex/l3kernel\expl3.sty
+ (C:\MiKTeX\tex/latex/ctex\ctex.sty (C:\MiKTeX\tex/latex/l3kernel\expl3.sty
 Package: expl3 2022-04-20 L3 programming layer (loader) 
  (C:\MiKTeX\tex/latex/l3backend\l3backend-xetex.def
 File: l3backend-xetex.def 2022-04-20 L3 backend support: XeTeX
@@ -442,8 +438,26 @@ Package fontspec Info: Font family 'SimSun(0)' created for font 'SimSun' with
 
 )) (C:\MiKTeX\tex/latex/ctex/config\ctex.cfg
 File: ctex.cfg 2021/12/12 v2.5.8 Configuration file (CTEX)
-) (report.aux)
-\openout1 = `report.aux'.
+) (C:\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count323
+\float@exts=\toks30
+\float@box=\box58
+\@float@everytoks=\toks31
+\@floatcapt=\box59
+) (C:\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip64
+\f@nch@O@elh=\skip65
+\f@nch@O@erh=\skip66
+\f@nch@O@olh=\skip67
+\f@nch@O@orh=\skip68
+\f@nch@O@elf=\skip69
+\f@nch@O@erf=\skip70
+\f@nch@O@olf=\skip71
+\f@nch@O@orf=\skip72
+) (mitternexam.aux)
+\openout1 = `mitternexam.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
@@ -480,14 +494,14 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (C:\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count323
+\c@section@level=\count324
 )
 LaTeX Info: Redefining \ref on input line 13.
 LaTeX Info: Redefining \pageref on input line 13.
 LaTeX Info: Redefining \nameref on input line 13.
- (report.out) (report.out)
+ (mitternexam.out) (mitternexam.out)
 \@outlinefile=\write3
-\openout3 = `report.out'.
+\openout3 = `mitternexam.out'.
 
 
 *geometry* driver: auto-detecting
@@ -524,7 +538,7 @@ LaTeX Info: Redefining \nameref on input line 13.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@lstlisting=\count324
+\c@lstlisting=\count325
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
@@ -581,61 +595,96 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 13.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 13.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
-(C:\MiKTeX\tex/latex/amsfonts\umsa.fd
+(mitternexam.toc [1
+
+])
+\tf@toc=\write4
+\openout4 = `mitternexam.toc'.
+
+ [2]
+LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
+ (C:\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
  (C:\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Underfull \hbox (badness 10000) in paragraph at lines 20--22
+) [3]
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
-[1
-
-] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 90--94
+[4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
-[3]
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 98.
+ []
 
+[7] [8] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 98.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\endgroup' on input line 98.
+ []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@over' on input line 98.
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
+
+ []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 98.
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+
+ []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 98.
+Underfull \hbox (badness 10000) in paragraph at lines 183--184
 
-[4] [5] (report.bbl) [6] (report.aux)
-Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: AB6859244BC56B46B3C9BDF157BD3AC4;514.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--186
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--193
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+
+ []
+
+[12] [13] [14] [15] [16] (mitternexam.aux)
+Package rerunfilecheck Info: File `mitternexam.out' has not changed.
+(rerunfilecheck)             Checksum: EF26298223993BDD7E9F5256F3415C81;3558.
  ) 
 Here is how much of TeX's memory you used:
- 16548 strings out of 410939
- 336482 string characters out of 2830432
- 687889 words of memory out of 3000000
- 37101 multiletter control sequences out of 15000+600000
- 480243 words of font info for 90 fonts, out of 8000000 for 9000
+ 16763 strings out of 410939
+ 343734 string characters out of 2830432
+ 695584 words of memory out of 3000000
+ 37311 multiletter control sequences out of 15000+600000
+ 478713 words of font info for 86 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,8n,97p,416b,583s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 89i,10n,97p,422b,451s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on report.xdv (6 pages, 61756 bytes).
+Output written on mitternexam.xdv (16 pages, 151348 bytes).

@@ -1,16 +1,9 @@
 # Fdb version 3
-["bibtex report"] 1680793020 "report.aux" "report.bbl" "report" 1680793024
-  "C:/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "report.aux" 1680793023 1352 1b264c44638905a916bc06d2d4abb0c4 "xelatex"
-  "runge.bib" 1680793020 707 63753f9950eaed2f1c5d1fcd8373d8c7 ""
+["xdvipdfmx"] 1680794705 "mitternexam.xdv" "mitternexam.pdf" "mitternexam" 1680794705
+  "mitternexam.xdv" 1680794705 151348 f29cddad20af1844d5e2a31aa4ae6cba "xelatex"
   (generated)
-  "report.bbl"
-  "report.blg"
-["xdvipdfmx"] 1680793023 "report.xdv" "report.pdf" "report" 1680793024
-  "report.xdv" 1680793023 61756 21d67384cb784b4acfd9afbe4ab26e0e "xelatex"
-  (generated)
-  "report.pdf"
-["xelatex"] 1680793021 "c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/Complex-analysis/report.tex" "report.xdv" "report" 1680793024
+  "mitternexam.pdf"
+["xelatex"] 1680794702 "c:/Users/toby1/OneDrive/program-tex/TEST/mittern-exam/mitternexam.tex" "mitternexam.xdv" "mitternexam" 1680794705
   "C:/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136743454 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -24,7 +17,6 @@
   "C:/MiKTeX/fonts/tfm/public/cm/cmmi8.tfm" 1136765053 1520 eccf95517727cb11801f4f1aee3a21b4 ""
   "C:/MiKTeX/fonts/tfm/public/cm/cmr10.tfm" 1136765053 1296 45809c5a464d5f32c8f98ba97c1bb47f ""
   "C:/MiKTeX/fonts/tfm/public/cm/cmr12.tfm" 1136765053 1288 655e228510b4c2a1abe905c368440826 ""
-  "C:/MiKTeX/fonts/tfm/public/cm/cmr17.tfm" 1136765053 1292 296a67155bdbfc32aa9c636f21e91433 ""
   "C:/MiKTeX/fonts/tfm/public/cm/cmr6.tfm" 1136765053 1300 b62933e007d01cfd073f79b963c01526 ""
   "C:/MiKTeX/fonts/tfm/public/cm/cmr8.tfm" 1136765053 1292 21c1c5bfeaebccffdb478fd231a0997d ""
   "C:/MiKTeX/fonts/tfm/public/cm/cmsy10.tfm" 1136765053 1124 6c73e740cf17375f03eec0ee63599741 ""
@@ -65,7 +57,6 @@
   "C:/MiKTeX/tex/latex/base/size12.clo" 1638775084 8449 bc7344e882df4d7e51c046514dee83e4 ""
   "C:/MiKTeX/tex/latex/base/ts1enc.def" 1638775082 8044 fa8875fa7360fa4a5757411aa07dae10 ""
   "C:/MiKTeX/tex/latex/base/tuenc.def" 1638775082 29098 3e2b8f2cbae539bde3ed8f63503c0954 ""
-  "C:/MiKTeX/tex/latex/cite/cite.sty" 1425353482 26218 19edeff8cdc2bcb704e8051dc55eb5a7 ""
   "C:/MiKTeX/tex/latex/cjk/CJKfntef.sty" 1634405102 12851 25a9b5cc006609feb5c9a20ce24a5392 ""
   "C:/MiKTeX/tex/latex/ctex/config/ctex-name-utf8.cfg" 1639330490 1769 735a72ed212ebc2ee09cb2f9f3314f5b ""
   "C:/MiKTeX/tex/latex/ctex/config/ctex.cfg" 1639330490 1229 1ecf7cad1a7cea3bfeb01fe4b0543bbb ""
@@ -76,6 +67,8 @@
   "C:/MiKTeX/tex/latex/ctex/engine/ctex-engine-xetex.def" 1639330490 4682 edc388300172b981ed3507192f7c968b ""
   "C:/MiKTeX/tex/latex/ctex/fontset/ctex-fontset-windows.def" 1639330490 4951 4840bf1b18bbc62d6d7873be77a404ea ""
   "C:/MiKTeX/tex/latex/ctex/scheme/ctex-scheme-chinese.def" 1639330490 2351 44605f23e4e0e2a54792838449d999c2 ""
+  "C:/MiKTeX/tex/latex/fancyhdr/fancyhdr.sty" 1612001844 17086 7ed8cbc4d361ec87392817e0dd4f65ec ""
+  "C:/MiKTeX/tex/latex/float/float.sty" 1469023953 6916 16d2656a1984957e674b149555f1ea1d ""
   "C:/MiKTeX/tex/latex/fontspec/fontspec-xetex.sty" 1642213122 162076 2f6d31c4632f2730c57b9c0fda038e15 ""
   "C:/MiKTeX/tex/latex/fontspec/fontspec.cfg" 1642213122 549 c4adac819276241fea8eb79c5ab7b99e ""
   "C:/MiKTeX/tex/latex/fontspec/fontspec.sty" 1642213122 1656 7e824878bad4df5a3e8bba4e463d9126 ""
@@ -119,13 +112,14 @@
   "C:/MiKTeX/tex/xelatex/xecjk/xeCJKfntef.sty" 1639329764 39112 d2c64c2924adb909ead58a883c2e3793 ""
   "C:/Users/toby1/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1680610784 23660638 dfd036573583e4a9d53cad7d24912597 ""
   "C:/WINDOWS/Fonts/msyh.ttc" 1575709707 19647736 ff2e53a6131130a07589812ea5b5b0d0 ""
-  "c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/Complex-analysis/report.tex" 1680792676 12249 1bc89e25fbd2f74ce77423c3aaddd94b ""
-  "report.aux" 1680793023 1352 1b264c44638905a916bc06d2d4abb0c4 "xelatex"
-  "report.bbl" 1680793021 1559 52cf471917a42036dc5baa77b8ab28e4 "bibtex report"
-  "report.out" 1680793023 514 ab6859244bc56b46b3c9bdf157bd3ac4 "xelatex"
-  "report.tex" 1680792676 12249 1bc89e25fbd2f74ce77423c3aaddd94b ""
+  "c:/Users/toby1/OneDrive/program-tex/TEST/mittern-exam/mitternexam.tex" 1680794699 23530 81e22e8fa46c6fb0d39004efa6316a34 ""
+  "mitternexam.aux" 1680794705 3780 f03c25322fbe6076f4bdc6c38a733f19 "xelatex"
+  "mitternexam.out" 1680794705 3558 ef26298223993bdd7e9f5256f3415c81 "xelatex"
+  "mitternexam.tex" 1680794699 23530 81e22e8fa46c6fb0d39004efa6316a34 ""
+  "mitternexam.toc" 1680794705 2225 e01ca0e0324c3c35614bd40ff382d9a8 "xelatex"
   (generated)
-  "report.aux"
-  "report.log"
-  "report.out"
-  "report.xdv"
+  "mitternexam.aux"
+  "mitternexam.log"
+  "mitternexam.out"
+  "mitternexam.toc"
+  "mitternexam.xdv"

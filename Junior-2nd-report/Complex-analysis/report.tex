@@ -15,13 +15,13 @@
 \maketitle
 
 \section{理论介绍}
-如果K是C中的紧子集，使得$C\setminus K$是一个连通集合，并且f在包含K的开放区域上为全纯函数，则存在一系列多项式$(p_{n})$，它们在K上一致逼近f。
+如果K是C中的紧子集，使$C\setminus K$是一个连通集合，并且f在包含K的开放区域上为全纯函数，则存在一系列多项式$(p_{n})$，它们在K上一致逼近f。\cite{stein2010complex}
 
 Runge定理可进一步推广：可以将A取作Riemann球体$C\cup{\infty}$ 的子集，并要求A还与K的无界连通分量相交(其中现在包括$\infty$)。
 也就是说，在以上给出的表述中，有理函数可能会在无穷远处具有极点；而在其它的表述中，可以选择把极点放置于$C\setminus K$ 的任意一个无界连通分量内部。\\
 
 1.在紧集合K的邻域内全纯的任何函数都可以被奇点在Kc中的有理函数一致逼近。如果$K_c$是连通的，则在K的邻域内全纯的任何函数都可以被多项式一致逼近。\\
-2.假设$f$在开集$\Omega$中全纯，且$K \subset  \Omega$是紧致的。那么，在$\Omega - K$中存在有限条线段$\gamma_1\cdots\gamma_N$，使得对于所有的 $z\in K$, 都有
+2.假设$f$在开集$\Omega$中全纯，且$K \subset  \Omega$是紧致的。那么，在$\Omega - K$中存在有限条线段$\gamma_1\cdots\gamma_N$，使对于所有的 $z\in K$, 都有
 
 \begin{center}
     $f(z) = \displaystyle\sum_{N}^{n = 1}\frac{1}{2\pi i}\displaystyle\int_{\gamma_n}\frac{f(\zeta)}{\zeta - z}d\zeta$
@@ -29,16 +29,15 @@ Runge定理可进一步推广：可以将A取作Riemann球体$C\cup{\infty}$ 的
 3.对于任何完全包含在$\Omega-K$中的线段$\gamma$，存在一系列有奇点的有理函数，它们在K上一致逼近积分$\displaystyle\int_{\gamma_n}\frac{f(\zeta)}{\zeta - z}d\zeta$。
 \section{证明部分}
 1.假设$f(z)$是在紧致集合$K$的邻域内全纯的函数。令$K_c$表示$K$的补集，也就是$f(z)$的奇点集。
-由Weierstrass定理，存在一列有理函数${p_n}$，使得$p_n$在$K_c$中一致收敛于$f(z)$。
+由Weierstrass定理，存在一列有理函数${p_n}$，则$p_n$在$K_c$中一致收敛于$f(z)$。
 由于有理函数是全纯函数，所以$p_n$也是在$K$的邻域内全纯的。因此，对于任意给定的$\epsilon > 0$，
-存在一个整数$N$，使得当$n > N$时，$p_n(z)$在$K$的邻域内与$f(z)$的差的绝对值小于$\epsilon$。因此，我们可以得到一个逼近式：
+存在一个整数$N$，则当$n > N$时，$p_n(z)$在$K$的邻域内与$f(z)$的差的绝对值小于$\epsilon$。因此，我们可以得到一个逼近式：
 \begin{center}
     $f(z) = \displaystyle\lim_{n \to \infty}p_n(z)$，对于$z\in K$
 \end{center}
 
     
-2.假设$f(z)$在开集$\Omega$中全纯，且$K \subset \Omega$是紧致的。根据留数定理，对于$z\in \Omega - K$，有
-
+2.假设$f(z)$在开集$\Omega$中全纯，且$K \subset \Omega$是紧致的。根据留数定理，对于$z\in \Omega - K$，有\cite{fornaess2020holomorphic}
 \begin{center}
 $f(z) = \displaystyle\frac{1}{2\pi i}\int_{\partial D} \frac{f(\zeta)}{\zeta - z} d\zeta$
 \end{center}
@@ -55,7 +54,7 @@ $\displaystyle f(z) = \lim_{n \to \infty}p_n(z)$，对于$z\in K$
 \end{center}
 
 然而，我们需要证明的是对于$z\in K$，上式仍然成立，即$f(z)$可以被某些函数的积分表示出来。因此，我们需要在$\Omega-K$中找到一条曲线，使得$f(z)$在该曲线上的积分可以逼近$f(z)$在$K$上的值。
-由于$\gamma$不与K相交，因此最后一个积分中的被积函数$F(z,t)$在$K\times[0,1]$上是联合连续的，并且由于K是紧致的，对于任意给定的$\epsilon>0$，存在$\delta>0$使得：
+由于$\gamma$不与K相交，因此最后一个积分中的被积函数$F(z,t)$在$K\times[0,1]$上是联合连续的，并且由于K是紧致的，对于任意给定的$\epsilon>0$，存在$\delta>0$让：\cite{fornaess2020holomorphic}
 \begin{center}
     $\displaystyle\sup_{z\in K}|F(z, t_1)-F(z, t_2)|<\epsilon$, whenever $|t_1-t_2|<\delta$
 \end{center}
@@ -64,13 +63,10 @@ $\displaystyle f(z) = \lim_{n \to \infty}p_n(z)$，对于$z\in K$
 由于这些黎曼和中的每一个都是具有奇点$\gamma$的有理函数，因此引理得以证明。
 最后，将极点推向无穷远的过程是通过使用$K^c$连通这一事实完成的。
 
-
-
-
 3.考虑完全包含在$\Omega-K$中的一条线段$\gamma$。我们需要找到一系列有奇点的有理函数，
 它们在$K$上一致逼近积分$\displaystyle\int_{\gamma}\frac{f(\zeta)}{\zeta-z}d\zeta$。
 
-我们可以将$\gamma$分割成若干条小线段，每条小线段的长度都足够小，使得每个小线段都被包含在$\Omega-K$中。
+我们可以将$\gamma$分割成若干条小线段，每条小线段的长度都足够小，让每个小线段都被包含在$\Omega-K$中。
 
 对于每条小线段，我们可以使用Cauchy积分定理，得到：
 \begin{center}
@@ -99,6 +95,96 @@ If $K^c$ is connected and $z_0 \notin K$, then the function $1/(z − z_0)$ can 
 2.Laurent级数是表示解析于环形区域（即两个同心圆之间区域）上的函数所使用到技术。
 Laurent级数展开将这样一个函数表示为两个系列之和：正幂次$(z-z_0)$项系列和负幂次$(z-z_0)$项系列。
 
+\section{$f(z) = \frac{1}{(z+1)^2}$做runge近似}
+我们现在考虑一个例子，即对于 $f(z) = \frac{1}{(z+1)^2}$，按照类似于之前的方法进行 Runge 近似：
+
+首先，我们需要找到一个包含 $f$ 的零点的有界圆盘 $D$，比如 $D$ 可以是以 $-1$ 为圆心，半径为 $1$ 的圆盘。显然，$f$ 在 $D$ 中有界。
+
+接下来，我们需要找到一个全纯函数 $g$，满足 $g(z) = f(z)$，当 $|z+1| \geq 1$ 时，$|g(z)| \leq M$，其中 $M$ 是一个正实数。
+
+我们可以定义 $g(z) = \frac{1}{(z+1)^2}$，当 $|z+1| \geq 1$ 时，$|g(z)| \leq 1$，当 $|z+1| < 1$ 时，$|g(z)| \leq \frac{1}{(1-|z+1|)^2} \leq \frac{1}{4}$，因此 $g$ 满足我们的条件。
+
+现在我们可以使用 Runge 定理构造一个多项式 $P_n$，满足对于任何 $z \in D$，
+
+\begin{center}
+    $|f(z) - P_n(z)|<\epsilon$
+\end{center}
+
+其中 $\epsilon$ 是任意给定的正实数。具体地，我们可以选择 $P_n(z)$ 为 $n$ 次 Lagrange 插值多项式，即
+\begin{center}
+    $P_n(z) = \displaystyle\sum_{k = 0}^{n}f(z_k) \cdot {\textstyle \displaystyle\prod_{j\neq k}}\frac{z - z_j}{z_k - z_j} $
+\end{center}
+其中 $z_0, z_1, \ldots, z_n$ 是 $D$ 中的任意 $n+1$ 个点。由于 $f$ 在 $D$ 中有界，因此存在一个正实数 $C$，使对于任何 $n$ 和 $z \in D$，
+\begin{center}
+    $|P_n(z)|\leq C\cdot \displaystyle\max_{0\leq k\leq n}|f(z_k)| $
+\end{center}
+因此，只需要选择足够多的插值点，我们就可以让 $|f(z) - P_n(z)|$ 小于任意给定的正实数 $\epsilon$。这证明了 $f$ 可以在 $D$ 中用全纯多项式近似。
+
+接下来我们可以尝试计算一下 $P_n(z)$ 在 $n \to \infty$ 时的极限。为了简化计算，
+我们可以选择取 $z_k$ 为 $n$ 个单位根，即 $z_k = e^{2 \pi i k/n}$，$k = 0, 1, \ldots, n-1$。此时 $P_n(z)$ 可以写成：
+\begin{center}
+    $P_n(z) = \displaystyle\sum_{k = 0}^{n-1}\frac{1}{(z_k + 1)^2} \cdot {\textstyle \displaystyle\prod_{j\neq k}}\frac{z - z_j}{z_k - z_j} $
+\end{center}
+我们可以把 $P_n(z)$ 分解成两个部分：$P_n(z) = A_n(z) + B_n(z)$，其中
+
+\begin{center}
+    $A_n(z) = \frac{1}{n}\displaystyle\sum_{k = 0}^{n-1}\frac{1}{(z_k + 1)^2}$
+\end{center}
+
+\begin{center}
+    $B_n(z) = \displaystyle\sum_{k = 0}^{n-1}\frac{1}{(z - z_k)(z_k + 1)^2}\cdot {\textstyle \displaystyle\prod_{j\neq k}}\frac{z_k - z_j}{z - z_j} $
+\end{center}
+
+首先，我们来计算 $A_n(z)$ 在 $n \to \infty$ 时的极限。显然，
+\begin{center}
+    $\displaystyle\lim_{n\to \infty}A_n(z) = \frac{1}{n}\displaystyle\sum_{k = 0}^{n-1}\frac{1}{(z_k + 1)^2}$
+\end{center}
+由于 $z_k = e^{2 \pi i k/n}$，我们有
+\begin{center}
+    $\displaystyle\lim_{n\to \infty}A_n(z) = \frac{1}{2\pi i}\displaystyle\int_{|\omega| = 1}\frac{1}{(\omega + 1)^2}\mathrm{d\omega}$
+\end{center}
+
+其中积分路径可以是任何一条围绕 $-1$ 的圆。容易计算得到上式等于 $\frac{1}{4}$。
+
+接下来，我们来计算 $B_n(z)$ 在 $n \to \infty$ 时的极限。首先，我们注意到当 $k \neq j$ 时，
+
+
+\begin{center}
+    $\displaystyle\lim_{n\to \infty}\frac{z_k - z_j}{z - z_j} = \frac{e^{2\pi ik/n}-e^{2\pi ij/n}}{z - e^{2\pi ij/n}} = \frac{\sin(\frac{2\pi (k-j)}{n})}{z - e^{2\pi ij/n}}\to 0$
+\end{center}
+
+当 $n \to \infty$ 时，我们可以把 $B_n(z)$ 写成：
+
+\begin{center}
+    $B_n(z) = \frac{1}{n}\displaystyle\sum_{k = 0}^{n-1}\frac{1}{(z - z_k)(z_k + 1)^2} + \mathcal{O}(1/n)$
+\end{center}
+
+其中 $\mathcal{O}(1/n)$ 表示随着 $n$ 的增大，上式右侧的项在绝对值意义下不超过某个与 $n$ 无关的常数。
+接下来，我们来计算第一项的极限。由于当 $k \neq j$ 时，
+
+
+\begin{center}
+    $\frac{1}{n}\displaystyle\sum_{k = 0}^{n-1}\frac{1}{(z-z_k)(z_k - 1)^2} = \frac{1}{n}\displaystyle\sum_{k = 0}^{n-1}\frac{1}{z_k-z}\cdot \frac{1}{(z_k+1)^2} \cdot{\textstyle \displaystyle\prod_{l\neq k}}\frac{z_k - z_l}{z_k + 1}$
+\end{center}
+
+考虑当 $n \to \infty$ 时，上式右侧的和式会趋近于一个积分。具体来说，我们可以把 $\frac{1}{z_k-z}$ 看成是 $z$ 点处的 Cauchy 核
+，$\frac{1}{(z_k+1)^2}$ 看成是 $-1$ 点处的一个常数项，而 $\displaystyle\prod_{l \neq k} \frac{z_k-z_l}{z_k+1}$ 可以看成是一些 $z_k$ 点处的一个多项式
+。因此，上式右侧会趋近于：
+
+
+\begin{center}
+    $\frac{1}{2\pi i} = \displaystyle\int_{|\omega| = 1}\frac{1}{\omega - z}\cdot \frac{1}{(\omega+1)^2}\cdot P(\omega)\mathrm{d\omega}$
+\end{center}
+
+其中 $P(w)$ 是一个无穷次可导的函数，且在 $w=-1$ 处有非零的 Taylor 展开式。这样的一个函数被称为一个 Stokes 函数，
+它在复平面上有很多有趣的性质。容易证明，当 $z$ 不在某些特殊的点上时，上式右侧等于 $\frac{1}{(z+1)^2}$。因此，我们得到：
+
+\begin{center}
+    $\displaystyle\lim_{n\to \infty}B_n(z) = \frac{1}{4} + \mathcal{O}(1/n)$
+\end{center}
+
+综上所述，我们证明了对于 $f(z) = \frac{1}{(z+1)^2}$，存在一列 Runge 函数 $B_n(z)$，满足 $\displaystyle\lim_{n \to \infty} B_n(z) = f(z)$ 
+对于几乎所有的 $z$ 成立。
 
 
 
@@ -114,6 +200,6 @@ Laurent级数展开将这样一个函数表示为两个系列之和：正幂次$
 \end{spacing}{}
 
 \bibliographystyle{IEEEtran}
-\bibliography{lecktion0}
+\bibliography{runge}
 
 \end{document}
