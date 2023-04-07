@@ -5,7 +5,7 @@
 \usepackage{setspace}
 \usepackage{listings}
 \usepackage{ctex}
-
+\usepackage{cite}
 \title{Title}
 \date{\today}
 \author{Alphabetium}
@@ -25,6 +25,63 @@
 
 磁重聯是一個尚未完全理解的複雜過程，但它被認為在許多天體物理現像中起著至關重要的作用，例如太陽耀斑、日冕物質拋射和地球磁層。 
 它還與實驗室等離子體、聚變能和空間天氣研究有關。
+\section{磁重联的物理机制和基本模型}
+\subsection{Sweet-Parker模型}
+Sweet-Parker模型描述了在电阻磁流体力学框架下，当重新连接的磁场是反平行（方向相反）且与粘性和可压缩性相关的效应不重要时，
+时间无关的磁再连接。初始速度仅为$E\times B$速度，因此：
+\begin{center}
+    $\displaystyle E_y = v_\text{in} B_\text{in}$
+\end{center}
+其中$E_y$是垂直于平面的电场，$v_\text{in}$是特征入流速度，而$B_\text{in}$则是特征上游磁场强度。通过忽略位移电流，可以得到低频安培定律。
+$\displaystyle\mathbf{J} = \frac{1}{\mu_0}\nabla\times\mathbf{B}$, gives the relation: 
+\begin{center}
+    $\displaystyle J_y \sim \frac{B_\text{in}}{\mu_0\delta}$
+\end{center}
+其中$\delta$是电流层的半厚度。该关系使用磁场在约$2\delta$的距离内反转。通过将理想电场与层内阻性电场$\displaystyle\mathbf{E} = \frac{1}{\sigma}\mathbf{J}$（使用欧姆定律）相匹配，我们发现： 
+\begin{center}
+    $\displaystyle v_\text{in} = \frac{E_y}{B_\text{in}} \sim \frac{1}{\mu_0\sigma\delta} = \frac{\eta}{\delta}$
+\end{center}
+这里，$\eta$是磁扩散率。当入流密度与出流密度相当时，质量守恒产生以下关系：\begin{center}
+    $\displaystyle v_\text{in}L \sim v_\text{out}\delta$
+\end{center}
+其中$L$是电流层的半长度，$v_\text{out}$是出流速度。上述关系式的左右两侧分别表示进入层和离开层的质量通量。
+将上游磁压力与下游动压力相等：\begin{center}
+    $\displaystyle \frac{B_\text{in}^2}{2\mu_0} \sim \frac{\rho v_\text{out}^2}{2}$
+\end{center}
+where $\rho$ is the mass density of the plasma.  Solving for the outflow velocity then gives: 
+\begin{center}
+    $\displaystyle v_\text{out} \sim \frac{B_\text{in}}{\sqrt{\mu_0\rho}} \equiv v_A$
+\end{center}
+其中 $v_A$ 是Alfvén wave波or Alfvén velocity。有了上述关系，无量纲重联速率 $R$ 就可以用两种形式来表示，
+第一种是使用从欧姆定律中推导出的结果 $(\eta, \delta, v_A)$，第二种是使用质量守恒定律中的 $(\delta, L)$：
+\begin{center}
+    $\displaystyle R = \frac{v_\text{in}}{v_\text{out}} \sim \frac{\eta}{v_A\delta} \sim \frac{\delta}{L}$
+\end{center}
+Since the dimensionless Lundquist number $S$ is given by
+: 
+\begin{center}
+    $\displaystyle S \equiv \frac{Lv_A}{\eta}$
+\end{center}
+$R$的两个不同表达式相乘，然后开方，给出了重新连接速率$R$和Lundquist数$S$之间的简单关系：
+\begin{center}
+    $\displaystyle R ~ \sim \sqrt{\frac{\eta}{v_A L}} = \frac{1}{S^\frac{1}{2}}$
+\end{center}
+Sweet-Parker 模型是一種加速機制，在 X 線附近，粒子可以被平行於重新連接的電場自由加速
+平面。 如果重聯區延伸距離D，則最大可能的能量增益為 ZeED ，它可能很大，但大多數粒子在達到該能量之前會偏離 X 線。 
+這種機制產生的粒子能譜不能很好地符合天體物理光譜，這降低了人們對這種機制的興趣\cite{zweibel2009magnetic}
+
+\subsection{Petschek模型}
+Sweet-Parker模型是比较慢的，因为所有进入重新连接区域的流体都必须通过一个有电阻的通道流出。
+Petschek解释如果电阻层很短，大部分进入的流体不通过它流出，而是被静态激波重新定向，重新连接速度会更快。
+Petschek的理论被广泛引用来支持快速重新连接，最大重新连接速度是$vA（π/8 \ln S）$，通常是Alfvén velocity 的百分之几，足以解释大多数天体物理现象。
+但是，通过数值MHD模拟尝试验证Petschek的理论表明，这种重新连接不会自行发展，除非磁扩散率η在X点附近增加。
+Petschek的模型的一个普遍特点是，与Sweet-Parker模型相比，大部分能量转化为流出的离子动能和热（如果存在激波），相对较少的能量进入电子的电阻加热中。
+
+\subsection{Spontaneous Reconnection}
+\subsection{Collisionless Reconnection}
+
+
+\section{磁重联在不同环境中的作用}
 
 \section{磁流体力学方程组}
 
@@ -100,73 +157,8 @@ $\rho = n_i\,m_i$,
 其中 $n_i$ 是離子數密度，$m_i$ 是每個粒子的平均離子質量，
 以便
 :$v_A \approx \left(2.18 \times 10^{11}\,\text{cm}\,\text{s}^{-1}\right) \left(\frac{m_i}{m_p}\right)^{-\frac{1}{2}} \left(\frac{n_i}{1~\text{cm}^{-3}}\right)^{-\frac{1}{2} } \left(\frac{B}{1~\text{G}}\right).$
-\section{Sweet-Parker model}
-Sweet-Parker模型描述了在电阻磁流体力学框架下，当重新连接的磁场是反平行（方向相反）且与粘性和可压缩性相关的效应不重要时，
-时间无关的磁再连接。初始速度仅为$E\times B$速度，因此：
-\begin{center}
-    $\displaystyle E_y = v_\text{in} B_\text{in}$
-\end{center}
-其中$E_y$是垂直于平面的电场，$v_\text{in}$是特征入流速度，而$B_\text{in}$则是特征上游磁场强度。通过忽略位移电流，可以得到低频安培定律。
-$\displaystyle\mathbf{J} = \frac{1}{\mu_0}\nabla\times\mathbf{B}$, gives the relation: 
-\begin{center}
-    $\displaystyle J_y \sim \frac{B_\text{in}}{\mu_0\delta}$
-\end{center}
-其中$\delta$是电流层的半厚度。该关系使用磁场在约$2\delta$的距离内反转。通过将理想电场与层内阻性电场$\displaystyle\mathbf{E} = \frac{1}{\sigma}\mathbf{J}$（使用欧姆定律）相匹配，我们发现： 
-\begin{center}
-    $\displaystyle v_\text{in} = \frac{E_y}{B_\text{in}} \sim \frac{1}{\mu_0\sigma\delta} = \frac{\eta}{\delta}$
-\end{center}
-这里，$\eta$是磁扩散率。当入流密度与出流密度相当时，质量守恒产生以下关系：\begin{center}
-    $\displaystyle v_\text{in}L \sim v_\text{out}\delta$
-\end{center}
-其中$L$是电流层的半长度，$v_\text{out}$是出流速度。上述关系式的左右两侧分别表示进入层和离开层的质量通量。
-将上游磁压力与下游动压力相等：\begin{center}
-    $\displaystyle \frac{B_\text{in}^2}{2\mu_0} \sim \frac{\rho v_\text{out}^2}{2}$
-\end{center}
-where $\rho$ is the mass density of the plasma.  Solving for the outflow velocity then gives: 
-\begin{center}
-    $\displaystyle v_\text{out} \sim \frac{B_\text{in}}{\sqrt{\mu_0\rho}} \equiv v_A$
-\end{center}
-其中 $v_A$ 是Alfvén wave波or Alfvén velocity。有了上述关系，无量纲重联速率 $R$ 就可以用两种形式来表示，
-第一种是使用从欧姆定律中推导出的结果 $(\eta, \delta, v_A)$，第二种是使用质量守恒定律中的 $(\delta, L)$：
-\begin{center}
-    $\displaystyle R = \frac{v_\text{in}}{v_\text{out}} \sim \frac{\eta}{v_A\delta} \sim \frac{\delta}{L}$
-\end{center}
-Since the dimensionless Lundquist number $S$ is given by
-: 
-\begin{center}
-    $\displaystyle S \equiv \frac{Lv_A}{\eta}$
-\end{center}
-$R$的两个不同表达式相乘，然后开方，给出了重新连接速率$R$和Lundquist数$S$之间的简单关系：
-\begin{center}
-    $\displaystyle R ~ \sim \sqrt{\frac{\eta}{v_A L}} = \frac{1}{S^\frac{1}{2}}$
-\end{center}
 
 
-\section{Rayleigh-Taylor instability}
-
-雷诺-泰勒不稳定性是当两种密度不同的流体之间存在界面且较重的流体由较轻的流体支撑时发生的一种流体不稳定性。
-当界面存在微扰时，不稳定性会引起较重的流体下降和较轻的流体上升，这会放大微扰并导致形成尖峰和气泡。
-
-该不稳定性是以雷利勋爵和泰勒先生的名字命名的，他们在20世纪早期分别推导出了控制不稳定性的方程。
-雷诺-泰勒不稳定性在许多自然和工业场合中都有观测到，包括超新星爆炸、激光驱动的坍塌和海洋和大气流的混合。
-
-从数学上讲，雷诺-泰勒不稳定性可以使用流体运动的纳维 - 斯托克斯方程，连续方程和流体状态方程来描述。
-这些方程可以在线性近似下，围绕未扰动的界面进行描述，导致一个色散关系，决定不稳定性的增长率和波长。
-
-不稳定性的增长率取决于流体之间的密度差异、重力加速度和扰动的波长。当扰动的波长大于关键波长时，界面的表面张力会稳定不稳定性。
-当波长小于关键波长时，不稳定性会呈指数增长，导致形成手指状和气泡状。
-
-雷诺-泰勒不稳定性是流体动力学中一个重要的研究领域，涉及广泛的领域，包括天体物理学、等离子体物理学和工程学。
-理解和控制不稳定性对许多工业和科学应用至关重要，例如惯性约束聚变和燃烧发动机中的混合。
-
-by wikipediaaaa
-
-\section{论文2.2}
-Sweet-Parker重新连接是缓慢的，因为所有进入重新连接区域的流体都必须通过一个薄的、有电阻的通道流出。
-Petschek解释如果电阻层很短，大部分进入的流体不通过它流出，而是被静态激波重新定向，重新连接速度会更快。
-Petschek的理论被广泛引用来支持快速重新连接，最大重新连接速度是$vA（π/8 \ln S）$，通常是Alfvén velocity 的几个百分点，足以解释大多数天体物理现象。
-但是，通过数值MHD模拟尝试验证Petschek的理论表明，这种重新连接不会自行发展，除非磁扩散率η在X点附近增加。
-Petschek的模型的一个普遍特点是，与Sweet-Parker模型相比，大部分能量转化为流出的离子动能和热（如果存在激波），相对较少的能量进入电子的电阻加热中。
 
 
 
@@ -175,5 +167,7 @@ Petschek的模型的一个普遍特点是，与Sweet-Parker模型相比，大部
 
 
 \end{spacing}{}
+\bibliographystyle{IEEEtran}
+\bibliography{re1}
 
 \end{document}
