@@ -74,10 +74,26 @@ Sweet-Parker 模型是一種加速機制，在 X 線附近，粒子可以被平�
 Sweet-Parker模型是比较慢的，因为所有进入重新连接区域的流体都必须通过一个有电阻的通道流出。
 Petschek解释如果电阻层很短，大部分进入的流体不通过它流出，而是被静态激波重新定向，重新连接速度会更快。
 Petschek的理论被广泛引用来支持快速重新连接，最大重新连接速度是$vA（π/8 \ln S）$，通常是Alfvén velocity 的百分之几，足以解释大多数天体物理现象。
-但是，通过数值MHD模拟尝试验证Petschek的理论表明，这种重新连接不会自行发展，除非磁扩散率η在X点附近增加。
+但是，通过数值MHD模拟尝试验证Petschek的理论表明，这种重新连接不会自行发展，除非磁扩散率$\eta$在X点附近增加。
 Petschek的模型的一个普遍特点是，与Sweet-Parker模型相比，大部分能量转化为流出的离子动能和热（如果存在激波），相对较少的能量进入电子的电阻加热中。
 
 \subsection{Spontaneous Reconnection}
+Sweet-Parker模型和Petschek模型描述了稳态重联，但没有解释它发生的情况。Furth、Killeen和Rosenbluth（1963）引入了一个新概念，
+
+他们表明磁场可以对小扰动（称为tearing mode）不稳定，并重新连接磁力线。
+图3显示了tearing mode的示例。在图的平面方向上有一个强大而几乎均匀的场，
+称为引导场。因为平面内的By在$x = 0$处翻转，所以由于弯曲磁力线所导致的磁张力力通过零，并且电阻率与动力学竞争。不稳定性需要电流密度梯度，并
+且梯度长度尺度必须比扰动长度尺度k-1小得多。否则，磁张力将稳定该模式。发现最不稳定模式的增长时间大约为$\tau_AS^{3/5}$，相对于全局尺度的电阻层宽度大约为$S^{-2/5}$。
+这些依赖于S的特征与Sweet-Parker的比例尺类似，其中3/5和-2/5分别被1/2和-1/2所取代。
+Adler、Kulsrud和White（1980）分析了tearing mode的能量学。他们表明，tearing mode降低了磁能，并且驱动能源来自于撕裂层内不稳定的电流梯度。
+与Sweet-Parker重联一样，磁能转化为离子流动能量和电子热能量。
+随着撕裂的进行，图3中显示的磁岛变宽。一旦岛的宽度超过电阻层的宽度，非线性$J\times B$力就会变得显著。
+指数增长被线性增长所取代，其速率与$\eta$成正比（Rutherford 1973）。在这个非常缓慢的增长阶段，最初不稳定的电流分布变平。
+当电流分布达到临界稳定度时，该模式饱和。
+电阻不稳定性可以被驱动理想不稳定性所改变。电阻屈曲模式，就像理想屈曲一样，由不稳定的电流分布驱动，是一个例子。
+它的增长时间大约为$\tau_AS^{1/3}$，比tearing mode快，但在大多数天体物理系统中仍然很慢。就像tearing mode一样，当岛的宽度达到有限值时，
+它会从指数增长过渡到代数增长。但电阻屈曲不会饱和，而是形成一个电流层，从而实现快速重联（Waelbroeck，1989年）。
+这种两阶段过程是实现快速重联的一种方式，可以被认为是一种驱动重联的形式。
 \subsection{Collisionless Reconnection}
 
 
@@ -133,30 +149,34 @@ $\displaystyle \frac{\partial}{\partial t} (\frac{p}{\rho^\gamma}) + \nabla \cdo
 
 \section{磁化等離子體}
 磁化等離子體的低頻相對介電常數 $\varepsilon$ 由下式給出
-:$ \varepsilon = 1 + \frac{c^2\,\mu_0\,\rho}{B^2}$
+:$\displaystyle \varepsilon = 1 + \frac{c^2\,\mu_0\,\rho}{B^2}$
 其中B是磁場強度，$c$是光速，$\mu_0$是真空的Permeability磁導率，質量密度是總和
-:$ \rho = \sum_s n_s m_s ,$
+:$ \displaystyle\rho = \sum_s n_s m_s ,$
 所有種類的帶電等離子體粒子（電子以及所有類型的離子）。這裡物種的數量密度為 $n_s$和每個粒子的質量 $m_s$。
 
 電磁波在這種介質中的相速度為
-:$ v = \frac{c}{\sqrt{\varepsilon}} = \frac{c}{\sqrt{1 + \dfrac{c^2 \mu_0 \rho}{B^2}}}$
+:$\displaystyle v = \frac{c}{\sqrt{\varepsilon}} = \frac{c}{\sqrt{1 + \dfrac{c^2 \mu_0 \rho}{B^2}}}$
 對於Alfvén wave的情況
-:$ v = \frac{v_A}{\sqrt{1 + \dfrac{v_A^2}{c^2}}}$
+:$\displaystyle v = \frac{v_A}{\sqrt{1 + \dfrac{v_A^2}{c^2}}}$
 其中
-:$ v_A \equiv \frac{B}{\sqrt{\mu_0\,\rho}}$
+:$\displaystyle v_A \equiv \frac{B}{\sqrt{\mu_0\,\rho}}$
 是Alfvén wave群速度。
 （相速度的公式假設等離子體粒子以非相對論速度運動，
 參考系中的質量加權粒子速度為零，
 並且波平行於磁場矢量傳播。）
 
-如果 $v_A \ll c$，那麼 $v \approx v_A$。
-另一方面，當 $v_A \to \infty$ 時，$v \to c$。 即在高場或低密度下，阿爾芬波的群速度接近光速，阿爾芬波成為普通的電磁波。
+如果 $\displaystyle v_A \ll c$，那麼 $v \approx v_A$。
+另一方面，當 $\displaystyle v_A \to \infty$ 時，$v \to c$。 即在高場或低密度下，阿爾芬波的群速度接近光速，阿爾芬波成為普通的電磁波。
 
 忽略電子對質量密度的貢獻，
 $\rho = n_i\,m_i$,
 其中 $n_i$ 是離子數密度，$m_i$ 是每個粒子的平均離子質量，
 以便
-:$v_A \approx \left(2.18 \times 10^{11}\,\text{cm}\,\text{s}^{-1}\right) \left(\frac{m_i}{m_p}\right)^{-\frac{1}{2}} \left(\frac{n_i}{1~\text{cm}^{-3}}\right)^{-\frac{1}{2} } \left(\frac{B}{1~\text{G}}\right).$
+:$\displaystyle v_A \approx \left(2.18 \times 10^{11}\,\text{cm}\,\text{s}^{-1}\right) \left(\frac{m_i}{m_p}\right)^{-\frac{1}{2}} \left(\frac{n_i}{1~\text{cm}^{-3}}\right)^{-\frac{1}{2} } \left(\frac{B}{1~\text{G}}\right).$
+
+
+\section{}
+
 
 
 

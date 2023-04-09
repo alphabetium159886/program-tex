@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  7 APR 2023 23:50
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  9 APR 2023 23:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -594,18 +594,17 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 Missing character: There is no （ in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no π in font cmmi12!
 Missing character: There is no ） in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no η in font [lmroman12-regular]:mapping=tex-text;!
-[3] [4] [5] (trymode.bbl) [6] (trymode.aux)
+[3] [4] [5] [6] (trymode.bbl) [7] (trymode.aux)
 Package rerunfilecheck Info: File `trymode.out' has not changed.
-(rerunfilecheck)             Checksum: B019F05BF6EC70FFEF3D224CFAA7B4E7;1290.
+(rerunfilecheck)             Checksum: 9FDD8A2930A2E943AAFE42C80E6E0507;1326.
  ) 
 Here is how much of TeX's memory you used:
  16586 strings out of 410939
  339093 string characters out of 2830432
- 687684 words of memory out of 3000000
+ 687740 words of memory out of 3000000
  37135 multiletter control sequences out of 15000+600000
  478729 words of font info for 88 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,6n,97p,500b,528s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on trymode.xdv (6 pages, 55164 bytes).
+Output written on trymode.xdv (7 pages, 69076 bytes).
