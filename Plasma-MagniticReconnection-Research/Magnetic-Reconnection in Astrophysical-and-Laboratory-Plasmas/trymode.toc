@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}磁重聯简述}{2}{section.1}%
+\contentsline {section}{\numberline {2}磁重联的物理机制和基本模型}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Sweet-Parker模型}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Petschek模型}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Spontaneous Reconnection}{5}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Collisionless Reconnection}{6}{subsection.2.4}%
+\contentsline {section}{\numberline {3}磁重联在不同环境中的作用}{6}{section.3}%
+\contentsline {section}{\numberline {4}磁流体力学方程组}{6}{section.4}%
+\contentsline {section}{\numberline {5}MHD equation}{6}{section.5}%
+\contentsline {section}{\numberline {6}磁化等離子體}{7}{section.6}%
