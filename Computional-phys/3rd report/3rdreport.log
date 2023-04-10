@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  10 APR 2023 12:31
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  10 APR 2023 13:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -614,7 +614,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
  (C:\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2]
+) [2] [3]
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
 (fontspec)             doesn't exist).
@@ -638,23 +638,23 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
- [3] [4] [5]
+ [4] [5] [6] [7]
 File: frame_1.png Graphic file (type bmp)
 <frame_1.png>
- [6] [7] [8]
+ [8] [9] [10]
 File: t=1.jpg Graphic file (type bmp)
 <t=1.jpg>
- [9] [10] [11] (3rdreport.aux)
+ [11] [12] [13] (3rdreport.aux)
 Package rerunfilecheck Info: File `3rdreport.out' has not changed.
 (rerunfilecheck)             Checksum: 4FFE24A1AB9146C2805C799DD1223EBA;378.
  ) 
 Here is how much of TeX's memory you used:
  17609 strings out of 410939
  361667 string characters out of 2830432
- 925591 words of memory out of 3000000
+ 935591 words of memory out of 3000000
  38141 multiletter control sequences out of 15000+600000
  478761 words of font info for 92 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,6n,97p,461b,1950s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on 3rdreport.xdv (11 pages, 156028 bytes).
+Output written on 3rdreport.xdv (13 pages, 167880 bytes).

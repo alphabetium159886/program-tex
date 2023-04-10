@@ -1,5 +1,5 @@
 \contentsline {section}{\numberline {1}问题}{2}{section.1}%
 \contentsline {section}{\numberline {2}ADI方法}{2}{section.2}%
-\contentsline {section}{\numberline {3}代码部分}{3}{section.3}%
-\contentsline {section}{\numberline {4}t=1s时的温度分布}{7}{section.4}%
-\contentsline {section}{\numberline {5}特别}{9}{section.5}%
+\contentsline {section}{\numberline {3}代码部分}{4}{section.3}%
+\contentsline {section}{\numberline {4}t=1s时的温度分布}{9}{section.4}%
+\contentsline {section}{\numberline {5}特别}{11}{section.5}%

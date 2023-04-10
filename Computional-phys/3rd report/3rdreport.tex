@@ -59,13 +59,89 @@ matlab用ADI方法求温度分布随时间的变化画出3D图形
 即将二维热传导方程分解为两个一维问题。在每个方向上，可以使用隐式方法进行时间步进，并使用三对角矩阵算法来解决空间离散化问题。每次迭代后，将得到一个新的温度场U(i,j)。
 根据所得到的温度场，计算需要的热量分布、温度梯度等。
 这里求解三对角矩阵是用的高斯消元法，简单来说就构造增广矩阵进行行变换后将线性方程组转化为一个上三角矩阵，进而通过回带求解得到方程组的解。
+以下是推导过程：\\
+考虑二维热传导方程：
 
-1.在x方向走半个时间步\\
-$\displaystyle \frac{T_{i,j}^{k+1/2}-T_{i,j}^{k}}{\Delta t/2}=\kappa\left(\frac{T_{i+1,j}^{k+1/2}-2T_{i,j}^{k+1/2}+T_{i-1,j}^{k+1/2}}{\left(\Delta x\right)^{2}}+\frac{T_{i,j+1}^{k}-2T_{i,j}^{k}+T_{i,j-1}^{k}}{\left(\Delta y\right)^{2}}\right)$\\
-2.在y方向走半个时间步\\
-$\displaystyle \frac{T_{i,j}^{k+1}-T_{i,j}^{k+1/2}}{\Delta t/2}=\kappa\left(\frac{T_{i+1,j}^{k+1/2}-2T_{i,j}^{k+1/2}+T_{i-1,j}^{k+1/2}}{\left(\Delta x\right)^{2}}+\frac{T_{i,j+1}^{k+1}-2T_{i,j}^{k+1}+T_{i,j}^{k+1}}{\left(\Delta y\right)^{2}}\right)$\\
+\begin{center}
+    $\displaystyle \frac{\partial u}{\partial t} = k\left(\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2}\right)$
+\end{center}
+
+其中，$u$ 是温度，$t$ 是时间，$k$ 是热传导系数，$x$ 和 $y$ 是空间坐标。
+
+ADI 方法求解方程，需要将其分解为两个一维问题，一个在 $x$ 方向，一个在 $y$ 方向。具体地，我们可以将时间步长 $\Delta t$ 分成两个部分，
+即 $\Delta t/2$，然后在 $x$ 方向应用隐式 Euler 方法，得到一个中间温度场 $u^{n+1/2}_{i,j}$，然后在 $y$ 方向应用隐式 Euler 方法，
+得到下一个时间步长的温度场 $u^{n+1}_{i,j}$。
+
+1.在 $x$ 方向上，将 $u^{n}_{i,j}$ 的值用 $u^{n+1/2}_{i,j}$ 表示，即
+\begin{center}
+    $\displaystyle u^{n}_{i,j} \approx u^{n+1/2}_{i,j}$
+\end{center}
+
+2.将 (2) 代入二维热传导方程中，得到
+\begin{center}
+    $\displaystyle \frac{\partial u^{n+1/2}_{i,j}}{\partial t} = k\left(\frac{\partial^2 u^{n+1/2}_{i,j}}{\partial x^2} + \frac{\partial^2 u^{n}_{i,j}}{\partial y^2}\right)$
+\end{center}
+
+3.在 $x$ 方向上，应用隐式 Euler 方法，得到
+\begin{center}
+    $\displaystyle u^{n+1/2}_{i,j} - u^{n}_{i,j} = \frac{\Delta t}{2} k\frac{\partial^2 u^{n+1/2}_{i,j}}{\partial x^2}$
+\end{center}
+
+4.在 $y$ 方向上，将 $u^{n+1/2}_{i,j}$ 的值用 $u^{n+1/2}_{i,j+1}$ 表示，即
+\begin{center}
+    $\displaystyle u^{n+1/2}_{i,j} \approx u^{n+1/2}_{i,j+1}$
+\end{center}
+
+5.将 (4) 代入 (2) 中，得到
+\begin{center}
+    $\displaystyle \frac{\partial u^{n+1/2}_{i,j+1}}{\partial t} = k\left(\frac{\partial^2 u^{n+1/2}_{i,j}}{\partial x^2} + \frac{\partial^2 u^{n+1/2}_{i,j+1}}{\partial y^2}\right)$
+\end{center}
+6.在 $y$ 方向上，应用隐式 Euler 方法，得到
+\begin{center}
+    $\displaystyle u^{n+1}_{i,j} - u^{n+1/2}_{i,j+1} = \frac{\Delta t}{2} k\frac{\partial^2 u^{n+1/2}_{i,j+1}}{\partial y^2}$
+\end{center}
+
+7.将 (3) 和 (6) 相加，得到
+\begin{center}
+    $\displaystyle u^{n+1}_{i,j} - u^{n}_{i,j} = \frac{\Delta t}{2} k\left(\frac{\partial^2 u^{n+1/2}_{i,j}}{\partial x^2} + \frac{\partial^2 u^{n+1/2}_{i,j+1}}{\partial y^2}\right)$
+\end{center}
+
+8.将 $u^{n+1/2}_{i,j}$ 和 $u^{n+1/2}_{i,j+1}$ 的值用 $u^{n+1}_{i,j+1/2}$ 表示，即
+\begin{center}
+    $\displaystyle u^{n+1/2}_{i,j} \approx u^{n+1}_{i,j+1/2}$
+\end{center}
+
+\begin{center}
+    $\displaystyle u^{n+1/2}_{i,j+1} \approx u^{n+1}_{i,j+1/2}$
+\end{center}
+
+9.将 (8) 代入 (7) 中，得到
+\begin{center}
+    $\displaystyle u^{n+1}_{i,j} - u^{n}_{i,j} = \frac{\Delta t}{2} k\left(\frac{\partial^2 u^{n+1}_{i,j+1/2}}{\partial x^2} + \frac{\partial^2 u^{n+1}_{i,j+1/2}}{\partial y^2}\right)$
+\end{center}
+
+10.最终得到 ADI 方法的迭代公式：
+\begin{center}
+    $\displaystyle u^{n+1}_{i,j} = u^{n}_{i,j} + \frac{\Delta t}{2} k\left(\frac{u^{n+1}_{i+1,j} - 2u^{n+1}_{i,j} + u^{n+1}_{i-1,j}}{\Delta x^2} + \frac{u^{n+1}_{i,j+1} - 2u^{n+1}_{i,j} + u^{n+1}_{i,j-1}}{\Delta y^2}\right)$
+\end{center}
+
+其中，$u^{n+1}_{i,j}$ 表示下一个时间步长的温度场，$u^{n}_{i,j}$ 表示当前时间步长的温度场，$\Delta x$ 和 $\Delta y$ 分别是 $x$ 和 $y$ 方向的网格间距。该公式是一个中心差分格式，可以用于数值计算二维平面传热问题。
+
+
+
+1.在x方向走半个时间步
+\begin{center}
+    $\displaystyle \frac{u_{i,j}^{k+1/2}-u_{i,j}^{k}}{\Delta t/2}=\kappa\left(\frac{u_{i+1,j}^{k+1/2}-2u_{i,j}^{k+1/2}+u_{i-1,j}^{k+1/2}}{\left(\Delta x\right)^{2}}+\frac{u_{i,j+1}^{k}-2u_{i,j}^{k}+u_{i,j-1}^{k}}{\left(\Delta y\right)^{2}}\right)$
+\end{center}
+2.在y方向走半个时间步
+\begin{center}
+    $\displaystyle \frac{u_{i,j}^{k+1}-u_{i,j}^{k+1/2}}{\Delta t/2}=\kappa\left(\frac{u_{i+1,j}^{k+1/2}-2u_{i,j}^{k+1/2}+u_{i-1,j}^{k+1/2}}{\left(\Delta x\right)^{2}}+\frac{u_{i,j+1}^{k+1}-2u_{i,j}^{k+1}+u_{i,j}^{k+1}}{\left(\Delta y\right)^{2}}\right)$
+\end{center}
 取$\displaystyle \Delta x=\Delta y,r=\frac{\kappa\Delta t}{\left(\Delta x\right)^{2}}$则方程变为：\\
-$\displaystyle -rT_{i-1}^{k+1/2}+2(1+r)T_{i,j}^{k+1/2}-rT_{i+1}^{k+1/2}=rT_{i,j-1}^{k}+2(1-r)T_{i,j}^{k}+rT_{j+1}^{k}\\ -rT_{i,j-1}^{k+1}+2(1+r)T_{i,j}^{k+1}-rT_{i,j+1}^{k+1}=rT_{i-1}^{k+1/2}+2(1-r)T_{i,j}^{k+1/2}+rT_{i+1}^{k+1/2}$
+$\displaystyle -ru_{i-1}^{k+1/2}+2(1+r)u_{i,j}^{k+1/2}-ru_{i+1}^{k+1/2}=ru_{i,j-1}^{k}+2(1-r)u_{i,j}^{k}+ru_{j+1}^{k}\\ -ru_{i,j-1}^{k+1}+2(1+r)u_{i,j}^{k+1}-ru_{i,j+1}^{k+1}=ru_{i-1}^{k+1/2}+2(1-r)u_{i,j}^{k+1/2}+ru_{i+1}^{k+1/2}$
+
+
+
 \section{代码部分}
 
 \begin{lstlisting}
