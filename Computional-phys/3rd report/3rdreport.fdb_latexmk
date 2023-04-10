@@ -1,13 +1,13 @@
 # Fdb version 3
-["xdvipdfmx"] 1681048447 "3rdreport.xdv" "3rdreport.pdf" "3rdreport" 1681048448
-  "3rdreport.xdv" 1681048446 153292 7b1cc160adef88cee09e1add5459775b "xelatex"
+["xdvipdfmx"] 1681101110 "3rdreport.xdv" "3rdreport.pdf" "3rdreport" 1681101111
+  "3rdreport.xdv" 1681101110 156028 f17cb3325e94c9fbe56416b81ac98d04 "xelatex"
   (generated)
   "3rdreport.pdf"
-["xelatex"] 1681048444 "c:/Users/toby1/OneDrive/program-tex/Computional-phys/3rd report/3rdreport.tex" "3rdreport.xdv" "3rdreport" 1681048448
-  "3rdreport.aux" 1681048446 1427 5007f3a7fe3383d56b5952fab4a5d1e3 "xelatex"
-  "3rdreport.out" 1681048446 378 4ffe24a1ab9146c2805c799dd1223eba "xelatex"
-  "3rdreport.tex" 1681048443 8395 ee0fbdd11d76f006f42a59f0e1dc8629 ""
-  "3rdreport.toc" 1681048446 335 75e4605643b7cea4d8c6cfca1cd7951c "xelatex"
+["xelatex"] 1681101108 "c:/Users/toby1/OneDrive/program-tex/Computional-phys/3rd report/3rdreport.tex" "3rdreport.xdv" "3rdreport" 1681101111
+  "3rdreport.aux" 1681101110 1427 84ac7c3ca9583791d9eff5f63782a228 "xelatex"
+  "3rdreport.out" 1681101110 378 4ffe24a1ab9146c2805c799dd1223eba "xelatex"
+  "3rdreport.tex" 1681101107 9321 c9d3359f18ea46c9553a198a5efa9c32 ""
+  "3rdreport.toc" 1681101110 335 75e4605643b7cea4d8c6cfca1cd7951c "xelatex"
   "C:/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136743454 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -117,7 +117,7 @@
   "C:/MiKTeX/tex/xelatex/xecjk/xeCJKfntef.sty" 1639329764 39112 d2c64c2924adb909ead58a883c2e3793 ""
   "C:/Users/toby1/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1680610784 23660638 dfd036573583e4a9d53cad7d24912597 ""
   "C:/WINDOWS/Fonts/msyh.ttc" 1575709707 19647736 ff2e53a6131130a07589812ea5b5b0d0 ""
-  "c:/Users/toby1/OneDrive/program-tex/Computional-phys/3rd report/3rdreport.tex" 1681048443 8395 ee0fbdd11d76f006f42a59f0e1dc8629 ""
+  "c:/Users/toby1/OneDrive/program-tex/Computional-phys/3rd report/3rdreport.tex" 1681101107 9321 c9d3359f18ea46c9553a198a5efa9c32 ""
   "frame_1.png" 1681033350 127557 abb05840493c18aa4343c9caf1191b30 ""
   "t=1.jpg" 1681035306 45875 c55ee8d58dad7624d54e33f18cf7cc51 ""
   (generated)

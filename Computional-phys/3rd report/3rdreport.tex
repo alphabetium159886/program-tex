@@ -45,7 +45,7 @@
 
 \section{问题}
 求以下PDE的数值解：
-$\frac{\partial T}{\partial t} = \kappa (\frac{\partial^2 T}{\partial x^2} + \frac{\partial^2 T}{\partial y^2})$
+$\displaystyle \frac{\partial T}{\partial t} = \kappa (\frac{\partial^2 T}{\partial x^2} + \frac{\partial^2 T}{\partial y^2})$
 其中初始条件区域内的温度为$0^{\circ}C$
 板子长宽皆为$25cm$
 边界条件上下左右四边分别有恒定温度：$100^{\circ}C, 0^{\circ}C, 75^{\circ}C, 50^{\circ}C$
@@ -59,6 +59,13 @@ matlab用ADI方法求温度分布随时间的变化画出3D图形
 即将二维热传导方程分解为两个一维问题。在每个方向上，可以使用隐式方法进行时间步进，并使用三对角矩阵算法来解决空间离散化问题。每次迭代后，将得到一个新的温度场U(i,j)。
 根据所得到的温度场，计算需要的热量分布、温度梯度等。
 这里求解三对角矩阵是用的高斯消元法，简单来说就构造增广矩阵进行行变换后将线性方程组转化为一个上三角矩阵，进而通过回带求解得到方程组的解。
+
+1.在x方向走半个时间步\\
+$\displaystyle \frac{T_{i,j}^{k+1/2}-T_{i,j}^{k}}{\Delta t/2}=\kappa\left(\frac{T_{i+1,j}^{k+1/2}-2T_{i,j}^{k+1/2}+T_{i-1,j}^{k+1/2}}{\left(\Delta x\right)^{2}}+\frac{T_{i,j+1}^{k}-2T_{i,j}^{k}+T_{i,j-1}^{k}}{\left(\Delta y\right)^{2}}\right)$\\
+2.在y方向走半个时间步\\
+$\displaystyle \frac{T_{i,j}^{k+1}-T_{i,j}^{k+1/2}}{\Delta t/2}=\kappa\left(\frac{T_{i+1,j}^{k+1/2}-2T_{i,j}^{k+1/2}+T_{i-1,j}^{k+1/2}}{\left(\Delta x\right)^{2}}+\frac{T_{i,j+1}^{k+1}-2T_{i,j}^{k+1}+T_{i,j}^{k+1}}{\left(\Delta y\right)^{2}}\right)$\\
+取$\displaystyle \Delta x=\Delta y,r=\frac{\kappa\Delta t}{\left(\Delta x\right)^{2}}$则方程变为：\\
+$\displaystyle -rT_{i-1}^{k+1/2}+2(1+r)T_{i,j}^{k+1/2}-rT_{i+1}^{k+1/2}=rT_{i,j-1}^{k}+2(1-r)T_{i,j}^{k}+rT_{j+1}^{k}\\ -rT_{i,j-1}^{k+1}+2(1+r)T_{i,j}^{k+1}-rT_{i,j+1}^{k+1}=rT_{i-1}^{k+1/2}+2(1-r)T_{i,j}^{k+1/2}+rT_{i+1}^{k+1/2}$
 \section{代码部分}
 
 \begin{lstlisting}
