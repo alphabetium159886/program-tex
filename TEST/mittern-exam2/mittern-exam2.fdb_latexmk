@@ -1,10 +1,12 @@
 # Fdb version 3
-["xdvipdfmx"] 1681136636 "mittern-exam2.xdv" "mittern-exam2.pdf" "mittern-exam2" 1681136637
-  "mittern-exam2.xdv" 1681136636 125832 506439811cd6d258e996d3ca4db79a42 "xelatex"
+["xdvipdfmx"] 1681365851 "mittern-exam2.xdv" "mittern-exam2.pdf" "mittern-exam2" 1681365852
+  "mittern-exam2.xdv" 1681365851 184680 69b0eeb3a1e54fcbc5323ef03f9d72fd "xelatex"
   (generated)
   "mittern-exam2.pdf"
-["xelatex"] 1681136634 "c:/Users/toby1/OneDrive/program-tex/TEST/mittern-exam2/mittern-exam2.tex" "mittern-exam2.xdv" "mittern-exam2" 1681136637
+["xelatex"] 1681365849 "c:/Users/toby1/OneDrive/program-tex/TEST/mittern-exam2/mittern-exam2.tex" "mittern-exam2.xdv" "mittern-exam2" 1681365852
   "A.jpg" 1681136448 116554 332eb5f6c213edf007cd2b9f6563b7d7 ""
+  "B.jpg" 1681365493 92595 93f2b3ef240f595aca8d7fd9762224ae ""
+  "C.jpg" 1681365543 109004 0104d61575c48d53080b0cf5af94c713 ""
   "C:/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136743454 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -114,11 +116,11 @@
   "C:/MiKTeX/tex/xelatex/xecjk/xeCJKfntef.sty" 1639329764 39112 d2c64c2924adb909ead58a883c2e3793 ""
   "C:/Users/toby1/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1680610784 23660638 dfd036573583e4a9d53cad7d24912597 ""
   "C:/WINDOWS/Fonts/msyh.ttc" 1575709707 19647736 ff2e53a6131130a07589812ea5b5b0d0 ""
-  "c:/Users/toby1/OneDrive/program-tex/TEST/mittern-exam2/mittern-exam2.tex" 1681136631 19661 c73cbdb910cb425c150aea5c66ada573 ""
-  "mittern-exam2.aux" 1681136636 3301 5658cceb289fda1170e1acf728e7b8a6 "xelatex"
-  "mittern-exam2.out" 1681136636 2602 94506db0e67c2a32ad88daf4e485ae09 "xelatex"
-  "mittern-exam2.tex" 1681136631 19661 c73cbdb910cb425c150aea5c66ada573 ""
-  "mittern-exam2.toc" 1681136636 1751 95d0a65297e3747828579b4bd32dfce8 "xelatex"
+  "c:/Users/toby1/OneDrive/program-tex/TEST/mittern-exam2/mittern-exam2.tex" 1681365845 28394 3b371e275fbfd89d6b4e1798361436a3 ""
+  "mittern-exam2.aux" 1681365851 5087 975ccd90b41aaa84785d80860e9e286f "xelatex"
+  "mittern-exam2.out" 1681365851 4350 716f2d09e51f72c1812f4a5076168130 "xelatex"
+  "mittern-exam2.tex" 1681365845 28394 3b371e275fbfd89d6b4e1798361436a3 ""
+  "mittern-exam2.toc" 1681365851 2850 bb8053a9bb0d49516eaf137ad25c48ae "xelatex"
   (generated)
   "mittern-exam2.aux"
   "mittern-exam2.log"

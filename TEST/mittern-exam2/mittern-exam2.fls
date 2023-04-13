@@ -874,6 +874,12 @@ INPUT C:\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT .\A.jpg
 INPUT .\A.jpg
 INPUT A.jpg
+INPUT .\B.jpg
+INPUT .\B.jpg
+INPUT B.jpg
+INPUT .\C.jpg
+INPUT .\C.jpg
+INPUT C.jpg
 INPUT mittern-exam2.aux
 INPUT .\mittern-exam2.out
 INPUT .\mittern-exam2.out
