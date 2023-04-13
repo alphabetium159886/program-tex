@@ -820,6 +820,7 @@ INPUT C:\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+OUTPUT chatGPTQandA.xdv
 INPUT C:\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
 INPUT C:\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
 INPUT C:\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
@@ -838,7 +839,6 @@ INPUT C:\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
-OUTPUT chatGPTQandA.xdv
 INPUT chatGPTQandA.aux
 INPUT .\chatGPTQandA.out
 INPUT .\chatGPTQandA.out

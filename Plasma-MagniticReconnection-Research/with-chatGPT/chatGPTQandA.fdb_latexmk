@@ -1,9 +1,9 @@
 # Fdb version 3
-["xdvipdfmx"] 1680881549 "chatGPTQandA.xdv" "chatGPTQandA.pdf" "chatGPTQandA" 1680881549
-  "chatGPTQandA.xdv" 1680881549 57316 cc1961f7cbc4d784ba58fa29ee6fba82 "xelatex"
+["xdvipdfmx"] 1681386229 "chatGPTQandA.xdv" "chatGPTQandA.pdf" "chatGPTQandA" 1681386230
+  "chatGPTQandA.xdv" 1681386229 171996 f439fd5d5a874ed6e4d002defa207ad6 "xelatex"
   (generated)
   "chatGPTQandA.pdf"
-["xelatex"] 1680881547 "c:/Users/toby1/OneDrive/program-tex/Plasma-MagniticReconnection-Research/with-chatGPT/chatGPTQandA.tex" "chatGPTQandA.xdv" "chatGPTQandA" 1680881549
+["xelatex"] 1681386227 "c:/Users/toby1/OneDrive/program-tex/Plasma-MagniticReconnection-Research/with-chatGPT/chatGPTQandA.tex" "chatGPTQandA.xdv" "chatGPTQandA" 1681386230
   "C:/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136743454 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -110,10 +110,10 @@
   "C:/MiKTeX/tex/xelatex/xecjk/xeCJKfntef.sty" 1639329764 39112 d2c64c2924adb909ead58a883c2e3793 ""
   "C:/Users/toby1/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1680610784 23660638 dfd036573583e4a9d53cad7d24912597 ""
   "C:/WINDOWS/Fonts/msyh.ttc" 1575709707 19647736 ff2e53a6131130a07589812ea5b5b0d0 ""
-  "c:/Users/toby1/OneDrive/program-tex/Plasma-MagniticReconnection-Research/with-chatGPT/chatGPTQandA.tex" 1680881544 11084 bb4264fb356d915042b05fb79e9467f7 ""
-  "chatGPTQandA.aux" 1680881549 1454 da740e818e5a3369b5c9f0a450013010 "xelatex"
-  "chatGPTQandA.out" 1680881549 778 65737570e9472af6edfd3023b4e769e9 "xelatex"
-  "chatGPTQandA.tex" 1680881544 11084 bb4264fb356d915042b05fb79e9467f7 ""
+  "c:/Users/toby1/OneDrive/program-tex/Plasma-MagniticReconnection-Research/with-chatGPT/chatGPTQandA.tex" 1681386223 28472 41407d19e45e72a7be56bda03a01d1a4 ""
+  "chatGPTQandA.aux" 1681386229 4225 ef0afacdbed3c91b18e907df2a05f1ac "xelatex"
+  "chatGPTQandA.out" 1681386229 4414 23f48f7e2cd82535e3f391fe4df760fa "xelatex"
+  "chatGPTQandA.tex" 1681386223 28472 41407d19e45e72a7be56bda03a01d1a4 ""
   (generated)
   "chatGPTQandA.aux"
   "chatGPTQandA.log"
