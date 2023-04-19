@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex trymode"] 1681910107 "trymode.aux" "trymode.bbl" "trymode" 1681910138
+["bibtex trymode"] 1681917728 "trymode.aux" "trymode.bbl" "trymode" 1681917732
   "C:/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
   "re1.bib" 1680882580 297 55503ebad444fd93c10a6ed3c6db5cfc ""
-  "trymode.aux" 1681910137 2396 fd7162b3960a71a6e00c0cef0df53593 "xelatex"
+  "trymode.aux" 1681917731 3132 8605428c6f8b2f14e1b05445a0beff3c "xelatex"
   (generated)
   "trymode.bbl"
   "trymode.blg"
-["xdvipdfmx"] 1681910138 "trymode.xdv" "trymode.pdf" "trymode" 1681910138
-  "trymode.xdv" 1681910137 139124 c7519ec49e4e589d33201e99c32c9147 "xelatex"
+["xdvipdfmx"] 1681917731 "trymode.xdv" "trymode.pdf" "trymode" 1681917732
+  "trymode.xdv" 1681917731 218424 525b80a2a0be3f8164bcdd55d830bb76 "xelatex"
   (generated)
   "trymode.pdf"
-["xelatex"] 1681910135 "c:/Users/toby1/OneDrive/program-tex/Plasma-MagniticReconnection-Research/Magnetic-Reconnection in Astrophysical-and-Laboratory-Plasmas/trymode.tex" "trymode.xdv" "trymode" 1681910138
+["xelatex"] 1681917728 "c:/Users/toby1/OneDrive/program-tex/Plasma-MagniticReconnection-Research/Magnetic-Reconnection in Astrophysical-and-Laboratory-Plasmas/trymode.tex" "trymode.xdv" "trymode" 1681917732
   "C:/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136743454 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -118,12 +118,12 @@
   "C:/MiKTeX/tex/xelatex/xecjk/xeCJKfntef.sty" 1639329764 39112 d2c64c2924adb909ead58a883c2e3793 ""
   "C:/Users/toby1/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1680610784 23660638 dfd036573583e4a9d53cad7d24912597 ""
   "C:/WINDOWS/Fonts/msyh.ttc" 1575709707 19647736 ff2e53a6131130a07589812ea5b5b0d0 ""
-  "c:/Users/toby1/OneDrive/program-tex/Plasma-MagniticReconnection-Research/Magnetic-Reconnection in Astrophysical-and-Laboratory-Plasmas/trymode.tex" 1681910134 22271 c94c290816ef073c9c1d4aabb72a5f88 ""
-  "trymode.aux" 1681910137 2396 fd7162b3960a71a6e00c0cef0df53593 "xelatex"
-  "trymode.bbl" 1681910107 1119 b47d2ce39f7842d8a8afc5db26e9c405 "bibtex trymode"
-  "trymode.out" 1681910137 1868 b6282379d328ff007ca824f62e486cd6 "xelatex"
-  "trymode.tex" 1681910134 22271 c94c290816ef073c9c1d4aabb72a5f88 ""
-  "trymode.toc" 1681910137 1112 e8b989e28d58b7de2d09dc3b5683d91c "xelatex"
+  "c:/Users/toby1/OneDrive/program-tex/Plasma-MagniticReconnection-Research/Magnetic-Reconnection in Astrophysical-and-Laboratory-Plasmas/trymode.tex" 1681917724 33811 eab3d09fbd9e1fd6df5a827585f9cf2b ""
+  "trymode.aux" 1681917731 3132 8605428c6f8b2f14e1b05445a0beff3c "xelatex"
+  "trymode.bbl" 1681917728 1119 b47d2ce39f7842d8a8afc5db26e9c405 "bibtex trymode"
+  "trymode.out" 1681917731 3096 64fcae68a9b248d7fe3825f2bc117bc7 "xelatex"
+  "trymode.tex" 1681917724 33811 eab3d09fbd9e1fd6df5a827585f9cf2b ""
+  "trymode.toc" 1681917731 1643 6b7984063defe9b8173e007443a29c85 "xelatex"
   (generated)
   "trymode.aux"
   "trymode.log"
