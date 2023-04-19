@@ -4,7 +4,10 @@
 \contentsline {subsection}{\numberline {2.2}Petschek模型}{4}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Spontaneous Reconnection}{5}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Collisionless Reconnection}{6}{subsection.2.4}%
-\contentsline {section}{\numberline {3}磁重联在不同环境中的作用}{6}{section.3}%
-\contentsline {section}{\numberline {4}磁流体力学方程组}{6}{section.4}%
-\contentsline {section}{\numberline {5}MHD equation}{6}{section.5}%
-\contentsline {section}{\numberline {6}磁化等離子體}{7}{section.6}%
+\contentsline {subsection}{\numberline {2.5}Instabilities and Time-Dependent Effects}{7}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Anomalous resistivity}{7}{subsubsection.2.5.1}%
+\contentsline {section}{\numberline {3}Summary}{7}{section.3}%
+\contentsline {section}{\numberline {4}关于磁重联的理论和模拟研究(重要！！)}{9}{section.4}%
+\contentsline {section}{\numberline {5}磁流体力学方程组}{10}{section.5}%
+\contentsline {section}{\numberline {6}MHD equation}{10}{section.6}%
+\contentsline {section}{\numberline {7}磁化等離子體}{11}{section.7}%
