@@ -1,0 +1,93 @@
+\documentclass[12pt, a4paper, oneside]{ctexart}
+\usepackage{amsmath, amsthm, amssymb, graphicx}
+\usepackage[bookmarks=true, colorlinks, citecolor=blue, linkcolor=black]{hyperref}
+\usepackage[margin = 25mm]{geometry}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{ctex}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+\title{一维有限元方法求解常微分方程边值问题}
+\date{\today}
+\author{202011010101物理2001孙陶庵}
+\begin{document}
+\begin{spacing}{2.0}
+\tableofcontents
+\maketitle
+
+\section{问题}
+使用一维有限元方法求解下列常微分方程边值问题：
+$\displaystyle \left\{\begin{matrix}y''-y+x=0,\quad x\in\left[1,2\right]\\ y\left(1\right)=1,y\left(2\right)=3\end{matrix}\right.$
+
+\section{方法推导}
+1.离散化区间[1,2]，选择有限元网格。可以选择等距节点网格，即将[1,2]等分为n个子区间，每个子区间内选择一个节点。这里选择n=4，即将[1,2]等分为4个子区间，
+每个子区间内选择一个节点，得到节点序列[1, 1.333, 1.667, 2]。
+\\
+2.根据所选有限元网格，建立有限元函数空间。由于是一维问题，可以采用线性元，即每个子区间内用一次多项式近似解。
+定义有限元函数空间为$\displaystyle V_h={v_h|v_h(x)=\sum_{j=1}^{n}c_j\varphi_j(x),c_j\in R}$，其中$\varphi_j(x)$为基函数，可以选择线性插值函数。
+则有
+$\varphi_1(x)=\begin{cases}
+    1-\frac{x-x_2}{x_1-x_2}, & x\in[x_1,x_2]\\ % 注意每个分段函数的结尾都应该有一个 \
+    0, & \text{otherwise}
+\end{cases}$
+
+$\varphi_2(x)=\begin{cases}
+    \frac{x-x_1}{x_2-x_1}, & x\in[x_1,x_2]\\
+    \frac{x_3-x}{x_3-x_2}, & x\in[x_2,x_3]\\
+    0, & \text{otherwise}
+\end{cases}$
+
+$\varphi_3(x)=\begin{cases}
+    \frac{x-x_2}{x_3-x_2}, & x\in[x_2,x_3]\\
+    \frac{x_4-x}{x_4-x_3}, & x\in[x_3,x_4]\\
+    0, & \text{otherwise}
+\end{cases}$
+
+$\varphi_4(x)=\begin{cases}
+    \frac{x-x_3}{x_4-x_3}, & x\in[x_3,x_4]\\
+    0, & \text{otherwise}
+\end{cases}$
+\\
+3.将原方程转化为弱形式。对于任意$v_h\in V_h$，将原方程两边乘$v_h$，并在区间[1,2]上积分，得到$\int_1^2(y''-y+x)v_hdx=0$。由于$v_h$是连续线性函数，
+可以将积分区间[1,2]上的积分转化为每个子区间内的积分，即$\displaystyle\sum_{k=1}^{3}\int_{x_k}^{x_{k+1}}(y''-y+x)v_hdx=0$。
+\\
+4.对于每个子区间[k,k+1]，将$y(x)$和$v_h(x)$在该区间内分别用基函数展开，即$\displaystyle y(x)=\sum_{j=1}^{2}y_j\varphi_j(x)$，$ \displaystyle v_h(x)=\sum_{j=1}^{2}v_j\varphi_j(x)$。
+将$y(x)$和$v_h(x)$在每个子区间[k,k+1]内分别用基函数展开，即用基函数$\varphi_j(x)$的线性组合来近似表示$y(x)$和$v_h(x)$。其中，$y_j$和$v_j$是在
+子区间[k,k+1]内的系数，需要确定。因此，在每个子区间上，有$\displaystyle y(x)=\sum_{j=1}^{2}y_j\varphi_j(x)$和$\displaystyle v_h(x)=\sum_{j=1}^{2}v_j\varphi_j(x)$的展开形式。
+这里选择的是线性元，所以每个子区间内用一次多项式近似解，即选择两个节点作为基函数的控制点，也就是基函数在这两个点处取值为1和0，其余点处线性插值。
+
+\section{问题}
+
+
+
+\end{spacing}{}
+
+\end{document}
