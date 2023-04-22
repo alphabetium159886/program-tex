@@ -46,7 +46,15 @@
 \section{问题}
 使用一维有限元方法求解下列常微分方程边值问题：
 $\displaystyle \left\{\begin{matrix}y''-y+x=0,\quad x\in\left[1,2\right]\\ y\left(1\right)=1,y\left(2\right)=3\end{matrix}\right.$
-
+1.方法推导\\
+2.分析对于一般边界条件，函数的近似方式有什么样的变化\\
+3.分析需要求解的线性方程组发生了什么变化\\
+4.对比有限元函数系与多项式函数系在不同n下的求解速度\\
+\subsection{求解方程}
+首先求解方程，利用sympy求解方程得到
+\begin{center}
+    $\displaystyle f{\left(x \right)} = x + \frac{e^{x}}{-1 + e^{2}} - \frac{e^{2} e^{- x}}{-1 + e^{2}}$
+\end{center}
 \section{方法推导}
 1.离散化区间[1,2]，选择有限元网格。可以选择等距节点网格，即将[1,2]等分为n个子区间，每个子区间内选择一个节点。这里选择n=4，即将[1,2]等分为4个子区间，
 每个子区间内选择一个节点，得到节点序列[1, 1.333, 1.667, 2]。
@@ -55,7 +63,7 @@ $\displaystyle \left\{\begin{matrix}y''-y+x=0,\quad x\in\left[1,2\right]\\ y\lef
 定义有限元函数空间为$\displaystyle V_h={v_h|v_h(x)=\sum_{j=1}^{n}c_j\varphi_j(x),c_j\in R}$，其中$\varphi_j(x)$为基函数，可以选择线性插值函数。
 则有
 $\varphi_1(x)=\begin{cases}
-    1-\frac{x-x_2}{x_1-x_2}, & x\in[x_1,x_2]\\ % 注意每个分段函数的结尾都应该有一个 \
+    1-\frac{x-x_2}{x_1-x_2}, & x\in[x_1,x_2]\\
     0, & \text{otherwise}
 \end{cases}$
 
@@ -84,7 +92,135 @@ $\varphi_4(x)=\begin{cases}
 子区间[k,k+1]内的系数，需要确定。因此，在每个子区间上，有$\displaystyle y(x)=\sum_{j=1}^{2}y_j\varphi_j(x)$和$\displaystyle v_h(x)=\sum_{j=1}^{2}v_j\varphi_j(x)$的展开形式。
 这里选择的是线性元，所以每个子区间内用一次多项式近似解，即选择两个节点作为基函数的控制点，也就是基函数在这两个点处取值为1和0，其余点处线性插值。
 
-\section{问题}
+\section{一般边界条件时函数近似方式的变化分析}
+一般边界条件指的是非齐次边界条件，即边界上的函数值不为0。这种情况下，可以通过加入虚拟节点的方式将问题转化为齐次边界条件的情况，然后再进行求解。
+因此，对于一般边界条件，函数的近似方式与齐次边界条件的情况是类似的，只是需要增加一些虚拟节点来满足非齐次边界条件。
+
+具体来说，对于一般边界条件$y(a)=\alpha$和$y(b)=\beta$，可以在第一个节点和最后一个节点之外再加上两个虚拟节点，设这两个节点的位置分别为$a_0$和$b_0$，
+则有：
+\begin{center}
+    $\begin{array}{c}y(a)=\alpha\Rightarrow y(a_0)-\dfrac{h}{2}y'(a_0)=\alpha\\ 
+    y(b)=\beta\Rightarrow y(b_0)+\dfrac{h}{2}y'(b_0)=\beta\end{array}$
+\end{center}
+这里用虚拟节点来满足非齐次边界条件，而又通过导数的方式保证了虚拟节点的值与真实节点的值是相等的。然后，对于虚拟节点和真实节点，采用相同的基函数进行展开，
+即在每个子区间上采用线性元素进行近似。因此，对于一般边界条件的情况，函数的近似方式与齐次边界条件的情况类似，只需要增加一些虚拟节点来满足非齐次边界条件即可。
+
+\section{分析需要求解的线性方程组发生了什么变化}
+对于一般边界条件的情况，需要增加虚拟节点来满足非齐次边界条件，因此在数值求解时，需要将这些虚拟节点也纳入线性方程组中进行求解。
+
+具体来说，在采用一维有限元方法求解线性方程组时，需要先将区间$[a,b]$进行剖分，得到若干个子区间，然后在每个子区间上采用线性元素进行近似。
+设第$i$个子区间的两个节点为$x_i$和$x_{i+1}$，则可以在该子区间上采用如下的形式进行近似：
+
+\begin{center}
+    $y(x)\approx v_i\varphi_i(x)+v_{i+1}\varphi_{i+1}(x)\quad\text{}$
+\end{center}
+
+\section{代码部分}
+\begin{lstlisting}[language=MATLAB, caption=有限元]
+tic
+a = 1;
+b = 2;
+n = 5;
+A = zeros(n,n);
+d = zeros(n,1);
+
+h = 0.01;
+x = a:h:b;
+N = size(x,2);
+
+for i = 1:n
+    for j = i:n
+        I = h/2*(alpha(a,i,j,a,b)+alpha(b,i,j,a,b));
+        for k=2:N-1
+            I = I + 2*alpha(x(k),i,j,a,b)*h/2;
+        end
+        A(i,j) = I;
+        A(j,i) = I;
+    end
+end
+
+for i = 1:n
+    I = h/2*(beta(a,i,a,b)+beta(b,i,a,b));
+    for k=2:N-1
+        I = I + 2*beta(x(k),i,a,b)*h/2;
+    end
+    d(i,1) = I;
+end
+
+c = A\d
+
+y = zeros(1,N);
+for i =1:N
+    for k = 1:n
+        y(i) = y(i) + c(k,1)*phi(x(i),k,a,b);
+    end
+end
+plot(x, y, 'o');
+hold on
+
+yy = (exp(1)-1).*exp(x)+x-1;
+plot(x,yy);
+hold off
+
+toc
+
+function z = alpha(x, i, j, a, b)
+    z = p(x)*dphi(x,i,a,b)*dphi(x,j,a,b) + q(x)*phi(x,i,a,b)*phi(x,j,a,b);
+end
+
+function z = beta(x, k, a, b)
+    z = f(x)*phi(x,k,a,b);
+end
+
+function z = phi(x, k, a, b)
+    z = (b-x)*(x-a)^k;
+end
+
+function z = dphi(x, k, a, b)
+    z = k*(b-x)*(x-a)^(k-1) - (x-a)^k;
+end
+
+function z = p(x)
+    z = 1;
+end
+
+function z = q(x)
+    z = -1;
+end
+
+function z = f(x)
+    z = x;
+end
+
+
+\end{lstlisting}
+输出图形
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{FEMfigure.jpg}
+    \caption{有限元方法}
+\end{figure}
+
+
+应用tictoc得到输出结果：
+Elapsed time is 0.196633 seconds.表示其求解速度
+\section{对比有限元函数系与多项式函数系在不同n下的求解速度}
+有限元函数系和多项式函数系在求解速度上具有不同的特点。在一般情况下，随着多项式次数$n$的增加，多项式函数系的求解速度会逐渐变慢，
+而有限元函数系的求解速度则相对稳定。
+
+这是因为在一维有限元方法中，增加子区间的个数可以提高解的精度，但同时也会增加线性方程组的规模，导致计算量增加。而对于多项式函数系，
+增加$n$可以提高函数的逼近精度，但同时也会增加系数的个数，导致计算量增加。
+
+具体来说，对于多项式函数系，可以使用多项式插值法、拉格朗日插值法等方法进行求解。而对于一维有限元方法，需要将区间剖分成若干个子区间，
+然后在每个子区间上使用局部线性插值函数进行近似，最后得到一个稠密的线性方程组，可以使用传统的追赶法等方法进行求解。
+
+在具体的实现中，多项式函数系的求解速度会随着$n$的增加而逐渐变慢，而有限元函数系的求解速度则相对稳定。这是因为在一维有限元方法中，
+区间剖分的个数是可以控制的，因此计算量可以在一定范围内控制。而对于多项式函数系，由于系数的个数随着$n$的增加而增加，因此计算量也会随之增加。
+
+因此，在具体的应用中，需要根据实际情况选择不同的函数系。如果要求解高精度的问题，可以使用高次的多项式函数系，但需要承受更高的计算量。
+而如果对计算速度要求较高，可以选择一维有限元方法进行求解。
+
+
 
 
 

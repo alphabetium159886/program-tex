@@ -1,3 +1,7 @@
 \contentsline {section}{\numberline {1}问题}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}求解方程}{2}{subsection.1.1}%
 \contentsline {section}{\numberline {2}方法推导}{2}{section.2}%
-\contentsline {section}{\numberline {3}问题}{3}{section.3}%
+\contentsline {section}{\numberline {3}一般边界条件时函数近似方式的变化分析}{4}{section.3}%
+\contentsline {section}{\numberline {4}分析需要求解的线性方程组发生了什么变化}{4}{section.4}%
+\contentsline {section}{\numberline {5}代码部分}{5}{section.5}%
+\contentsline {section}{\numberline {6}对比有限元函数系与多项式函数系在不同n下的求解速度}{8}{section.6}%

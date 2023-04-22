@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  22 APR 2023 14:40
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  22 APR 2023 16:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -598,7 +598,15 @@ LaTeX Info: Redefining \nameref on input line 41.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count325
-(4threport.toc)
+(4threport.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+ (C:\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+ (C:\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 \tf@toc=\write4
 \openout4 = `4threport.toc'.
 
@@ -607,29 +615,56 @@ LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <12> not available
  [1
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 45.
- (C:\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
- (C:\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Overfull \hbox (12.89217pt too wide) in paragraph at lines 51--61
+Underfull \hbox (badness 10000) in paragraph at lines 47--53
+
+ []
+
+
+Overfull \hbox (12.89217pt too wide) in paragraph at lines 59--69
 \TU/SimSun(0)/m/n/12 子 区 间 内 用 一 次 多 项 式 近 似 解。|  定 义 有 限 元 函 数 空 间 为 $\OML/cmm/m/it/12 V[] \OT1/cmr/m/n/12 = []$\TU/SimSun(0)/m/n/12 ，|
  []
 
-[2] [3] (4threport.aux)
+[2] [3] [4] (C:\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 119.
+
+Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "FangSong/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "FangSong/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
+(fontspec)             with options [Script={CJK}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+
+ [5] [6]
+File: FEMfigure.jpg Graphic file (type bmp)
+<FEMfigure.jpg>
+ [7] [8] [9] (4threport.aux)
 Package rerunfilecheck Info: File `4threport.out' has not changed.
-(rerunfilecheck)             Checksum: AE3E71399AE78BF3B3EBAFC11C9F0411;193.
+(rerunfilecheck)             Checksum: F0B18F321CC5438199DDD87F33AA3D81;920.
  ) 
 Here is how much of TeX's memory you used:
- 17521 strings out of 410939
- 358410 string characters out of 2830432
- 699363 words of memory out of 3000000
- 38070 multiletter control sequences out of 15000+600000
- 478713 words of font info for 86 fonts, out of 8000000 for 9000
+ 18180 strings out of 410939
+ 366620 string characters out of 2830432
+ 1017465 words of memory out of 3000000
+ 38708 multiletter control sequences out of 15000+600000
+ 478777 words of font info for 94 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,10n,97p,461b,523s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 89i,10n,97p,461b,2502s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on 4threport.xdv (3 pages, 17532 bytes).
+Output written on 4threport.xdv (9 pages, 91164 bytes).
