@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  22 APR 2023 16:02
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  23 APR 2023 15:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -627,7 +627,7 @@ Overfull \hbox (12.89217pt too wide) in paragraph at lines 59--69
 [2] [3] [4] (C:\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 119.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 124.
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
 (fontspec)             doesn't exist).
@@ -654,17 +654,19 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
  [5] [6]
 File: FEMfigure.jpg Graphic file (type bmp)
 <FEMfigure.jpg>
- [7] [8] [9] (4threport.aux)
+File: mma.jpg Graphic file (type bmp)
+<mma.jpg>
+ [7] [8] (4threport.aux)
 Package rerunfilecheck Info: File `4threport.out' has not changed.
 (rerunfilecheck)             Checksum: F0B18F321CC5438199DDD87F33AA3D81;920.
  ) 
 Here is how much of TeX's memory you used:
- 18180 strings out of 410939
- 366620 string characters out of 2830432
- 1017465 words of memory out of 3000000
- 38708 multiletter control sequences out of 15000+600000
- 478777 words of font info for 94 fonts, out of 8000000 for 9000
+ 18183 strings out of 410939
+ 366743 string characters out of 2830432
+ 1092790 words of memory out of 3000000
+ 38709 multiletter control sequences out of 15000+600000
+ 478785 words of font info for 95 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,10n,97p,461b,2502s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 89i,10n,97p,461b,2504s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on 4threport.xdv (9 pages, 91164 bytes).
+Output written on 4threport.xdv (8 pages, 88552 bytes).

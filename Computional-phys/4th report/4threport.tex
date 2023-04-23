@@ -91,6 +91,11 @@ $\varphi_4(x)=\begin{cases}
 将$y(x)$和$v_h(x)$在每个子区间[k,k+1]内分别用基函数展开，即用基函数$\varphi_j(x)$的线性组合来近似表示$y(x)$和$v_h(x)$。其中，$y_j$和$v_j$是在
 子区间[k,k+1]内的系数，需要确定。因此，在每个子区间上，有$\displaystyle y(x)=\sum_{j=1}^{2}y_j\varphi_j(x)$和$\displaystyle v_h(x)=\sum_{j=1}^{2}v_j\varphi_j(x)$的展开形式。
 这里选择的是线性元，所以每个子区间内用一次多项式近似解，即选择两个节点作为基函数的控制点，也就是基函数在这两个点处取值为1和0，其余点处线性插值。
+可以得到：
+$\begin{bmatrix}2/h&-1\\ -1&2/h&-1&\ddots\\ &&\ddots&\ddots\\ &&-1&2/h&-1\\ &&&&-1&2/h\end{bmatrix}\begin{bmatrix}a_1\\ a_2\\ \vdots\\ a_N\\ a_N+1\end{bmatrix} + 
+\begin{bmatrix}y'(1)\varphi_1(1)-y'(0)\varphi_1(0)\\ &0\\ &\vdots\\ &0\\ g'(2)\varphi_{N+1}(2)-g'(3)\varphi_{N+1}(3)\end{bmatrix} = 
+\begin{bmatrix}h^2\int_1^2x\varphi_1(x)dx\\ h^2\int_1^2x\varphi_2(x)dx\\ \vdots\\ h^2\int_1^2x\varphi_N(x)dx\\ h^2\int_1^2x\varphi_N+1(x)dx\end{bmatrix}$ 
+其中 $\varphi_{1}(0)$ 和 $\varphi_{N+1}(3)$ 需要根据边界条件进行计算，而 $y'(1)$ 和 $y'(2)$ 可以使用前向差分和后向差分进行近似计算。
 
 \section{一般边界条件时函数近似方式的变化分析}
 一般边界条件指的是非齐次边界条件，即边界上的函数值不为0。这种情况下，可以通过加入虚拟节点的方式将问题转化为齐次边界条件的情况，然后再进行求解。
@@ -117,81 +122,58 @@ $\varphi_4(x)=\begin{cases}
 
 \section{代码部分}
 \begin{lstlisting}[language=MATLAB, caption=有限元]
-tic
-a = 1;
-b = 2;
-n = 5;
-A = zeros(n,n);
-d = zeros(n,1);
-
-h = 0.01;
-x = a:h:b;
-N = size(x,2);
-
-for i = 1:n
-    for j = i:n
-        I = h/2*(alpha(a,i,j,a,b)+alpha(b,i,j,a,b));
-        for k=2:N-1
-            I = I + 2*alpha(x(k),i,j,a,b)*h/2;
+    % 一维有限元方法求解常微分方程边值问题
+    clc; clear; close all;
+    
+    % 设置参数
+    a = 1;  % 区间左端点
+    b = 2;  % 区间右端点
+    N = 10; % 等分数
+    h = (b-a)/N; % 步长
+    
+    % 定义节点坐标
+    x = linspace(a, b, N+1);
+    
+    % 定义刚度矩阵和载荷向量
+    K = zeros(N+1, N+1);
+    F = zeros(N+1, 1);
+    for i = 1:N
+        % 定义局部刚度矩阵和局部载荷向量
+        Ke = [1/h, -1/h; -1/h, 1/h] + h/6*[2, 1; 1, 2];
+        fe = [h/2; h/2];
+        
+        % 加入全局刚度矩阵和全局载荷向量
+        K(i:i+1, i:i+1) = K(i:i+1, i:i+1) + Ke;
+        F(i:i+1) = F(i:i+1) + fe;
+    end
+    
+    % 处理边界条件
+    K(1, :) = 0; K(1, 1) = 1; F(1) = 1;
+    K(N+1, :) = 0; K(N+1, N+1) = 1; F(N+1) = 3;
+    
+    % 解线性方程组
+    y = K\F;
+    
+    % 绘制数值解
+    xx = linspace(a, b, 1000);
+    yy = zeros(1000, 1);
+    for i = 1:1000
+        if xx(i) <= x(2)
+            N = 1;
+        elseif xx(i) >= x(end-1)
+            N = length(x) - 2;
+        else
+            N = fix((xx(i) - a)/h) + 1;
         end
-        A(i,j) = I;
-        A(j,i) = I;
+        yy(i) = y(N)*(x(N+1)-xx(i))/h + y(N+1)*(xx(i)-x(N))/h;
     end
-end
-
-for i = 1:n
-    I = h/2*(beta(a,i,a,b)+beta(b,i,a,b));
-    for k=2:N-1
-        I = I + 2*beta(x(k),i,a,b)*h/2;
-    end
-    d(i,1) = I;
-end
-
-c = A\d
-
-y = zeros(1,N);
-for i =1:N
-    for k = 1:n
-        y(i) = y(i) + c(k,1)*phi(x(i),k,a,b);
-    end
-end
-plot(x, y, 'o');
-hold on
-
-yy = (exp(1)-1).*exp(x)+x-1;
-plot(x,yy);
-hold off
-
-toc
-
-function z = alpha(x, i, j, a, b)
-    z = p(x)*dphi(x,i,a,b)*dphi(x,j,a,b) + q(x)*phi(x,i,a,b)*phi(x,j,a,b);
-end
-
-function z = beta(x, k, a, b)
-    z = f(x)*phi(x,k,a,b);
-end
-
-function z = phi(x, k, a, b)
-    z = (b-x)*(x-a)^k;
-end
-
-function z = dphi(x, k, a, b)
-    z = k*(b-x)*(x-a)^(k-1) - (x-a)^k;
-end
-
-function z = p(x)
-    z = 1;
-end
-
-function z = q(x)
-    z = -1;
-end
-
-function z = f(x)
-    z = x;
-end
-
+    plot(xx, yy, 'b-', 'LineWidth', 2);
+    xlabel('x');
+    ylabel('y');
+    title('Finite Element Method Solution');
+    grid on;
+    
+    
 
 \end{lstlisting}
 输出图形
@@ -201,28 +183,29 @@ end
     \caption{有限元方法}
 \end{figure}
 
-
 应用tictoc得到输出结果：
-Elapsed time is 0.196633 seconds.表示其求解速度
-\section{对比有限元函数系与多项式函数系在不同n下的求解速度}
-有限元函数系和多项式函数系在求解速度上具有不同的特点。在一般情况下，随着多项式次数$n$的增加，多项式函数系的求解速度会逐渐变慢，
-而有限元函数系的求解速度则相对稳定。
+Elapsed time is 0.159850 seconds.
 
-这是因为在一维有限元方法中，增加子区间的个数可以提高解的精度，但同时也会增加线性方程组的规模，导致计算量增加。而对于多项式函数系，
+与mathemetica图形对比：
+\begin{lstlisting}
+    Plot[x + (Exp[x] - Exp[2 - x])/(Exp[2] - 1), {x, 0, 2}]
+\end{lstlisting}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{mma.jpg}
+    \caption{mathemetica}
+\end{figure}
+
+
+\section{对比有限元函数系与多项式函数系在不同n下的求解速度}
+
+在一维有限元方法中，增加子区间的个数可以提高解的精度，但同时也会增加线性方程组的规模，导致计算量增加。而对于多项式函数系，
 增加$n$可以提高函数的逼近精度，但同时也会增加系数的个数，导致计算量增加。
 
-具体来说，对于多项式函数系，可以使用多项式插值法、拉格朗日插值法等方法进行求解。而对于一维有限元方法，需要将区间剖分成若干个子区间，
+对于多项式函数系，可以使用多项式插值法、拉格朗日插值法等方法进行求解。而对于一维有限元方法，需要将区间分成若干个子区间，
 然后在每个子区间上使用局部线性插值函数进行近似，最后得到一个稠密的线性方程组，可以使用传统的追赶法等方法进行求解。
-
-在具体的实现中，多项式函数系的求解速度会随着$n$的增加而逐渐变慢，而有限元函数系的求解速度则相对稳定。这是因为在一维有限元方法中，
-区间剖分的个数是可以控制的，因此计算量可以在一定范围内控制。而对于多项式函数系，由于系数的个数随着$n$的增加而增加，因此计算量也会随之增加。
-
-因此，在具体的应用中，需要根据实际情况选择不同的函数系。如果要求解高精度的问题，可以使用高次的多项式函数系，但需要承受更高的计算量。
-而如果对计算速度要求较高，可以选择一维有限元方法进行求解。
-
-
-
-
+多项式函数系的求解速度会随着$n$的增加而逐渐变慢，而有限元函数系的求解速度则相对稳定。这是因为在一维有限元方法中，
+区间分出来的个数是可以控制的，因此计算量可以在一定范围内控制。而对于多项式函数系，由于系数的个数随着$n$的增加而增加，因此计算量也会随之增加。
 
 \end{spacing}{}
 

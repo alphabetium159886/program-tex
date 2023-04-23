@@ -1,13 +1,13 @@
 # Fdb version 3
-["xdvipdfmx"] 1682150577 "4threport.xdv" "4threport.pdf" "4threport" 1682150578
-  "4threport.xdv" 1682150577 91164 9851d418693b3d1f06866ae07017c819 "xelatex"
+["xdvipdfmx"] 1682235500 "4threport.xdv" "4threport.pdf" "4threport" 1682235500
+  "4threport.xdv" 1682235499 88552 ba1f5779414152f9ec390f1abe207320 "xelatex"
   (generated)
   "4threport.pdf"
-["xelatex"] 1682150575 "c:/Users/toby1/OneDrive/program-tex/Computional-phys/4th report/4threport.tex" "4threport.xdv" "4threport" 1682150578
-  "4threport.aux" 1682150577 1805 9ec2f6efd703a8426b948644a9f90fad "xelatex"
-  "4threport.out" 1682150577 920 f0b18f321cc5438199ddd87f33aa3d81 "xelatex"
-  "4threport.tex" 1682150572 9675 613bbcfb960c49bb1c7466102ab40259 ""
-  "4threport.toc" 1682150577 628 dd754c4524ef250364a27a8798dae634 "xelatex"
+["xelatex"] 1682235497 "c:/Users/toby1/OneDrive/program-tex/Computional-phys/4th report/4threport.tex" "4threport.xdv" "4threport" 1682235500
+  "4threport.aux" 1682235499 1927 67e947ffe4a81d05dbda0f8152b40106 "xelatex"
+  "4threport.out" 1682235499 920 f0b18f321cc5438199ddd87f33aa3d81 "xelatex"
+  "4threport.tex" 1682235494 10208 bf3212a735cbac6c7f5e2e9c1f78bf83 ""
+  "4threport.toc" 1682235499 628 cf229c348b6ce3ac85d12984a78624fb "xelatex"
   "C:/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136743454 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -118,8 +118,9 @@
   "C:/MiKTeX/tex/xelatex/xecjk/xeCJKfntef.sty" 1639329764 39112 d2c64c2924adb909ead58a883c2e3793 ""
   "C:/Users/toby1/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1680610784 23660638 dfd036573583e4a9d53cad7d24912597 ""
   "C:/WINDOWS/Fonts/msyh.ttc" 1575709707 19647736 ff2e53a6131130a07589812ea5b5b0d0 ""
-  "FEMfigure.jpg" 1682149297 25773 202a05d9740696d45c39f9d411bfb6d2 ""
-  "c:/Users/toby1/OneDrive/program-tex/Computional-phys/4th report/4threport.tex" 1682150572 9675 613bbcfb960c49bb1c7466102ab40259 ""
+  "FEMfigure.jpg" 1682233853 42629 f357f6e31989c12b7bf3ee78d369e2e5 ""
+  "c:/Users/toby1/OneDrive/program-tex/Computional-phys/4th report/4threport.tex" 1682235494 10208 bf3212a735cbac6c7f5e2e9c1f78bf83 ""
+  "mma.jpg" 1682234565 10448 06c894bda54cd2c8efdaecdc269b5cc8 ""
   (generated)
   "4threport.aux"
   "4threport.log"

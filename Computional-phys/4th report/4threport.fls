@@ -863,6 +863,9 @@ INPUT C:\MiKTeX\tex\latex\listings\lstlang1.sty
 INPUT .\FEMfigure.jpg
 INPUT .\FEMfigure.jpg
 INPUT FEMfigure.jpg
+INPUT .\mma.jpg
+INPUT .\mma.jpg
+INPUT mma.jpg
 INPUT 4threport.aux
 INPUT .\4threport.out
 INPUT .\4threport.out
