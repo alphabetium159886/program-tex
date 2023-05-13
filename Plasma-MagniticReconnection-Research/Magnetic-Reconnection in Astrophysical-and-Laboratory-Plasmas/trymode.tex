@@ -142,6 +142,50 @@ Adler、Kulsrud和White（1980）分析了tearing mode的能量学。他们表�
 
 总的来说，对无碰撞重联的持续研究是等离子体物理学和天体物理学的一个活跃的研究领域，对我们理解宇宙中等离子体的行为具有重要意义。
 
+Up to now, we have used the resistive MHD form of Ohm's Law, given by Equation 1 with v, fluid
+velocity. The meaning of Ohm's Law is that in a steady state, the Lorentz force on the electrons
+is balanced by frictional drag due to collisions. Thus, v is understood to be the electron velocity
+ve. Using the relation $J\equiv(v_i-v_e)en_e$ (valid for singly charged ions in a quasineutral plasma) and
+assuming v ∼ vi, Ohm's Law can be written in a form that accounts for $v_e \ne v_i$ :
+\begin{center}
+    $E+\dfrac{v\times B}{c}-\dfrac{J\times B}{en_ec}=\dfrac{J}{\sigma}.$
+\end{center}
+The $J \times B$ term in Equation 4 represents the Hall effect. When the Hall term dominates,
+the in-plane electron flow into and out of the reconnection region corresponds to an in-plane
+current. This differs from the Sweet-Parker and Petschek models, in which the current is entirely
+perpendicular to the reconnection plane. The situation is sketched in Figure 4.
+Consider the out-of-plane ($\hat{y}$) component of Equation 4 near the magnetic X-point. It can be
+shown that the ion velocity vi ∼ v approaches zero on scales below the so-called ion inertial length
+or ion skin depth $\delta_{i}$ (see Table 1 and Equation 8). One can think of $\delta_{i}$ as the gyroradius of an ion
+moving at the Alfven speed: $\delta_{i}$ = $v_A/\omega c i$ . On scales $\delta$ < $\delta_{i}$, E is supported by the Hall term or the
+resistive term (electron pressure can also play a role, but we ignore that for the time being).
+The out-of-plane component of the Hall term can be written in terms of Ampere's Law as
+\begin{center}
+    $\left(\dfrac{J\times B}{en_ec}\right)_y=\dfrac{B\cdot\nabla B_y}{4\pi en_e}.$
+\end{center}
+
+
+Equation 5 shows that the in-plane current generates an out-of-plane field, By. We can derive the
+spatial form of By from the behavior of $J_x$ and $J_z$ near the X-point. Because $J_x$ represents electron
+inflow and $J_z$ represents electron outflow, $J_x \propto x$ and $J_z \propto -z$. From Ampere's Law, $B_y \propto xz$, that
+is, the out-of-plane field has a quadrupole pattern.
+When do we expect the Hall effect to be important in reconnection? Recall that in MHD
+reconnection, the electric field is inductive outside the reconnection region and resistive within
+it. Because the Hall effect takes place on scales less than $\delta_{i}$, we expect Hall reconnection when
+$\delta_{SP} < \delta_{i}$. Using Equation 2, we find
+\begin{center}
+    $\dfrac{\delta_{SP}}{\delta_i}=\left(\dfrac{L}{\lambda_{mfp}}\right)^{1/2}\left(\dfrac{m_e}{m_i}\right)^{1/4},$
+\end{center}
+
+where $\lambda_{mfp}$ is the electron mean free path; we have assumed $T_e = T_i,v_A \sim v_{tbi}$ ($\beta \sim 1$ in the
+reconnection layer), and $\eta_\perp \sim 2\eta_\parallel$ owing to the magnetic field (Yamada et al. 2006). Equation 6
+shows that the Hall effect should become important in reconnection when the length of the
+current sheet is comparable to the electron mean free path. For that reason, Hall reconnection is
+sometimes called collisionless reconnection.
+Under certain conditions, Hall reconnection proceeds quite fast, at about 0.1 vA. The reasons
+for this, and the relevance of Hall reconnection in astrophysics, are subjects of current research
+and are discussed more extensively in Section 5.2.
+
 
 \subsection{Instabilities and Time-Dependent Effects}
 主要探讨了不稳定性和时间演化效应。其中，讨论了微观不稳定性对电子加热、磁场结构以及重联速率的影响，

@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  23 APR 2023 18:04
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  10 MAY 2023 18:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/toby1/OneDrive/program-tex/Computional-phys/4th report/4threport.tex"
-(c:/Users/toby1/OneDrive/program-tex/Computional-phys/4th report/4threport.tex
+**"c:/Users/toby1/OneDrive/program-tex/Computional-phys/5th report/5threport.tex"
+(c:/Users/toby1/OneDrive/program-tex/Computional-phys/5th report/5threport.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-04-20> (C:\MiKTeX\tex/latex/ctex\ctexart.cls (C:\MiKTeX\tex/latex/ctex/config\ctexbackend.cfg
 File: ctexbackend.cfg 2021/12/12 v2.5.8 Backend configuration file (CTEX)
@@ -466,8 +466,8 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
-) (4threport.aux)
-\openout1 = `4threport.aux'.
+) (5threport.aux)
+\openout1 = `5threport.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
@@ -558,9 +558,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 41.
 LaTeX Info: Redefining \pageref on input line 41.
 LaTeX Info: Redefining \nameref on input line 41.
- (4threport.out) (4threport.out)
+ (5threport.out) (5threport.out)
 \@outlinefile=\write3
-\openout3 = `4threport.out'.
+\openout3 = `5threport.out'.
 
 
 *geometry* driver: auto-detecting
@@ -598,36 +598,26 @@ LaTeX Info: Redefining \nameref on input line 41.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count325
-(4threport.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
- (C:\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
- (C:\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+(5threport.toc)
 \tf@toc=\write4
-\openout4 = `4threport.toc'.
+\openout4 = `5threport.toc'.
 
 LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <12> not available
 (Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 45.
  [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 47--53
-
- []
-
-
-Overfull \hbox (12.89217pt too wide) in paragraph at lines 59--69
-\TU/SimSun(0)/m/n/12 子 区 间 内 用 一 次 多 项 式 近 似 解。|  定 义 有 限 元 函 数 空 间 为 $\OML/cmm/m/it/12 V[] \OT1/cmr/m/n/12 = []$\TU/SimSun(0)/m/n/12 ，|
- []
-
-[2] [3] [4] (C:\MiKTeX\tex/latex/listings\lstlang1.sty
+LaTeX Font Info:    Trying to load font information for U+msa on input line 45.
+ (C:\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
+ (C:\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (C:\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 124.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 54.
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
 (fontspec)             doesn't exist).
@@ -651,22 +641,17 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
- [5] [6]
-File: FEMfigure.jpg Graphic file (type bmp)
-<FEMfigure.jpg>
-File: mma.jpg Graphic file (type bmp)
-<mma.jpg>
- [7] [8] (4threport.aux)
-Package rerunfilecheck Info: File `4threport.out' has not changed.
-(rerunfilecheck)             Checksum: F0B18F321CC5438199DDD87F33AA3D81;920.
+ [2] [3] [4] [5] (5threport.aux)
+Package rerunfilecheck Info: File `5threport.out' has not changed.
+(rerunfilecheck)             Checksum: 1A5B258159B2D1AA0312E79A53EB07B1;94.
  ) 
 Here is how much of TeX's memory you used:
- 18183 strings out of 410939
- 366743 string characters out of 2830432
- 1093790 words of memory out of 3000000
- 38709 multiletter control sequences out of 15000+600000
- 478785 words of font info for 95 fonts, out of 8000000 for 9000
+ 18171 strings out of 410939
+ 366504 string characters out of 2830432
+ 1137639 words of memory out of 3000000
+ 38703 multiletter control sequences out of 15000+600000
+ 478769 words of font info for 93 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,10n,97p,461b,2504s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 89i,6n,97p,461b,2480s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on 4threport.xdv (8 pages, 83528 bytes).
+Output written on 5threport.xdv (5 pages, 61848 bytes).

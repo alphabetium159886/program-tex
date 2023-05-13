@@ -1,0 +1,130 @@
+\documentclass[12pt, a4paper, oneside]{ctexart}
+\usepackage{amsmath, amsthm, amssymb, graphicx}
+\usepackage[bookmarks=true, colorlinks, citecolor=blue, linkcolor=black]{hyperref}
+\usepackage[margin = 25mm]{geometry}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{ctex}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+\title{蒙特卡罗伊辛模型}
+\date{\today}
+\author{202011010101物理2001孙陶庵}
+\begin{document}
+\begin{spacing}{2.0}
+\tableofcontents
+\maketitle
+
+\section{问题}
+1.模型定义：定义一个2维的N*N伊辛模型，每一个点上有一个自旋，可上可下，体系的哈密顿量为
+$\displaystyle H=-J\sum_{<i,j>}s_{i}s_{j}$
+其中的$s_{i}$为第i个格点上的自选为1或-1，j为交换常数，模拟中设为1，<i,j>表示对所有最近邻格点求和。
+2.Metropolis算法：使用Metropolis算法来模拟这个伊辛模型。在每一步中，随机选择一个格点，计算反转这个格点的自选后能量变化为$\Delta E$，如果$\Delta E<0$则接受这个反转；如果$\Delta E>0$则以概率$exp(\frac{\Delta E}{kT})$接受这个反转，其中k为boltzmann constant，T为温度
+3.在不同温度下运行模拟程序，计算并绘制体系的序参量以及其涨落随着温度的变化
+\section{}
+
+\begin{lstlisting}[language=Matlab, caption={代码}]
+
+    N = 1000000;
+    n = 100;
+    J = 1;
+    temperatures = linspace(1, 10, 10);  % 不同的温度
+    
+    monte_carlo_ising_model(N, n, J, temperatures);
+    
+    
+    function z = f(k, T, dE)
+        z = exp(-dE / (k * T));
+    end
+    
+    function monte_carlo_ising_model(N, n, J, temperatures)
+        SPINARRAY = zeros(length(temperatures), 1);
+        order_params = zeros(N, length(temperatures));
+    
+        for k = 1:length(temperatures)
+            T = temperatures(k);
+            array = zeros(N, 1);
+            S = 2 * randi([0, 1], n, n) - 1;
+    
+            for i = 1:N
+                index = randi(n, 1, 2);
+                x1 = mod(index(1) - 2, n) + 1;
+                x2 = index(1);
+                x3 = mod(index(1), n) + 1;
+                y1 = mod(index(2) - 2, n) + 1;
+                y2 = index(2);
+                y3 = mod(index(2), n) + 1;
+                dE = 2 * J * S(x2, y2) * (S(x1, y2) + S(x3, y2) + S(x2, y1) + S(x2, y3));
+    
+                if dE > 0
+                    a = rand();
+                    if a < f(1, T, dE)
+                        S(x2, y2) = -1;
+                    end
+                else
+                    S(x2, y2) = -S(x2, y2);
+                end
+    
+                ss = sum(sum(S)) / (n * n);
+                array(i) = ss;
+            end
+    
+            array1 = array .^ 2;
+            MEANSQ1 = mean(array1(floor(N * 3 / 10):end));  % 平方和平均值
+            MEANSQ = mean(array(floor(N * 3 / 10):end)) .^ 2;  % 平均平方
+            ANS = MEANSQ1 - MEANSQ;  % 序参量的涨落
+            SPINARRAY(k) = ANS;
+            order_params(:, k) = array;
+        end
+    
+        figure;
+        subplot(2, 1, 1);
+        plot(1:N, order_params);
+        xlabel('MC Steps');
+        ylabel('Order Parameter');
+        title('Order Parameter vs MC Steps');
+        legend(string(temperatures), 'Location', 'northwest');
+    
+        subplot(2, 1, 2);
+        plot(temperatures, SPINARRAY, 'ro-');
+        xlabel('Temperature');
+        ylabel('Fluctuation');
+        title('Fluctuation of Order Parameter vs Temperature');
+    end
+    
+    
+\end{lstlisting}
+
+
+
+\end{spacing}{}
+
+\end{document}

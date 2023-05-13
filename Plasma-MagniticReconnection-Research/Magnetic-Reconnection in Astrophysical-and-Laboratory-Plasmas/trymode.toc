@@ -5,14 +5,14 @@
 \contentsline {subsection}{\numberline {2.3}Petschek模型}{4}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Spontaneous Reconnection}{6}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Collisionless Reconnection}{7}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Instabilities and Time-Dependent Effects}{8}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Instabilities and Turbulent Plasmas}{9}{subsection.2.7}%
-\contentsline {subsubsection}{\numberline {2.7.1}Anomalous resistivity}{10}{subsubsection.2.7.1}%
-\contentsline {subsubsection}{\numberline {2.7.2}Reconnection in Line-Tied Systems}{10}{subsubsection.2.7.2}%
-\contentsline {subsection}{\numberline {2.8}Reconnection in Line-Tied Systems}{11}{subsection.2.8}%
-\contentsline {subsection}{\numberline {2.9}Reconnection in Weakly Ionized Gases}{11}{subsection.2.9}%
-\contentsline {subsection}{\numberline {2.10}Reconnection in Relativistic Plasmas}{12}{subsection.2.10}%
-\contentsline {section}{\numberline {3}Summary}{13}{section.3}%
-\contentsline {section}{\numberline {4}磁流体力学方程组}{15}{section.4}%
-\contentsline {section}{\numberline {5}MHD equation}{15}{section.5}%
-\contentsline {section}{\numberline {6}磁化等離子體}{16}{section.6}%
+\contentsline {subsection}{\numberline {2.6}Instabilities and Time-Dependent Effects}{9}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Instabilities and Turbulent Plasmas}{10}{subsection.2.7}%
+\contentsline {subsubsection}{\numberline {2.7.1}Anomalous resistivity}{11}{subsubsection.2.7.1}%
+\contentsline {subsubsection}{\numberline {2.7.2}Reconnection in Line-Tied Systems}{11}{subsubsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.8}Reconnection in Line-Tied Systems}{12}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Reconnection in Weakly Ionized Gases}{13}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.10}Reconnection in Relativistic Plasmas}{14}{subsection.2.10}%
+\contentsline {section}{\numberline {3}Summary}{14}{section.3}%
+\contentsline {section}{\numberline {4}磁流体力学方程组}{16}{section.4}%
+\contentsline {section}{\numberline {5}MHD equation}{17}{section.5}%
+\contentsline {section}{\numberline {6}磁化等離子體}{18}{section.6}%

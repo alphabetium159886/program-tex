@@ -92,7 +92,7 @@ $\varphi_4(x)=\begin{cases}
 子区间[k,k+1]内的系数，需要确定。因此，在每个子区间上，有$\displaystyle y(x)=\sum_{j=1}^{2}y_j\varphi_j(x)$和$\displaystyle v_h(x)=\sum_{j=1}^{2}v_j\varphi_j(x)$的展开形式。
 这里选择的是线性元，所以每个子区间内用一次多项式近似解，即选择两个节点作为基函数的控制点，也就是基函数在这两个点处取值为1和0，其余点处线性插值。
 可以得到：
-$\begin{bmatrix}2/h&-1\\ -1&2/h&-1&\ddots\\ &&\ddots&\ddots\\ &&-1&2/h&-1\\ &&&&-1&2/h\end{bmatrix}\begin{bmatrix}a_1\\ a_2\\ \vdots\\ a_N\\ a_N+1\end{bmatrix} + 
+$\displaystyle\begin{bmatrix}2/h&-1\\ -1&2/h&-1&\ddots\\ &&\ddots&\ddots\\ &&-1&2/h&-1\\ &&&&-1&2/h\end{bmatrix}\begin{bmatrix}a_1\\ a_2\\ \vdots\\ a_N\\ a_N+1\end{bmatrix} + 
 \begin{bmatrix}y'(1)\varphi_1(1)-y'(0)\varphi_1(0)\\ &0\\ &\vdots\\ &0\\ g'(2)\varphi_{N+1}(2)-g'(3)\varphi_{N+1}(3)\end{bmatrix} = 
 \begin{bmatrix}h^2\int_1^2x\varphi_1(x)dx\\ h^2\int_1^2x\varphi_2(x)dx\\ \vdots\\ h^2\int_1^2x\varphi_N(x)dx\\ h^2\int_1^2x\varphi_N+1(x)dx\end{bmatrix}$ 
 其中 $\varphi_{1}(0)$ 和 $\varphi_{N+1}(3)$ 需要根据边界条件进行计算，而 $y'(1)$ 和 $y'(2)$ 可以使用前向差分和后向差分进行近似计算。
@@ -123,38 +123,34 @@ $\begin{bmatrix}2/h&-1\\ -1&2/h&-1&\ddots\\ &&\ddots&\ddots\\ &&-1&2/h&-1\\ &&&&
 \section{代码部分}
 \begin{lstlisting}[language=MATLAB, caption=有限元]
     % 一维有限元方法求解常微分方程边值问题
+    tic
     clc; clear; close all;
     
-    % 设置参数
-    a = 1;  % 区间左端点
-    b = 2;  % 区间右端点
-    N = 10; % 等分数
-    h = (b-a)/N; % 步长
-    
-    % 定义节点坐标
+    a = 1;  % 左端点
+    b = 2;  % 右端点
+    N = 10; 
+    h = (b-a)/N; 
     x = linspace(a, b, N+1);
     
-    % 定义刚度矩阵和载荷向量
+    % 定义矩阵
     K = zeros(N+1, N+1);
     F = zeros(N+1, 1);
     for i = 1:N
-        % 定义局部刚度矩阵和局部载荷向量
         Ke = [1/h, -1/h; -1/h, 1/h] + h/6*[2, 1; 1, 2];
         fe = [h/2; h/2];
         
-        % 加入全局刚度矩阵和全局载荷向量
         K(i:i+1, i:i+1) = K(i:i+1, i:i+1) + Ke;
         F(i:i+1) = F(i:i+1) + fe;
     end
     
-    % 处理边界条件
+    % 边界条件
     K(1, :) = 0; K(1, 1) = 1; F(1) = 1;
     K(N+1, :) = 0; K(N+1, N+1) = 1; F(N+1) = 3;
     
-    % 解线性方程组
+    % 解方程
     y = K\F;
     
-    % 绘制数值解
+    %画图
     xx = linspace(a, b, 1000);
     yy = zeros(1000, 1);
     for i = 1:1000
@@ -173,7 +169,7 @@ $\begin{bmatrix}2/h&-1\\ -1&2/h&-1&\ddots\\ &&\ddots&\ddots\\ &&-1&2/h&-1\\ &&&&
     title('Finite Element Method Solution');
     grid on;
     
-    
+    toc
 
 \end{lstlisting}
 输出图形
