@@ -72,7 +72,7 @@ $V(r)=4\epsilon\left[\left(\frac{\sigma}{r}\right)^{12}-\left(\frac{\sigma}{r}\r
 3.记录模拟过程中的数据，包括系统的能量温度压强等物理量的时间演化\\
 4.分析结果，解释模拟结果的物理意义，并于理论预测结果相比较\\
 \section{初始文件设置}
-\subsection{设定拓扑文件}
+\subsection{设定拓扑文件(argon.top)}
 \begin{lstlisting}[caption={argon.top}]
     [ defaults ]
 ; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
@@ -98,228 +98,10 @@ Argon
 AR                216
 \end{lstlisting}
 其中[ atomtypes ]里面的A项（0.0后面0.00622127前面）即为Lennard-Jones势能在gromacs的代号
-\subsection{设定结构文件}
+\subsection{设定结构文件(liquid.gro)}
 总共219行的参数文件，参见附件
-\subsection{设定分子动力学参数(mdp)}
-\begin{lstlisting}[caption={94k.mdp}]
-    ;
-;	File 'mdout.mdp' was generated
-;	By user: bert (1001)
-;	On host: bertp3
-;	At date: Sat Dec  4 13:41:42 2004
-;
-
-; VARIOUS PREPROCESSING OPTIONS
-include                  = 
-define                   = 
-
-; RUN CONTROL PARAMETERS
-integrator               = md
-; Start time and timestep in ps
-tinit                    = 0
-dt                       = 0.002
-nsteps                   = 500000
-; For exact run continuation or redoing part of a run
-init_step                = 0
-; mode for center of mass motion removal
-comm-mode                = Linear
-; number of steps for center of mass motion removal
-nstcomm                  = 1
-; group(s) for center of mass motion removal
-comm-grps                = 
-
-; LANGEVIN DYNAMICS OPTIONS
-; Temperature, friction coefficient (amu/ps) and random seed
-bd-fric                  = 0
-ld-seed                  = 1993
-
-; ENERGY MINIMIZATION OPTIONS
-; Force tolerance and initial step-size
-emtol                    = 10
-emstep                   = 0.01
-; Max number of iterations in relax_shells
-niter                    = 20
-; Step size (1/ps^2) for minimization of flexible constraints
-fcstep                   = 0
-; Frequency of steepest descents steps when doing CG
-nstcgsteep               = 1000
-nbfgscorr                = 10
-
-; OUTPUT CONTROL OPTIONS
-; Output frequency for coords (x), velocities (v) and forces (f)
-nstxout                  = 10000
-nstvout                  = 10000
-nstfout                  = 0
-; Output frequency for energies to log file and energy file
-nstlog                   = 100
-nstcalcenergy            = 1
-nstenergy                = 100
-; Output frequency and precision for xtc file
-nstxout-compressed       = 500
-compressed-x-precision   = 1000
-; This selects the subset of atoms for the xtc file. You can
-; select multiple groups. By default all atoms will be written.
-xtc-grps                 = 
-; Selection of energy groups
-energygrps               = System
-
-; long-range cut-off for switched potentials
-cutoff-scheme            = Verlet
-
-; NEIGHBORSEARCHING PARAMETERS
-; nblist update frequency
-nstlist                  = 50
-; Periodic boundary conditions: xyz (default), no (vacuum)
-; or full (infinite systems only)
-pbc                      = xyz
-; nblist cut-off        
-rlist                    = 0.85
-
-
-; OPTIONS FOR ELECTROSTATICS AND VDW
-; Method for doing electrostatics
-coulombtype              = Cut-off
-rcoulomb-switch          = 0
-rcoulomb                 = 0.85
-; Dielectric constant (DC) for cut-off or DC of reaction field
-epsilon-r                = 1
-; Method for doing Van der Waals
-vdw-type                 = Cut-off
-; cut-off lengths       
-rvdw-switch              = 0
-rvdw                     = 0.85
-; Apply long range dispersion corrections for Energy and Pressure
-DispCorr                 = Enerpres
-; Extension of the potential lookup tables beyond the cut-off
-table-extension          = 1
-; Spacing for the PME/PPPM FFT grid
-fourierspacing           = 0.12
-; FFT grid size, when a value is 0 fourierspacing will be used
-fourier_nx               = 0
-fourier_ny               = 0
-fourier_nz               = 0
-; EWALD/PME/PPPM parameters
-pme_order                = 4
-ewald_rtol               = 1e-05
-ewald_geometry           = 3d
-epsilon_surface          = 0
-
-; IMPLICIT SOLVENT (for use with Generalized Born electrostatics)
-implicit_solvent         = No
-
-; OPTIONS FOR WEAK COUPLING ALGORITHMS
-; Temperature coupling  
-Tcoupl                   = v-rescale
-; Groups to couple separately
-tc-grps                  = System
-; Time constant (ps) and reference temperature (K)
-tau_t                    = 0.1
-ref_t                    = 94.4
-; Pressure coupling     
-Pcoupl                   = No
-Pcoupltype               = isotropic
-; Time constant (ps), compressibility (1/bar) and reference P (bar)
-tau_p                    = 0.5
-compressibility          = 4.5e-5
-ref_p                    = 10.0
-
-; SIMULATED ANNEALING  
-; Type of annealing for each temperature group (no/single/periodic)
-annealing                =  
-; Number of time points to use for specifying annealing in each group
-annealing_npoints        = 
-; List of times at the annealing points for each group
-annealing_time           = 
-; Temp. at each annealing point, for each group.
-annealing_temp           = 
-
-; GENERATE VELOCITIES FOR STARTUP RUN
-gen_vel                  = no
-gen_temp                 = 100.0
-gen_seed                 = 173529
-
-; OPTIONS FOR BONDS    
-constraints              = all-bonds
-; Type of constraint algorithm
-constraint-algorithm     = Lincs
-; Do not constrain the start configuration
-continuation             = no
-; Use successive overrelaxation to reduce the number of shake iterations
-Shake-SOR                = no
-; Relative tolerance of shake
-shake-tol                = 1e-04
-; Highest order in the expansion of the constraint coupling matrix
-lincs-order              = 4
-; Number of iterations in the final step of LINCS. 1 is fine for
-; normal simulations, but use 2 to conserve energy in NVE runs.
-; For energy minimization with constraints it should be 4 to 8.
-lincs-iter               = 1
-; Lincs will write a warning to the stderr if in one step a bond
-; rotates over more degrees than
-lincs-warnangle          = 30
-; Convert harmonic bonds to morse potentials
-morse                    = no
-
-; ENERGY GROUP EXCLUSIONS
-; Pairs of energy groups for which all non-bonded interactions are excluded
-energygrp_excl           = 
-
-; NMR refinement stuff 
-; Distance restraints type: No, Simple or Ensemble
-disre                    = No
-; Force weighting of pairs in one distance restraint: Conservative or Equal
-disre-weighting          = Conservative
-; Use sqrt of the time averaged times the instantaneous violation
-disre-mixed              = no
-disre-fc                 = 1000
-disre-tau                = 0
-; Output frequency for pair distances to energy file
-nstdisreout              = 100
-; Orientation restraints: No or Yes
-orire                    = no
-; Orientation restraints force constant and tau for time averaging
-orire-fc                 = 0
-orire-tau                = 0
-orire-fitgrp             = 
-; Output frequency for trace(SD) to energy file
-nstorireout              = 100
-
-; Free energy control stuff
-free-energy              = no
-init-lambda              = 0
-delta-lambda             = 0
-sc-alpha                 = 0
-sc-sigma                 = 0.3
-
-; Non-equilibrium MD stuff
-acc-grps                 = 
-accelerate               = 
-freezegrps               = 
-freezedim                = 
-cos-acceleration         = 0
-
-; Electric fields      
-; Format is number of terms (int) and for all terms an amplitude (real)
-; and a phase angle (real)
-E-x                      = 
-E-xt                     = 
-E-y                      = 
-E-yt                     = 
-E-z                      = 
-E-zt                     = 
-
-; User defined thingies
-user1-grps               = 
-user2-grps               = 
-userint1                 = 0
-userint2                 = 0
-userint3                 = 0
-userint4                 = 0
-userreal1                = 0
-userreal2                = 0
-userreal3                = 0
-userreal4                = 0
-\end{lstlisting}
+\subsection{设定分子动力学参数(94k.mdp)}
+总共217行的参数文件，参见附件
 包含初始条件及其它参数
 \section{编译-结果-及分析}
 分别输入以下命令：
@@ -353,8 +135,8 @@ userreal4                = 0
 以上指令用于跑(mdrun)出拟合档案liquid.gro(结构文件)及 traj\_comp.xtc(轨迹文件)
 将以上这两个文件放在Pymol中打开后会得到一段分子振动的影片，并将其打印成GIF档（见附件）
 \section{径向分布函数(RDF)分析}
-RDF可以提供有关系统中粒子之间的距离分布信息。分析RDF可以确定粒子之间的最近邻距离、平均距离以及周期性结构（如晶体中的晶格常数）同时
-在研究相变过程中也非常有用。相变通常涉及粒子的聚集或分散，以及结构的变化。通过监测RDF随温度、压力或其他条件的变化，可以探索相变过程中粒子的聚集行为。
+RDF可以提供有关系统中粒子之间的距离分布信息。分析RDF可以确定粒子之间的最近邻距离、平均距离以及周期性结构（如晶体中的晶格常数）同时也可以研究相变过程。
+相变通常涉及粒子的聚集或分散，以及结构的变化。通过监测RDF随温度、压力或其他条件的变化，可以探索相变过程中粒子的聚集行为。
 接下来讨论如何使用rdf来分析：
 \begin{figure}[H]
     \begin{minipage}[t]{0.5\linewidth}
@@ -382,8 +164,248 @@ RDF可以提供有关系统中粒子之间的距离分布信息。分析RDF可�
 	\caption{all in one}
 \end{figure}
 
-\section{可以修改的参数并且与之而来的结果模拟及解释}
+\section{数据处理}
+\subsection{表格数据分析}
+我们从日志文件(md.log)中可以找到软件对数据的记录：
+\begin{center}
+  Energies (kJ/mol)
+  \begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    LJ (SR) & Disper. corr. & Coulomb (SR) & Potential & Kinetic En. \\
+    \hline
+    $-1.06112 \times 10^{3}$ & $-1.86835 \times 10^{2}$ & $0.00000$ & $-1.24795 \times 10^{3}$ & $2.22800 \times 10^{2}$ \\
+    \hline
+    \end{tabular}
+    \end{table}
+    
+    \begin{table}[h]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Total Energy & Conserved En. & Temperature & Pres. DC (bar) & Pressure (bar) \\
+    \hline
+    $-1.02515 \times 10^{3}$ & $-1.02747 \times 10^{3}$ & $8.30903 \times 10^{1}$ & $-2.98394 \times 10^{2}$ & $2.18580 \times 10^{1}$ \\
+    \hline
+    \end{tabular}
+    \end{table}
 
+     Step           Time
+    31400       62.80000
+
+Current $ref_t$ for group System: 93.7
+\end{center}
+这只是其中一项，透过python代码处理
+\begin{lstlisting}[language=python, caption={statistics}]
+  import re
+  import pandas as pd
+  import matplotlib.pyplot as plt
+  with open('D:\Process-zone\GROMACS-WORK\project-liquid\md.log', 'r') as file:
+      content = file.read()
+  
+  # 使用正则表达式提取能量数据
+  pattern = r'Energies \(kJ/mol\)\n(.*?\d+)\n\n'
+  energies_data = re.findall(pattern, content, re.DOTALL)
+  
+  # 提取每个项的能量数据
+  energies_list = []
+  for data in energies_data:
+      data_lines = data.strip().split('\n')[2:]
+      energies = []
+      for line in data_lines:
+          if 'Step' not in line and 'Current' not in line and 'Total' not in line:
+              values = line.split()
+              energies.extend([float(value) for value in values])
+      energies_list.append(energies)
+  
+  df = pd.DataFrame(energies_list, columns=['LJ (SR)', 'Disper. corr.', 'Coulomb (SR)', 'Potential', 'Kinetic En.'])
+  
+  # 打印DataFrame
+  print(df)
+  
+  # 平均值、标准差
+  average_potential = df['Potential'].mean()
+  std_kinetic = df['Kinetic En.'].std()
+  DAS = df['Disper. corr.'].std()
+  DAA = df['Disper. corr.'].mean()
+  CSS = df['Coulomb (SR)'].std()
+  CAA = df['Coulomb (SR)'].mean()
+  LJA = df['LJ (SR)'].mean()
+  LJS = df['LJ (SR)'].std()
+  print("Average Potential: ", average_potential)
+  print("Standard Deviation of Kinetic Energy: ", std_kinetic)
+  print("DisperAverage:", DAA)
+  print("DisperStandard Deviation:",DAS)
+  print("CoulombAverage:",CAA)
+  print("CoulombStandard Deviation:",CSS)
+  print("LJ (SR)Average:",LJA)
+  print("LJ (SR)Standard Deviation:",LJS)
+  
+  # 能量随时间变化
+  plt.figure(figsize=(10, 6))
+  steps = range(len(df))
+  # 势能
+  plt.plot(steps, df['Potential'], label='Potential')
+  # 动能
+  plt.plot(steps, df['Kinetic En.'], label='Kinetic Energy')
+  # Disper. corr.
+  plt.plot(steps, df['Disper. corr.'], label='Disper. corr.')
+  # Coulomb (SR)
+  plt.plot(steps, df['Coulomb (SR)'], label='Coulomb (SR)')
+  # LJ (SR)
+  plt.plot(steps, df['LJ (SR)'], label='LJ (SR)')
+  plt.xlabel('Time Steps')
+  plt.ylabel('Energy (kJ/mol)')
+  plt.title('Energy vs Time')
+  plt.legend()
+  plt.show()
+  
+  # 势能随时间变化
+  plt.figure(figsize=(10, 6))
+  plt.plot(steps, df['Potential'])
+  plt.xlabel('Time Steps')
+  plt.ylabel('Potential (kJ/mol)')
+  plt.title('Potential Energy vs Time')
+  plt.show()
+  
+  # 动能随时间变化
+  plt.figure(figsize=(10, 6))
+  plt.plot(steps, df['Kinetic En.'])
+  plt.xlabel('Time Steps')
+  plt.ylabel('Kinetic Energy (kJ/mol)')
+  plt.title('Kinetic Energy vs Time')
+  plt.show()
+  
+  # Disper. corr.随时间变化
+  plt.figure(figsize=(10, 6))
+  plt.plot(steps, df['Disper. corr.'])
+  plt.xlabel('Time Steps')
+  plt.ylabel('Disper. corr. (kJ/mol)')
+  plt.title('Disper. corr. Energy vs Time')
+  plt.show()
+  
+  # Coulomb (SR)随时间变化
+  plt.figure(figsize=(10, 6))
+  plt.plot(steps, df['Coulomb (SR)'])
+  plt.xlabel('Time Steps')
+  plt.ylabel('Coulomb (SR) (kJ/mol)')
+  plt.title('Coulomb (SR) Energy vs Time')
+  plt.show()
+  
+  # LJ (SR)随时间变化
+  plt.figure(figsize=(10, 6))
+  plt.plot(steps, df['LJ (SR)'])
+  plt.xlabel('Time Steps')
+  plt.ylabel('LJ (SR) (kJ/mol)')
+  plt.title('LJ (SR) Energy vs Time')
+  plt.show()
+  
+  \end{lstlisting}
+可以得到如下表格以及分析结果：\\
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+  \hline
+  LJ (SR) & Disper. corr. & Coulomb (SR) & Potential & Kinetic En. \\
+  \hline
+  -1004.670 & -1004.48 & 90.209700 & -301.526 & 166.73500 \\
+  -962.629 & -1003.68 & 100.741000 & -299.542 & 275.23400 \\
+  -937.160 & -1001.67 & 98.721000 & -296.440 & 503.93900 \\
+  -951.473 & -1000.52 & 92.313700 & -291.618 & 401.50000 \\
+  -944.428 & -1000.60 & 107.810000 & -288.753 & 74.92010 \\
+  ...      &        ...&        ...&        ...&  ...\\
+  -1775.050 & -1218.10 & 0.092283 & -501.159 & 9.23700 \\
+  -1775.160 & -1218.11 & 0.070176 & -501.173 & 9.37576 \\
+  -1775.250 & -1218.11 & 0.050506 & -501.177 & 10.05530 \\
+  -1775.350 & -1218.11 & 0.033881 & -501.184 & 8.36206 \\
+  -1410.180 & -1148.98 & 49.927000 & -410.124 & 7.53815 \\
+  \hline
+  \end{tabular}
+\end{center}
+[5002 rows x 5 columns]\\
+Average Potential:  -410.1118780487805\\
+Standard Deviation of Kinetic Energy:  72.91968855603525\\
+其中各项的意义是：\\
+1.LJ (SR)：Lennard-Jones相互作用能，表示由Lennard-Jones势引起的分子之间的吸引和排斥相互作用能。
+LJ势是常用的描述非键相互作用的势能函数之一，其中包括范德华吸引力和泡利排斥力。
+\\
+2.Disper. corr.：分散校正能量，表示由分散力校正引起的能量修正。分散力是一种非经典的相互作用力，考虑了分子间的电子云偶极矩相互作用，
+通常用于修正Lennard-Jones势中的近似。
+\\
+3.Coulomb (SR)：库仑相互作用能。
+\\
+4.Potential：总势能。
+\\
+5.Kinetic En.：动能。
+\\
+
+以上结果可以从平均势能(Average Potential)和动能标准差(Standard Deviation of Kinetic Energy)出发来探讨分子动力学模拟中的分子状态变化：\\
+1.平均势能：平均势能是系统内粒子之间相互作用势能的平均值。代表系统的相互作用能量大小，包括分子之间的吸引力和排斥力。
+平均势能可以用来描述系统的稳定性和结构性质。较低的平均势能通常对应着一个相对稳定的系统，而较高的平均势能可能表明系统存在较大的动力学变化和结构重排。
+\\
+2.动能标准差：动能标准差反映了分子系统内部粒子的平均动能分布的离散程度。标准差越大，意味着粒子的动能分布越广泛，粒子的运动速度差异较大。
+这可以用来衡量系统的热力学状态，较大的动能标准差可能表明系统处于高温状态或者存在较大的动力学涨落。\\
+
+同时，根据表格数据可以得出系统处于一个相对稳定的状态：\\
+1.平均势能较低，表明系统在一个相对稳定的能量平衡位置附近。这可能是由于温度耦合和压力耦合的控制使系统趋向平衡状态。
+\\
+2.系统中分子的动能分布较广：动能的标准差较大，表示分子的动能有较大的变化范围。
+这样的结果表明系统中的分子在模拟过程中可能具有较高的动力学活性和速度差异，可能存在一定程度的动能分散或动力学不均衡。
+\\
+3.分子间的相互作用具有较强的吸引力：Disper的平均值较低，表示分子间的范德华相互作用较强，有助于分子之间的吸引。
+根据Disper的平均值较低，可以推断Lennard-Jones相互作用在系统中起主导作用。
+\\
+4.分子间的静电相互作用有一定的强度：Coulomb的平均值较低，表示系统中存在一定强度的静电相互作用。
+这可能是由于系统中的电荷分布导致的静电相互作用。
+\\
+\subsection{对图形趋势分析}
+\begin{figure}[H]
+  \begin{minipage}[t]{0.5\linewidth}
+      \centering
+      \includegraphics[scale=0.3]{kinetic_energy_plot.png}
+      \caption{动能}
+      \label{fig:side:a}
+    \end{minipage}%
+    \begin{minipage}[t]{0.5\linewidth}
+      \centering
+      \includegraphics[scale=0.3]{potential_energy_plot.png}
+      \caption{势能}
+      \label{fig:side:b}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\linewidth}
+      \centering
+      \includegraphics[scale=0.3]{disper_corr_energy_plot.png}
+      \caption{分散校正能量}
+      \label{fig:side:a}
+    \end{minipage}%
+    \begin{minipage}[t]{0.5\linewidth}
+      \centering
+      \includegraphics[scale=0.3]{lj_sr_energy_plot.png}
+      \caption{Lennard-Jones相互作用能}
+      \label{fig:side:b}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\linewidth}
+      \centering
+      \includegraphics[scale=0.3]{coulomb_sr_energy_plot.png}
+      \caption{Coulomb}
+      \label{fig:side:b}
+    \end{minipage}
+    \begin{minipage}[t]{0.5\linewidth}
+      \centering
+      \includegraphics[scale=0.3]{analyticalfigure.png}
+      \caption{总图}
+      \label{fig:side:b}
+    \end{minipage}
+\end{figure}
+根据图形观察每一项的值随着时间逐渐减小，可以得出以下可能的解释：
+\\
+势能逐渐减小：势能的减小可能表示系统在模拟过程中逐渐接近更稳定的能量状态。因为系统在模拟过程中发生了一系列的能量转移（温度降低），使系统朝着更低能量的状态演化。
+\\
+动能标准差减小：动能标准差的减小可能表示分子之间的动能差异逐渐减小，即分子的动能分布趋于均匀。这可能是由于温度随着时间的降低，使系统中的分子逐渐趋于热平衡状态。
+\\
+Disper的平均值减小：Disper的平均值减小可能表示系统中分子间的范德华相互作用逐渐减弱。系统在模拟过程中，分子的相对位置和取向发生了变化，导致范德华相互作用减弱。
+\\
+Coulomb的平均值减小：Coulomb的平均值减小可能表示系统中静电相互作用逐渐减弱。
 \end{spacing}{}
 \bibliographystyle{IEEEtran}
 \bibliography{6thre}

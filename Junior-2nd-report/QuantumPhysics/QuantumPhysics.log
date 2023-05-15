@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  7 MAY 2023 12:56
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  15 MAY 2023 15:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -615,19 +615,19 @@ LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <12> not available
  [1
 
 ] [2] [3]
-Overfull \vbox (82.04832pt too high) has occurred while \output is active []
+Overfull \vbox (69.91072pt too high) has occurred while \output is active []
 
  [4] (QuantumPhysics.aux)
 Package rerunfilecheck Info: File `QuantumPhysics.out' has not changed.
-(rerunfilecheck)             Checksum: EDB33CC470A44C961A27619CD20730EF;1472.
+(rerunfilecheck)             Checksum: 08963059419871C30093AD11F4522BFF;1447.
  ) 
 Here is how much of TeX's memory you used:
- 17494 strings out of 410939
- 356621 string characters out of 2830432
- 701840 words of memory out of 3000000
- 38042 multiletter control sequences out of 15000+600000
+ 17493 strings out of 410939
+ 356610 string characters out of 2830432
+ 700803 words of memory out of 3000000
+ 38041 multiletter control sequences out of 15000+600000
  478721 words of font info for 87 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,6n,97p,469b,431s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on QuantumPhysics.xdv (4 pages, 25764 bytes).
+Output written on QuantumPhysics.xdv (4 pages, 26392 bytes).

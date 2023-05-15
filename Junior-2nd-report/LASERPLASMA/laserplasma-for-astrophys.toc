@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}研究背景(1-2页ppt)}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}磁场的起源(1-2页ppt)}{2}{subsection.1.1}%
+\contentsline {section}{\numberline {2}理论基础(2-4页ppt，包含两个理论但不含公式介绍)}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}发电机理论}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}原初磁场理论}{4}{subsection.2.2}%
+\contentsline {section}{\numberline {3}测量方法(1-2页ppt)}{4}{section.3}%
+\contentsline {section}{\numberline {4}研究方法(2-4页ppt)}{5}{section.4}%
+\contentsline {section}{\numberline {5}研究成果(1-2页ppt)}{5}{section.5}%
+\contentsline {subsection}{\numberline {5.1}结论与展望(1页ppt)}{5}{subsection.5.1}%

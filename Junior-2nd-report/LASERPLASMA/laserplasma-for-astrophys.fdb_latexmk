@@ -1,9 +1,16 @@
 # Fdb version 3
-["xdvipdfmx"] 1684136972 "QuantumPhysics.xdv" "QuantumPhysics.pdf" "QuantumPhysics" 1684136973
-  "QuantumPhysics.xdv" 1684136972 26392 1645ea06562407b0bfb5420861d6f0b8 "xelatex"
+["bibtex laserplasma-for-astrophys"] 1684135216 "laserplasma-for-astrophys.aux" "laserplasma-for-astrophys.bbl" "laserplasma-for-astrophys" 1684135223
+  "6thre.bib" 0 -1 0 ""
+  "C:/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
+  "laserplasma-for-astrophys.aux" 1684135222 1841 df4b0f680393228587cc87d9c7f8a314 "xelatex"
   (generated)
-  "QuantumPhysics.pdf"
-["xelatex"] 1684136970 "c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/QuantumPhysics/QuantumPhysics.tex" "QuantumPhysics.xdv" "QuantumPhysics" 1684136973
+  "laserplasma-for-astrophys.bbl"
+  "laserplasma-for-astrophys.blg"
+["xdvipdfmx"] 1684135223 "laserplasma-for-astrophys.xdv" "laserplasma-for-astrophys.pdf" "laserplasma-for-astrophys" 1684135223
+  "laserplasma-for-astrophys.xdv" 1684135222 64532 0bb9241cea149dee2382165831794e51 "xelatex"
+  (generated)
+  "laserplasma-for-astrophys.pdf"
+["xelatex"] 1684135219 "c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/LASERPLASMA/laserplasma-for-astrophys.tex" "laserplasma-for-astrophys.xdv" "laserplasma-for-astrophys" 1684135223
   "C:/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136743454 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -57,6 +64,7 @@
   "C:/MiKTeX/tex/latex/base/size12.clo" 1638775084 8449 bc7344e882df4d7e51c046514dee83e4 ""
   "C:/MiKTeX/tex/latex/base/ts1enc.def" 1638775082 8044 fa8875fa7360fa4a5757411aa07dae10 ""
   "C:/MiKTeX/tex/latex/base/tuenc.def" 1638775082 29098 3e2b8f2cbae539bde3ed8f63503c0954 ""
+  "C:/MiKTeX/tex/latex/cite/cite.sty" 1425353482 26218 19edeff8cdc2bcb704e8051dc55eb5a7 ""
   "C:/MiKTeX/tex/latex/cjk/CJKfntef.sty" 1634405102 12851 25a9b5cc006609feb5c9a20ce24a5392 ""
   "C:/MiKTeX/tex/latex/ctex/config/ctex-name-utf8.cfg" 1639330490 1769 735a72ed212ebc2ee09cb2f9f3314f5b ""
   "C:/MiKTeX/tex/latex/ctex/config/ctex.cfg" 1639330490 1229 1ecf7cad1a7cea3bfeb01fe4b0543bbb ""
@@ -113,14 +121,15 @@
   "C:/MiKTeX/tex/xelatex/xecjk/xeCJKfntef.sty" 1639329764 39112 d2c64c2924adb909ead58a883c2e3793 ""
   "C:/Users/toby1/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1680610784 23660638 dfd036573583e4a9d53cad7d24912597 ""
   "C:/WINDOWS/Fonts/msyh.ttc" 1575709707 19647736 ff2e53a6131130a07589812ea5b5b0d0 ""
-  "QuantumPhysics.aux" 1684136972 2640 3c0f9be6e1ca309dffea3ae15f0f740b "xelatex"
-  "QuantumPhysics.out" 1684136972 1447 08963059419871c30093ad11f4522bff "xelatex"
-  "QuantumPhysics.tex" 1684136966 1790 41796a4c95c46d2eef580658e949848a ""
-  "QuantumPhysics.toc" 1684136972 1291 673f281543aad519f41f7355d8efe53f "xelatex"
-  "c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/QuantumPhysics/QuantumPhysics.tex" 1684136966 1790 41796a4c95c46d2eef580658e949848a ""
+  "c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/LASERPLASMA/laserplasma-for-astrophys.tex" 1684135208 10115 3e8e2968084c12bbe8c441bbb4763fc9 ""
+  "laserplasma-for-astrophys.aux" 1684135222 1841 df4b0f680393228587cc87d9c7f8a314 "xelatex"
+  "laserplasma-for-astrophys.bbl" 0 -1 0 "bibtex laserplasma-for-astrophys"
+  "laserplasma-for-astrophys.out" 1684135222 1251 2ec5f1921ed30679877156d7e8e6ae5c "xelatex"
+  "laserplasma-for-astrophys.tex" 1684135208 10115 3e8e2968084c12bbe8c441bbb4763fc9 ""
+  "laserplasma-for-astrophys.toc" 1684135222 784 7601a27334d4b14cd40da2e8bd350739 "xelatex"
   (generated)
-  "QuantumPhysics.aux"
-  "QuantumPhysics.log"
-  "QuantumPhysics.out"
-  "QuantumPhysics.toc"
-  "QuantumPhysics.xdv"
+  "laserplasma-for-astrophys.aux"
+  "laserplasma-for-astrophys.log"
+  "laserplasma-for-astrophys.out"
+  "laserplasma-for-astrophys.toc"
+  "laserplasma-for-astrophys.xdv"

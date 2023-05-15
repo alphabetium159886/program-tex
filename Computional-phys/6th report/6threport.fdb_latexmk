@@ -1,21 +1,21 @@
 # Fdb version 3
-["bibtex 6threport"] 1684070115 "6threport.aux" "6threport.bbl" "6threport" 1684070126
+["bibtex 6threport"] 1684153577 "6threport.aux" "6threport.bbl" "6threport" 1684154055
   "6thre.bib" 1684061187 242 70522b37f219331f2071c6ebbe36d3c3 ""
-  "6threport.aux" 1684070124 3186 f6fae26159ffc62bafe40512fcb276b7 "xelatex"
+  "6threport.aux" 1684154053 4498 4299c4842444d8307de65c569b086e5a "xelatex"
   "C:/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
   (generated)
   "6threport.bbl"
   "6threport.blg"
-["xdvipdfmx"] 1684070125 "6threport.xdv" "6threport.pdf" "6threport" 1684070126
-  "6threport.xdv" 1684070124 235892 fd60f4a31a52c3ffc2e2a39cf5979d6d "xelatex"
+["xdvipdfmx"] 1684154054 "6threport.xdv" "6threport.pdf" "6threport" 1684154055
+  "6threport.xdv" 1684154053 223728 8cd5e571b1c1693e2756f93a610c2f4c "xelatex"
   (generated)
   "6threport.pdf"
-["xelatex"] 1684070120 "c:/Users/toby1/OneDrive/program-tex/Computional-phys/6th report/6threport.tex" "6threport.xdv" "6threport" 1684070126
-  "6threport.aux" 1684070124 3186 f6fae26159ffc62bafe40512fcb276b7 "xelatex"
-  "6threport.bbl" 1684070116 1087 72104047f25bf0a42fe45715a8712683 "bibtex 6threport"
-  "6threport.out" 1684070124 1270 04faf17400766cb709135fbc42389ca6 "xelatex"
-  "6threport.tex" 1684070120 15980 29aaf73d4118c9d090d7a60c893f7053 ""
-  "6threport.toc" 1684070124 906 b561b464b0f6e07058abd214d3240466 "xelatex"
+["xelatex"] 1684154050 "c:/Users/toby1/OneDrive/program-tex/Computional-phys/6th report/6threport.tex" "6threport.xdv" "6threport" 1684154055
+  "6threport.aux" 1684154053 4498 4299c4842444d8307de65c569b086e5a "xelatex"
+  "6threport.bbl" 1684153577 1087 72104047f25bf0a42fe45715a8712683 "bibtex 6threport"
+  "6threport.out" 1684154053 1501 d4b21ea786adac0620c1e3688f8723c2 "xelatex"
+  "6threport.tex" 1684154049 18763 8cdfb9d07ee4da9989b70c4e109c7e15 ""
+  "6threport.toc" 1684154053 1050 709dbe69973fa467179e5c10e3dfc00b "xelatex"
   "C:/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136743454 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -112,6 +112,7 @@
   "C:/MiKTeX/tex/latex/letltxmacro/letltxmacro.sty" 1575399536 5766 13a9e8766c47f30327caf893ece86ac8 ""
   "C:/MiKTeX/tex/latex/listings/listings.cfg" 1623004943 1830 e31effa752c61538383451ae21332364 ""
   "C:/MiKTeX/tex/latex/listings/listings.sty" 1623004942 80964 64e57373f36316e4a09b517cbf1aba2e ""
+  "C:/MiKTeX/tex/latex/listings/lstlang1.sty" 1623004943 204271 bae5b2d457283e99567249c1990510be ""
   "C:/MiKTeX/tex/latex/listings/lstmisc.sty" 1623004942 77022 ee25ce086f4a79d8cf73bac6f94c02a5 ""
   "C:/MiKTeX/tex/latex/refcount/refcount.sty" 1576433952 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "C:/MiKTeX/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1575571282 9715 b051d5b493d9fe5f4bc251462d039e5f ""
@@ -127,9 +128,15 @@
   "C:/Users/toby1/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1680610784 23660638 dfd036573583e4a9d53cad7d24912597 ""
   "C:/WINDOWS/Fonts/msyh.ttc" 1575709707 19647736 ff2e53a6131130a07589812ea5b5b0d0 ""
   "Radial Distribution Function2.png" 1684056774 29162 18de8808250784a12246b70be318f61b ""
-  "c:/Users/toby1/OneDrive/program-tex/Computional-phys/6th report/6threport.tex" 1684070120 15980 29aaf73d4118c9d090d7a60c893f7053 ""
+  "analyticalfigure.png" 1684151605 69718 366d35434b0a6494dc23f8e9de7d228d ""
+  "c:/Users/toby1/OneDrive/program-tex/Computional-phys/6th report/6threport.tex" 1684154049 18763 8cdfb9d07ee4da9989b70c4e109c7e15 ""
+  "coulomb_sr_energy_plot.png" 1684152658 41438 15d70d42d4ec7b44f46370c5f8a6b6ef ""
+  "disper_corr_energy_plot.png" 1684152653 33607 98f83b2fa29045c73f09246bdd25cc59 ""
+  "kinetic_energy_plot.png" 1684152642 49108 92dde5b61b618e43cba3300996c1c30c ""
+  "lj_sr_energy_plot.png" 1684152663 37737 bcd281762e1683adb968a6a397495321 ""
   "msdxvg.png" 1684055308 19257 05af1ab682387d86403af8481982e0ae ""
   "msdxvgworking.jpg" 1684058951 123857 2393d385947fa15b6a8b192604bfc916 ""
+  "potential_energy_plot.png" 1684152636 39136 b1766df7f505b542aa293d0e92f0fbeb ""
   "radial distribution function solid.png" 1684056856 24214 350a3a922adbe7830a4e350fce13d1f4 ""
   "radial distribution function.png" 1684055846 26149 4f81d8f728e4a909bbb752c451f1f493 ""
   (generated)

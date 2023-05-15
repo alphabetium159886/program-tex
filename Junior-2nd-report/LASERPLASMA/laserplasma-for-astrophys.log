@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  15 MAY 2023 20:34
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  15 MAY 2023 15:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/toby1/OneDrive/program-tex/Computional-phys/6th report/6threport.tex"
-(c:/Users/toby1/OneDrive/program-tex/Computional-phys/6th report/6threport.tex
+**c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/LASERPLASMA/laserplasma-for-astrophys.tex
+(c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/LASERPLASMA/laserplasma-for-astrophys.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-04-20> (C:\MiKTeX\tex/latex/ctex\ctexart.cls (C:\MiKTeX\tex/latex/ctex/config\ctexbackend.cfg
 File: ctexbackend.cfg 2021/12/12 v2.5.8 Backend configuration file (CTEX)
@@ -470,33 +470,8 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
-) (6threport.aux
-
-LaTeX Warning: Label `fig:side:a' multiply defined.
-
-
-LaTeX Warning: Label `fig:side:b' multiply defined.
-
-
-LaTeX Warning: Label `fig:side:a' multiply defined.
-
-
-LaTeX Warning: Label `fig:side:b' multiply defined.
-
-
-LaTeX Warning: Label `fig:side:a' multiply defined.
-
-
-LaTeX Warning: Label `fig:side:b' multiply defined.
-
-
-LaTeX Warning: Label `fig:side:b' multiply defined.
-
-
-LaTeX Warning: Label `fig:side:b' multiply defined.
-
-)
-\openout1 = `6threport.aux'.
+) (laserplasma-for-astrophys.aux)
+\openout1 = `laserplasma-for-astrophys.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
 LaTeX Font Info:    ... okay on input line 42.
@@ -587,9 +562,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 42.
 LaTeX Info: Redefining \pageref on input line 42.
 LaTeX Info: Redefining \nameref on input line 42.
- (6threport.out) (6threport.out)
+ (laserplasma-for-astrophys.out) (laserplasma-for-astrophys.out)
 \@outlinefile=\write3
-\openout3 = `6threport.out'.
+\openout3 = `laserplasma-for-astrophys.out'.
 
 
 *geometry* driver: auto-detecting
@@ -627,128 +602,35 @@ LaTeX Info: Redefining \nameref on input line 42.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count325
-(6threport.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
+(laserplasma-for-astrophys.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
  (C:\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
  (C:\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write4
-\openout4 = `6threport.toc'.
+\openout4 = `laserplasma-for-astrophys.toc'.
 
 LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <12> not available
 (Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 46.
  [1
 
-] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 69--74
-
- []
-
-[3]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 76.
-
-Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: Could not resolve font "FangSong/B" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: Could not resolve font "FangSong/I" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
-(fontspec)             with options [Script={CJK}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
-
- [4]
-File: msdxvg.png Graphic file (type bmp)
-<msdxvg.png>
-File: msdxvgworking.jpg Graphic file (type bmp)
-<msdxvgworking.jpg>
- [5]
-File: radial distribution function.png Graphic file (type bmp)
-<radial distribution function.png>
-
-Overfull \hbox (3.64185pt too wide) in paragraph at lines 144--145
- [][] 
- []
-
-File: radial distribution function solid.png Graphic file (type bmp)
-<radial distribution function solid.png>
-
-Overfull \hbox (3.64185pt too wide) in paragraph at lines 150--151
- [][] 
- []
-
-File: Radial Distribution Function2.png Graphic file (type bmp)
-<Radial Distribution Function2.png>
-[6] (C:\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-) [7] [8] [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 305--306
-
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 325--341
-
- []
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 342--348
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 349--361
-
- []
-
-[13]
-File: kinetic_energy_plot.png Graphic file (type bmp)
-<kinetic_energy_plot.png>
-File: potential_energy_plot.png Graphic file (type bmp)
-<potential_energy_plot.png>
-File: disper_corr_energy_plot.png Graphic file (type bmp)
-<disper_corr_energy_plot.png>
-File: lj_sr_energy_plot.png Graphic file (type bmp)
-<lj_sr_energy_plot.png>
-File: coulomb_sr_energy_plot.png Graphic file (type bmp)
-<coulomb_sr_energy_plot.png>
-File: analyticalfigure.png Graphic file (type bmp)
-<analyticalfigure.png>
-
-Overfull \hbox (2.608pt too wide) in paragraph at lines 363--399
-[] [] 
- []
-
-[14] (6threport.bbl) [15] (6threport.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package rerunfilecheck Info: File `6threport.out' has not changed.
-(rerunfilecheck)             Checksum: D4B21EA786ADAC0620C1E3688F8723C2;1501.
+] [2] [3] [4] [5]
+No file laserplasma-for-astrophys.bbl.
+[6] (laserplasma-for-astrophys.aux)
+Package rerunfilecheck Info: File `laserplasma-for-astrophys.out' has not changed.
+(rerunfilecheck)             Checksum: 2EC5F1921ED30679877156D7E8E6AE5C;1251.
  ) 
 Here is how much of TeX's memory you used:
- 18036 strings out of 410939
- 369407 string characters out of 2830432
- 1086391 words of memory out of 3000000
- 38547 multiletter control sequences out of 15000+600000
- 478785 words of font info for 95 fonts, out of 8000000 for 9000
+ 17745 strings out of 410939
+ 367544 string characters out of 2830432
+ 711510 words of memory out of 3000000
+ 38290 multiletter control sequences out of 15000+600000
+ 478721 words of font info for 87 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,11n,97p,461b,2101s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 89i,6n,97p,477b,530s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on 6threport.xdv (15 pages, 223728 bytes).
+Output written on laserplasma-for-astrophys.xdv (6 pages, 64532 bytes).

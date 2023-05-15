@@ -1,7 +1,7 @@
-PWD c:\Users\toby1\OneDrive\program-tex\Computional-phys\6th report
+PWD c:\Users\toby1\OneDrive\program-tex\Junior-2nd-report\LASERPLASMA
 INPUT C:\Users\toby1\AppData\Local\MiKTeX\miktex\data\le\xetex\xelatex.fmt
-INPUT c:\Users\toby1\OneDrive\program-tex\Computional-phys\6th report\6threport.tex
-OUTPUT 6threport.log
+INPUT c:\Users\toby1\OneDrive\program-tex\Junior-2nd-report\LASERPLASMA\laserplasma-for-astrophys.tex
+OUTPUT laserplasma-for-astrophys.log
 INPUT C:\MiKTeX\tex\latex\ctex\ctexart.cls
 INPUT C:\MiKTeX\tex\latex\ctex\ctexart.cls
 INPUT C:\MiKTeX\tex\latex\ctex\ctexart.cls
@@ -772,10 +772,10 @@ INPUT C:\MiKTeX\tex\latex\graphics-cfg\color.cfg
 INPUT C:\MiKTeX\tex\latex\graphics-cfg\color.cfg
 INPUT C:\MiKTeX\tex\latex\graphics-cfg\color.cfg
 INPUT C:\MiKTeX\tex\latex\amsmath\amsmath.sty
-INPUT .\6threport.aux
-INPUT 6threport.aux
-INPUT 6threport.aux
-OUTPUT 6threport.aux
+INPUT .\laserplasma-for-astrophys.aux
+INPUT laserplasma-for-astrophys.aux
+INPUT laserplasma-for-astrophys.aux
+OUTPUT laserplasma-for-astrophys.aux
 INPUT C:\MiKTeX\tex\latex\graphics\color.sty
 INPUT C:\MiKTeX\tex\latex\hyperref\nameref.sty
 INPUT C:\MiKTeX\tex\latex\hyperref\nameref.sty
@@ -814,20 +814,20 @@ INPUT C:\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\MiKTeX\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\MiKTeX\tex\latex\kvoptions\kvoptions.sty
 INPUT C:\MiKTeX\tex\generic\ltxcmds\ltxcmds.sty
-INPUT .\6threport.out
-INPUT 6threport.out
-INPUT .\6threport.out
-INPUT 6threport.out
-INPUT .\6threport.out
-INPUT 6threport.out
-INPUT .\6threport.out
-INPUT 6threport.out
-INPUT .\6threport.out
-INPUT .\6threport.out
-OUTPUT 6threport.out
-INPUT .\6threport.toc
-INPUT 6threport.toc
-INPUT 6threport.toc
+INPUT .\laserplasma-for-astrophys.out
+INPUT laserplasma-for-astrophys.out
+INPUT .\laserplasma-for-astrophys.out
+INPUT laserplasma-for-astrophys.out
+INPUT .\laserplasma-for-astrophys.out
+INPUT laserplasma-for-astrophys.out
+INPUT .\laserplasma-for-astrophys.out
+INPUT laserplasma-for-astrophys.out
+INPUT .\laserplasma-for-astrophys.out
+INPUT .\laserplasma-for-astrophys.out
+OUTPUT laserplasma-for-astrophys.out
+INPUT .\laserplasma-for-astrophys.toc
+INPUT laserplasma-for-astrophys.toc
+INPUT laserplasma-for-astrophys.toc
 INPUT C:\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
 INPUT C:\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
 INPUT C:\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
@@ -854,8 +854,8 @@ INPUT C:\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
-OUTPUT 6threport.toc
-OUTPUT 6threport.xdv
+OUTPUT laserplasma-for-astrophys.toc
+OUTPUT laserplasma-for-astrophys.xdv
 INPUT C:\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
 INPUT C:\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
@@ -867,47 +867,6 @@ INPUT C:\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
-INPUT .\msdxvg.png
-INPUT .\msdxvg.png
-INPUT msdxvg.png
-INPUT .\msdxvgworking.jpg
-INPUT .\msdxvgworking.jpg
-INPUT msdxvgworking.jpg
-INPUT .\radial distribution function.png
-INPUT .\radial distribution function.png
-INPUT radial distribution function.png
-INPUT .\radial distribution function solid.png
-INPUT .\radial distribution function solid.png
-INPUT radial distribution function solid.png
-INPUT .\Radial Distribution Function2.png
-INPUT .\Radial Distribution Function2.png
-INPUT Radial Distribution Function2.png
-INPUT C:\MiKTeX\tex\latex\listings\lstlang1.sty
-INPUT C:\MiKTeX\tex\latex\listings\lstlang1.sty
-INPUT C:\MiKTeX\tex\latex\listings\lstlang1.sty
-INPUT C:\MiKTeX\tex\latex\listings\lstlang1.sty
-INPUT .\kinetic_energy_plot.png
-INPUT .\kinetic_energy_plot.png
-INPUT kinetic_energy_plot.png
-INPUT .\potential_energy_plot.png
-INPUT .\potential_energy_plot.png
-INPUT potential_energy_plot.png
-INPUT .\disper_corr_energy_plot.png
-INPUT .\disper_corr_energy_plot.png
-INPUT disper_corr_energy_plot.png
-INPUT .\lj_sr_energy_plot.png
-INPUT .\lj_sr_energy_plot.png
-INPUT lj_sr_energy_plot.png
-INPUT .\coulomb_sr_energy_plot.png
-INPUT .\coulomb_sr_energy_plot.png
-INPUT coulomb_sr_energy_plot.png
-INPUT .\analyticalfigure.png
-INPUT .\analyticalfigure.png
-INPUT analyticalfigure.png
-INPUT .\6threport.bbl
-INPUT 6threport.bbl
-INPUT .\6threport.bbl
-INPUT 6threport.bbl
-INPUT 6threport.aux
-INPUT .\6threport.out
-INPUT .\6threport.out
+INPUT laserplasma-for-astrophys.aux
+INPUT .\laserplasma-for-astrophys.out
+INPUT .\laserplasma-for-astrophys.out

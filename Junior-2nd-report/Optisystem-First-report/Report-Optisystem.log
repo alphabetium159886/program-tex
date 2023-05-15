@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  15 MAY 2023 15:55
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  15 MAY 2023 15:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/Optisystem-First-report/Report-Mach-Zehnder.tex
-(c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/Optisystem-First-report/Report-Mach-Zehnder.tex
+**c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/Optisystem-First-report/Report-Optisystem.tex
+(c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/Optisystem-First-report/Report-Optisystem.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-04-20> (C:\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -448,8 +448,8 @@ Package: color 2021/12/07 v1.3c Standard LaTeX Color (DPC)
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: xetex.def on input line 149.
-) (Report-Mach-Zehnder.aux)
-\openout1 = `Report-Mach-Zehnder.aux'.
+) (Report-Optisystem.aux)
+\openout1 = `Report-Optisystem.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
@@ -484,9 +484,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 15.
 LaTeX Info: Redefining \pageref on input line 15.
 LaTeX Info: Redefining \nameref on input line 15.
- (Report-Mach-Zehnder.out) (Report-Mach-Zehnder.out)
+ (Report-Optisystem.out) (Report-Optisystem.out)
 \@outlinefile=\write3
-\openout3 = `Report-Mach-Zehnder.out'.
+\openout3 = `Report-Optisystem.out'.
 
 
 *geometry* driver: auto-detecting
@@ -580,7 +580,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
 (Font)                  OT1/cmss/bx/n --> TU/lmss/b/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 15.
-(Report-Mach-Zehnder.toc
+(Report-Optisystem.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
  (C:\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -590,7 +590,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 \tf@toc=\write4
-\openout4 = `Report-Mach-Zehnder.toc'.
+\openout4 = `Report-Optisystem.toc'.
 
  [1
 
@@ -605,18 +605,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--48
  []
 
 [3]
-No file Report-Mach-Zehnder.bbl.
-[4] (Report-Mach-Zehnder.aux)
-Package rerunfilecheck Info: File `Report-Mach-Zehnder.out' has not changed.
+No file Report-Optisystem.bbl.
+[4] (Report-Optisystem.aux)
+Package rerunfilecheck Info: File `Report-Optisystem.out' has not changed.
 (rerunfilecheck)             Checksum: 8B7D932649E4A1E23E748DAF0B12E945;775.
  ) 
 Here is how much of TeX's memory you used:
- 16576 strings out of 410939
- 338730 string characters out of 2830432
- 683217 words of memory out of 3000000
- 37128 multiletter control sequences out of 15000+600000
+ 16554 strings out of 410939
+ 337278 string characters out of 2830432
+ 683175 words of memory out of 3000000
+ 37106 multiletter control sequences out of 15000+600000
  478713 words of font info for 86 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,6n,97p,453b,525s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 89i,6n,97p,451b,525s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on Report-Mach-Zehnder.xdv (4 pages, 25532 bytes).
+Output written on Report-Optisystem.xdv (4 pages, 24980 bytes).
