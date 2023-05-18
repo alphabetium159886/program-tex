@@ -4,6 +4,7 @@
 \usepackage[margin = 25mm]{geometry}
 \usepackage{setspace}
 \usepackage{listings}
+\usepackage{cite}
 \usepackage{ctex}
 \usepackage{float}
 \usepackage{xcolor}
@@ -61,7 +62,7 @@ WKB（Wenzel，Kramers, Brillouin）方法是得到一维定态 Schrödinger 方
 首先波函数以指数函数的形式重新表达，再将这指数函数代入Schrödinger方程，展开指数函数的参数为$\hbar$的幂级数，
 $\hbar$同次幂的项目一一对应，会得到一组方程，处理后，就会得到波函数的近似。
 \subsection{基本思想}
-中间省略了很多步骤，详细过程参见各大量子力学课本
+中间省略了很多步骤，详细过程参见各大量子力学课本\cite{griffiths_schroeter_2018}
 对于一维定态Schrödinger方程：
 \begin{center}
     $\displaystyle - \frac{\hbar^2}{2m} \frac{\mathrm{d}^2}{\mathrm{d}x^2} \psi(x) + V(x) \psi(x) = E \psi(x)\,\!$
@@ -125,12 +126,61 @@ $\displaystyle \psi(x) = e^{\phi(x)/\hbar} \,\!$。将其代回原方程可以�
 \\
 2.粒子轨道和量子态：WKB近似还可以用于计算量子力学中的粒子轨道和量子态。
 在某些情况下，例如静电场中的粒子运动或氢原子的束缚态，WKB近似可以提供近似的能级和波函数。
-
+\\
+3.WKB近似法能够在不需要精确求解的情况下，通过计算得到等离子体中波的传播方程，并得出物理运动的定性描述。
+WKB近似法的优势在于它比其他精确方法更快和更简单，并且可以解决一些无法通过其他方法计算的难点问题。
 \section{WKB近似在激光等离子体中的应用}
+接下来考虑在背景密度和磁场随位置但不随时间变化的情况下，略微不均匀的冷等离子体中的波传播，并且揭示等离子体中的波传播特性。
+\subsection{不均匀等离子体中波的传播机制}
+1.折射：当波从一个介质传播到另一个介质时，波会受到折射现象的影响。在不均匀冷等离子体中，由于等离子体的密度或折射率分布不均匀，
+波在介质中传播时会遇到密度或折射率的变化。这会导致波的传播方向发生改变，遵循折射定律。折射现象在不均匀冷等离子体中是波传播的重要机制之一。
+\\
+2.衍射：衍射是波在通过障碍物或通过波前上的不规则结构时发生的现象。在不均匀冷等离子体中，波通过介质中的非均匀性分布时，
+会遇到空间上的不规则结构，如孔隙、缺陷或波动性变化。这些不规则结构会导致波的传播方向和强度的变化，产生衍射现象。
+\\
 
-\subsection{激光在非均匀等离子体中的传播与能量吸收过程citep114}
-\subsection{}
-\subsection{}
+
+\subsection{冷等离子体波、WKB近似和射线追踪的应用}
+在冷等离子波笔记中，我们假设波的电磁场具有以下形式:
+\begin{center}
+    $\displaystyle \delta\mathbf{E}=\tilde{\mathbf{E}}\exp(\text{i}\mathbf{k}\cdot\mathbf{r}-\text{i}\omega t),$
+\end{center}
+\begin{center}
+    $\displaystyle \delta\mathbf{B}=\tilde{\mathbf{B}}\exp(\text{i}\mathbf{k}\cdot\mathbf{r}-\text{i}\omega t).$
+\end{center}
+在非均匀的稳态等离子体中，我们不能简单地假设波函数是$\displaystyle \exp(\text{i}\mathbf{k}\cdot\mathbf{r}-\text{i}\omega t)$，
+而要考虑另一种形式，即
+\begin{center}
+    $\displaystyle\delta\mathbf{E}=\tilde{\mathbf{E}}(\mathbf{r})\exp(\mathrm{i}S(\mathbf{r})-\mathrm{i}\omega t),$
+\end{center}
+\begin{center}
+    $\displaystyle \delta\mathbf{B}=\tilde{\mathbf{B}}(\mathbf{r})\exp(\mathrm{i}S(\mathbf{r})-\mathrm{i}\omega t).$
+\end{center}
+我们假设 S为 eikonal 函数\cite{DETRIXHE201346}并且系数E和B具有L量级的特征长度，
+
+\begin{center}
+    $\displaystyle \frac{|\nabla S|}{S}\sim\frac{|\nabla\tilde{\mathbf{E}}|}{|\tilde{\mathbf{E}}|}\sim\frac{|\nabla\tilde{\mathbf{B}}|}{|\tilde{\mathbf{B}}|}\sim\frac{1}{L},$
+\end{center}
+同时方程S(r)很大
+
+\begin{center}
+    $\displaystyle S(\mathbf{r})\sim kL \gg  1$
+\end{center}
+，所以考虑
+\begin{center}
+    $\displaystyle |\nabla S|\sim k\gg\frac{1}{L}$
+\end{center}
+这样就可以重写冷等离子体方程，将$\displaystyle \mathrm{ik}\tilde{\mathbf{E}}$变成$\mathrm{i}\nabla S\tilde{\mathbf{E}}+\nabla\tilde{\mathbf{E}}$
+我们就可以得到：
+\begin{center}
+    $\displaystyle\frac{c^2}{\omega^2}(\mathbf{k}-\mathrm i\nabla)\times[(\mathbf k-\mathrm i\nabla)\times\tilde{\mathbf E}]+\epsilon\cdot\tilde{\mathbf E}=0,$
+\end{center}
+其中$K = \nabla S$
+
+
+
+
+\subsection{求得解析解}
 \subsection{}
 
 
@@ -140,5 +190,8 @@ $\displaystyle \psi(x) = e^{\phi(x)/\hbar} \,\!$。将其代回原方程可以�
 
 
 \end{spacing}{}
+
+\bibliographystyle{IEEEtran}
+\bibliography{qp}
 
 \end{document}
