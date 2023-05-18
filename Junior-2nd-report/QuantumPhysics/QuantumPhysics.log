@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  15 MAY 2023 15:49
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  17 MAY 2023 20:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -599,11 +599,11 @@ LaTeX Info: Redefining \nameref on input line 41.
 
 \c@lstlisting=\count325
 (QuantumPhysics.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
  (C:\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
  (C:\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
@@ -614,20 +614,19 @@ LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <12> not available
 (Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 45.
  [1
 
-] [2] [3]
-Overfull \vbox (69.91072pt too high) has occurred while \output is active []
-
- [4] (QuantumPhysics.aux)
+] [2]
+Missing character: There is no ⎯ in font [lmroman12-regular]:mapping=tex-text;!
+[3] [4] [5] (QuantumPhysics.aux)
 Package rerunfilecheck Info: File `QuantumPhysics.out' has not changed.
-(rerunfilecheck)             Checksum: 08963059419871C30093AD11F4522BFF;1447.
+(rerunfilecheck)             Checksum: 7F68C15F858B01C5C56BF37355E4071D;1009.
  ) 
 Here is how much of TeX's memory you used:
- 17493 strings out of 410939
- 356610 string characters out of 2830432
- 700803 words of memory out of 3000000
- 38041 multiletter control sequences out of 15000+600000
+ 17558 strings out of 410939
+ 360606 string characters out of 2830432
+ 702285 words of memory out of 3000000
+ 38106 multiletter control sequences out of 15000+600000
  478721 words of font info for 87 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,6n,97p,469b,431s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 89i,8n,97p,469b,548s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on QuantumPhysics.xdv (4 pages, 26392 bytes).
+Output written on QuantumPhysics.xdv (5 pages, 39980 bytes).

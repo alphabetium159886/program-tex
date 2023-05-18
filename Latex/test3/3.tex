@@ -28,7 +28,7 @@
 \section{计算推导}
 设质量为$m$,能量为$E(E> 0)$的粒子从左入射,碰到$\delta$势垒:\\
 \begin{center}
-  $V=\alpha[\delta(x+a)+\delta(x-a)]$
+  $\displaystyle V=\alpha[\delta(x+a)+\delta(x-a)]$
 \end{center}
 \begin{figure}[htbp]
     \centering
@@ -97,53 +97,53 @@ $\\
 因此，我们可以首先考虑单个delta势垒$V=\alpha\delta(x-a)$
 \\对于薛定谔方程：
 \begin{center}
-  $i\hbar\frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2 m} \frac{\partial^2 \Psi}{\partial x^2}+V(x) \Psi(x,t)$
+  $\displaystyle i\hbar\frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2 m} \frac{\partial^2 \Psi}{\partial x^2}+V(x) \Psi(x,t)$
 \end{center}
 分离变量
 \begin{center}
-$\Psi(x,t)=\psi(x)\phi(t)$
+$\displaystyle \Psi(x,t)=\psi(x)\phi(t)$
 \end{center}
 \begin{center}
-$i\hbar\psi\frac{d\phi}{dt}=-\frac{\hbar^2}{2m} \phi\frac{d^2 \psi}{dx^2}+V\psi\phi$\\
-$\Rightarrow i\hbar\frac{\dot\phi}{\phi}=-\frac{\hbar^2}{2m}\frac{\ddot\psi}{\psi}+V=E $\\
-$\left\{\begin{matrix}    i\hbar\frac{\dot\phi}{\phi}=E \\     -\frac{\hbar^2}{2m}\frac{\ddot\psi}{\psi}+V=E  \end{matrix}\right. $\\
+$\displaystyle i\hbar\psi\frac{d\phi}{dt}=-\frac{\hbar^2}{2m} \phi\frac{d^2 \psi}{dx^2}+V\psi\phi$\\
+$\displaystyle \Rightarrow i\hbar\frac{\dot\phi}{\phi}=-\frac{\hbar^2}{2m}\frac{\ddot\psi}{\psi}+V=E $\\
+$\displaystyle \left\{\begin{matrix}    i\hbar\frac{\dot\phi}{\phi}=E \\     -\frac{\hbar^2}{2m}\frac{\ddot\psi}{\psi}+V=E  \end{matrix}\right. $\\
 \end{center}
 将势能V带入,得
 \begin{center}
-$\left\{\begin{matrix}    i\hbar\frac{\dot\phi}{\phi}=E \\     -\frac{\hbar^2}{2m}\frac{\ddot\psi}{\psi}+\alpha\delta(x-a)=E  \end{matrix}\right. $\\
+$\displaystyle \left\{\begin{matrix}    i\hbar\frac{\dot\phi}{\phi}=E \\     -\frac{\hbar^2}{2m}\frac{\ddot\psi}{\psi}+\alpha\delta(x-a)=E  \end{matrix}\right. $\\
 \end{center}
 E为满足边界条件的特征值,
 \begin{center}
-$ \frac{\partial^2\psi}{\partial x^2}+\frac{2m}{\hbar^2} \left\{E-\alpha\delta(x-a)\right\}\psi=0$   (1)\\
+$\displaystyle \frac{\partial^2\psi}{\partial x^2}+\frac{2m}{\hbar^2} \left\{E-\alpha\delta(x-a)\right\}\psi=0$   (1)\\
 \end{center}
 如果$x\neq a$,
-$\Rightarrow \frac{\partial^2\psi}{\partial x^2}+\frac{2mE}{\hbar^2}\psi=0 $
+$\displaystyle \Rightarrow \frac{\partial^2\psi}{\partial x^2}+\frac{2mE}{\hbar^2}\psi=0 $
 会有以下解
 \begin{center}
-$\psi(x)= \left\{\begin{matrix}    Ae^{ikx}+Be^{-ikx},x<-a \\  Fe^{ikx}+Ge^{-ikx},x>a\\  \end{matrix}\right. ,k=\frac{\sqrt{2mE}}{\hbar}$\\
+$\displaystyle \psi(x)= \left\{\begin{matrix}    Ae^{ikx}+Be^{-ikx},x<-a \\  Fe^{ikx}+Ge^{-ikx},x>a\\  \end{matrix}\right. ,k=\frac{\sqrt{2mE}}{\hbar}$\\
 \end{center}
 并且此时有边界条件:
 \begin{center}
-$ \lim\limits_{x \to a^-}\psi(x)=\lim\limits_{x\to a^+}\psi(x)$
+$\displaystyle \lim\limits_{x \to a^-}\psi(x)=\lim\limits_{x\to a^+}\psi(x)$
 \end{center}
 这样可得:
 \begin{center}
-$ Ae^{ika}+Be^{-ika}=Fe^{ika}+Ge^{-ika} $  (1)
+$\displaystyle Ae^{ika}+Be^{-ika}=Fe^{ika}+Ge^{-ika} $  (1)
 \end{center}
 而其他的条件可对(1)式积分,范围从$-a-\epsilon$到$-a+\epsilon$
 \begin{center}
 $\displaystyle\int^{-a+\epsilon}_{-a-\epsilon}\left\{\frac{\partial^2\psi}{\partial x^2}\right\}=-\frac{2m}{\hbar^2}[E-\alpha\delta(x-a)]\psi(x) dx $\\
 $\displaystyle\int^{-a+\epsilon}_{-a-\epsilon}\frac{\partial^2\psi}{\partial x^2}dx=-\frac{2m}{\hbar^2}\left\{E \displaystyle\int^{-a+\epsilon}_{-a-\epsilon}\psi(x) dx-\alpha\displaystyle\int^{-a+\epsilon}_{-a-\epsilon}[\delta(x-a)]\psi(x) dx\right\}$\\
-$\frac{\mathrm{d}\psi}{\mathrm{d}x}\bigg|^{a+\epsilon}_{a-\epsilon}=-\frac{2m}{\hbar^2}\bigg[E\psi(a)\displaystyle\int^{a+\epsilon}_{a-\epsilon}\mathrm{d}x-\alpha\psi(a)\bigg]$\\
-$\frac{\mathrm{d}\psi}{\mathrm{d}x}\bigg|^{a+\epsilon}_{a-\epsilon}=-\frac{2m}{\hbar^2}[E\psi(a)(2\epsilon)-\alpha\psi(a)]$ , 令$\epsilon \to 0$\\
-$\frac{\mathrm{d}\psi}{\mathrm{dx}}\bigg|^{-a^+}_{-a^-}=\frac{2m\alpha}{\hbar^2}\psi(a)=0$\\
-$\frac{2m\alpha}{\hbar^2}\psi(a)=\lim\limits_{x \to a^+}\frac{\mathrm{d}\psi}{\mathrm{d}x}-\lim\limits_{x \to a^-}\frac{\mathrm{d}\psi}{\mathrm{d}x}$\\
-$ik(Fe^{ika}-Ge^{-ika})-ik(Ae^{ika}-Be^{-ika})=\frac{2m\alpha}{\hbar^2}(Ae^{ika}+Be^{-ika})$   (2)\\
+$\displaystyle \frac{\mathrm{d}\psi}{\mathrm{d}x}\bigg|^{a+\epsilon}_{a-\epsilon}=-\frac{2m}{\hbar^2}\bigg[E\psi(a)\displaystyle\int^{a+\epsilon}_{a-\epsilon}\mathrm{d}x-\alpha\psi(a)\bigg]$\\
+$\displaystyle \frac{\mathrm{d}\psi}{\mathrm{d}x}\bigg|^{a+\epsilon}_{a-\epsilon}=-\frac{2m}{\hbar^2}[E\psi(a)(2\epsilon)-\alpha\psi(a)]$ , 令$\epsilon \to 0$\\
+$\displaystyle \frac{\mathrm{d}\psi}{\mathrm{dx}}\bigg|^{-a^+}_{-a^-}=\frac{2m\alpha}{\hbar^2}\psi(a)=0$\\
+$\displaystyle \frac{2m\alpha}{\hbar^2}\psi(a)=\lim\limits_{x \to a^+}\frac{\mathrm{d}\psi}{\mathrm{d}x}-\lim\limits_{x \to a^-}\frac{\mathrm{d}\psi}{\mathrm{d}x}$\\
+$\displaystyle ik(Fe^{ika}-Ge^{-ika})-ik(Ae^{ika}-Be^{-ika})=\frac{2m\alpha}{\hbar^2}(Ae^{ika}+Be^{-ika})$   (2)\\
 \end{center}
 由(1)(2)式求出F和G的表达式，
 最终可以得到
 \begin{center}
-$\left\{\begin{matrix} F=\frac{k\hbar^2-im\alpha}{k\hbar^2}A-\frac{im\alpha}{k\hbar^2}e^{-2ika}B
+$\displaystyle \left\{\begin{matrix} F=\frac{k\hbar^2-im\alpha}{k\hbar^2}A-\frac{im\alpha}{k\hbar^2}e^{-2ika}B
      \\ G=\frac{im\alpha}{k\hbar^2}e^{2ika}A+\frac{k\hbar^2+im\alpha}{k\hbar^2}B \end{matrix}\right.  $\\
     \end{center}
 可以看出
@@ -152,8 +152,8 @@ $\begin{bmatrix}
     G
   \end{bmatrix}
   \begin{bmatrix}
-    \frac{k\hbar^2-im\alpha}{k\hbar^2} &-\frac{im\alpha}{k\hbar^2}e^{-2ika} \\
-    \frac{im\alpha}{k\hbar^2}e^{2ika} &\frac{k\hbar^2+im\alpha}{k\hbar^2}
+    \displaystyle \frac{k\hbar^2-im\alpha}{k\hbar^2} &-\frac{im\alpha}{k\hbar^2}e^{-2ika} \\
+    \displaystyle \frac{im\alpha}{k\hbar^2}e^{2ika} &\frac{k\hbar^2+im\alpha}{k\hbar^2}
   \end{bmatrix}
   =\begin{bmatrix}
     A\\
@@ -162,23 +162,23 @@ $\begin{bmatrix}
 即\\
 $M_1=
 \begin{bmatrix}
-    \frac{k\hbar^2-im\alpha}{k\hbar^2} &-\frac{im\alpha}{k\hbar^2}e^{-2ika} \\
-    \frac{im\alpha}{k\hbar^2}e^{2ika} &\frac{k\hbar^2+im\alpha}{k\hbar^2}
+  \displaystyle \frac{k\hbar^2-im\alpha}{k\hbar^2} &-\frac{im\alpha}{k\hbar^2}e^{-2ika} \\
+  \displaystyle \frac{im\alpha}{k\hbar^2}e^{2ika} &\frac{k\hbar^2+im\alpha}{k\hbar^2}
   \end{bmatrix}
 $
 \\而对于$V=\alpha\delta(x+a)$也是同样的算法，这里不赘述，其矩阵:
 $M_2=
 \begin{bmatrix}
-    \frac{k\hbar^2-im\alpha}{k\hbar^2} &-\frac{im\alpha}{k\hbar^2}e^{2ika} \\
-    \frac{im\alpha}{k\hbar^2}e^{-2ika} &\frac{k\hbar^2+im\alpha}{k\hbar^2}
+  \displaystyle \frac{k\hbar^2-im\alpha}{k\hbar^2} &-\frac{im\alpha}{k\hbar^2}e^{2ika} \\
+  \displaystyle \frac{im\alpha}{k\hbar^2}e^{-2ika} &\frac{k\hbar^2+im\alpha}{k\hbar^2}
 \end{bmatrix}
 $
 所以\\
 $
 M=M_2 M_1=
 \begin{bmatrix}
-    \frac{(k\hbar^2-im\alpha)^2+m^2\alpha^2e^{4ika}}{k^2\hbar^4}&\frac{-im\alpha(k\hbar^2-im\alpha)e^{-2ika}-im\alpha(k\hbar^2+im\alpha)e^{2ika}}{k^2\hbar^4}\\
-    \frac{im\alpha(k\hbar^2-im\alpha)e^{-2ika}+im\alpha(k\hbar^2+im\alpha)e^{2ika}}{k^2\hbar^4}&\frac{(k\hbar^2+im\alpha)^2+m^2\alpha^2e^{-4ika}}{k^2\hbar^4}
+  \displaystyle \frac{(k\hbar^2-im\alpha)^2+m^2\alpha^2e^{4ika}}{k^2\hbar^4}&\frac{-im\alpha(k\hbar^2-im\alpha)e^{-2ika}-im\alpha(k\hbar^2+im\alpha)e^{2ika}}{k^2\hbar^4}\\
+  \displaystyle \frac{im\alpha(k\hbar^2-im\alpha)e^{-2ika}+im\alpha(k\hbar^2+im\alpha)e^{2ika}}{k^2\hbar^4}&\frac{(k\hbar^2+im\alpha)^2+m^2\alpha^2e^{-4ika}}{k^2\hbar^4}
 \end{bmatrix}
 $
 则

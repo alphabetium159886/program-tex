@@ -44,24 +44,95 @@
 \maketitle
 
 \section{引言}
-\subsection{}
-\subsection{}
+量子物理中的WKB（Wentzel-Kramers-Brillouin）近似是一种强大的工具，用于解决薛定谔方程的近似解。
+它在描述均匀介质中的量子现象和波动行为方面具有广泛的应用。然而，许多实际系统，如非均匀等离子体，具有空间上的变化性质，
+导致了更为复杂的物理行为。在这种情况下，我们需要将WKB近似扩展到非均匀介质，以更准确地描述系统的性质和行为。
+
+非均匀等离子体作为一种重要的物质状态，在激光等离子体物理和实验室天体物理中扮演着关键的角色。
+它们在实验室中通过激光和高能粒子束的相互作用中产生，并在宇宙中存在于星际介质和恒星大气等环境中。
+然而，由于等离子体密度、温度和电场等物理量在空间上的变化，非均匀等离子体的性质和行为比均匀介质更为复杂和多样化。
+
+在这篇论文中，我们将探索WKB近似在非均匀等离子体中的应用。首先，我们将回顾WKB近似的基本原理和推导过程，以及其在均匀介质中的应用。
+然后在激光等离子体中，我们将探讨WKB近似在分析波模式、自聚焦效应和光束传输中的应用。
+
 \section{WKB近似的基本原理}
+WKB（Wenzel，Kramers, Brillouin）方法是得到一维定态 Schrödinger 方程的近似解的一种技术，
+其基本思想同样可应用于许多其他形式的微分方程和三维 Schrödinger 方程的径向部分，其最基本的核心思想主要是：
+首先波函数以指数函数的形式重新表达，再将这指数函数代入Schrödinger方程，展开指数函数的参数为$\hbar$的幂级数，
+$\hbar$同次幂的项目一一对应，会得到一组方程，处理后，就会得到波函数的近似。
+\subsection{基本思想}
+中间省略了很多步骤，详细过程参见各大量子力学课本
+对于一维定态Schrödinger方程：
+\begin{center}
+    $\displaystyle - \frac{\hbar^2}{2m} \frac{\mathrm{d}^2}{\mathrm{d}x^2} \psi(x) + V(x) \psi(x) = E \psi(x)\,\!$
+\end{center}
+将其重写为：
+\begin{center}
+    $\displaystyle -\hbar^2\frac{\mathrm{d}^2}{\mathrm{d}x^2} \psi(x) =p^2\psi(x)\,\!$
+\end{center}
+其中$p(x)\equiv \sqrt{2m[E-V(x)]}$，此时假设$E>V(x)$，因此p为实数，此为经典区域，所以现在假设波函数的形式为另外一个函数$\phi\,\!$的指数，
+$\displaystyle \psi(x) = e^{\phi(x)/\hbar} \,\!$。将其代回原方程可以得到
+\begin{center}
+    $\displaystyle\frac{d\psi}{dx}=\left(A^\cdot+i A\phi^\cdot\right)e^{i\phi}$
+\end{center}
+\begin{center}
+    $\displaystyle\frac{d^2\psi}{dx^2}=\bigg[A'+2i A\phi'+i A\phi'-A\Big(\phi'\Big)^2\bigg]e^{i\phi}$
+\end{center}
+代回原式可得：
+\begin{center}
+    $\displaystyle A^{'}+2i A^{'}\phi+i A\phi^{'}-A\Big(\phi^{'}\Big)^{2}=-\frac{p^{2}}{\hbar^{2}}A$
+\end{center}
+这等价于两个实数方程，且一个实部一个虚部：
+\begin{center}
+    $\displaystyle A^*-A\Big(\phi^.\Big)^2=-\frac{p^2}{\hbar^2}A$
+\end{center}
+\begin{center}
+    $2A\phi'+A\phi'=0$
+\end{center}
+第二个方程很容易解出：
+\begin{center}
+    $A^2\phi^2=C^2$
+\end{center}
+式中 C 为（实）常数。一般来说第一个方程很难求解⎯所以需要近似：我们假定振幅 A 的变
+化非常缓慢，因此$A''$项可忽略，在此情况下，我们只剩下：
+\begin{center}
+    $\displaystyle\phi(x) = \pm \int p(x) \mathrm{dx}$
+\end{center}
+可以得出：
+\begin{center}
+    $\displaystyle\psi(x) \approx  \frac{C_{\pm}} {\sqrt{p(x)}}  e^{\frac{i}{\hbar}\pm\int p(x) \mathrm{d}x}$
+\end{center}
+接着，在势阱内部，我们有：
+\begin{center}
+    $\displaystyle\psi\big(x\big)\cong\frac{1}{\sqrt{p(x)}}\biggl[C_+e^{i\phi(x)}+C_-e^{-i\phi(x)}\biggr]$
+\end{center}
+其中
+\begin{center}
+    $\displaystyle \phi(x) = \frac{1}{\hbar}\int_0^xp(x')\mathrm{dx'}$
+\end{center}
+现在考虑边界条件$\psi(x=0)=0$和$\psi(x=a)=0$，所以$C_2=0$，所以
+\begin{center}
+    $\phi\bigl(a\bigr)=n\pi\quad\bigl(n=1,2,3,...\bigr)$
+\end{center}
+最后，系统满足量子化规则：
+\begin{center}
+    $\displaystyle \int_{x_1}^{x_2} p(x)dx =(n - 1/2)\pi\hbar,\qquad n=1,\,2,\,3,\,\dots\,\!$
+\end{center}
 
-\subsection{概述}
-\subsection{假设和限制条件}
-\subsection{推导过程}
 \subsection{解释和物理意义}
-
+1.隧穿效应：WKB近似在描述隧穿效应（tunneling effect）方面非常有用。当粒子遇到势垒或势阱时，根据经典物理学，粒子应该被完全反射或完全传播。
+然而，量子力学中存在隧穿效应，使得一部分波函数能够穿透势垒或势阱。WKB近似能够提供隧穿概率的估计，从而解释一些实验现象，如$\alpha$衰变和扫描隧道显微镜等。
+\\
+2.粒子轨道和量子态：WKB近似还可以用于计算量子力学中的粒子轨道和量子态。
+在某些情况下，例如静电场中的粒子运动或氢原子的束缚态，WKB近似可以提供近似的能级和波函数。
 
 \section{WKB近似在激光等离子体中的应用}
+
 \subsection{激光在非均匀等离子体中的传播与能量吸收过程citep114}
 \subsection{}
 \subsection{}
 \subsection{}
-\subsection{}
-\subsection{}
-\subsection{}
+
 
 
 \section{结论}
