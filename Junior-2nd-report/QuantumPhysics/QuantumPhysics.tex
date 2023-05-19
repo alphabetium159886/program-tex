@@ -36,7 +36,7 @@
 \lstset{style=mystyle}
 
 
-\title{}
+\title{WKB近似的介绍讲解以及它在不同领域的应用}
 \date{\today}
 \author{202011010101物理2001孙陶庵}
 \begin{document}
@@ -52,9 +52,11 @@
 非均匀等离子体作为一种重要的物质状态，在激光等离子体物理和实验室天体物理中扮演着关键的角色。
 它们在实验室中通过激光和高能粒子束的相互作用中产生，并在宇宙中存在于星际介质和恒星大气等环境中。
 然而，由于等离子体密度、温度和电场等物理量在空间上的变化，非均匀等离子体的性质和行为比均匀介质更为复杂和多样化。
+WKB方法在等离子体物理中是非常有价值的解决方案，因为这个方法提供了一个直观的方式描述波的传播；
+通过一个局部色散关系定义的波，其幅度和相位以一种非常明显的方式与这种局部的特征相关
 
-在这篇论文中，我们将探索WKB近似在非均匀等离子体中的应用。首先，我们将回顾WKB近似的基本原理和推导过程，以及其在均匀介质中的应用。
-然后在激光等离子体中，我们将探讨WKB近似在分析波模式、自聚焦效应和光束传输中的应用。
+在这篇文章中，我们会讨论WKB近似在非均匀等离子体中的应用。首先，我们将回顾WKB近似的基本原理和推导过程。
+然后在激光等离子体中，我们将探讨WKB近似在分析波模式中的应用。
 
 \section{WKB近似的基本原理}
 WKB（Wenzel，Kramers, Brillouin）方法是得到一维定态 Schrödinger 方程的近似解的一种技术，
@@ -62,7 +64,7 @@ WKB（Wenzel，Kramers, Brillouin）方法是得到一维定态 Schrödinger 方
 首先波函数以指数函数的形式重新表达，再将这指数函数代入Schrödinger方程，展开指数函数的参数为$\hbar$的幂级数，
 $\hbar$同次幂的项目一一对应，会得到一组方程，处理后，就会得到波函数的近似。
 \subsection{基本思想}
-中间省略了很多步骤，详细过程参见各大量子力学课本\cite{griffiths_schroeter_2018}
+中间省略了很多步骤，详细过程参见各大量子力学课本\cite{griffiths_schroeter_2018}，以及这篇文章皆有非常好的讲解\cite{LU2018502}
 对于一维定态Schrödinger方程：
 \begin{center}
     $\displaystyle - \frac{\hbar^2}{2m} \frac{\mathrm{d}^2}{\mathrm{d}x^2} \psi(x) + V(x) \psi(x) = E \psi(x)\,\!$
@@ -121,71 +123,130 @@ $\displaystyle \psi(x) = e^{\phi(x)/\hbar} \,\!$。将其代回原方程可以�
 \end{center}
 
 \subsection{解释和物理意义}
-1.隧穿效应：WKB近似在描述隧穿效应（tunneling effect）方面非常有用。当粒子遇到势垒或势阱时，根据经典物理学，粒子应该被完全反射或完全传播。
-然而，量子力学中存在隧穿效应，使得一部分波函数能够穿透势垒或势阱。WKB近似能够提供隧穿概率的估计，从而解释一些实验现象，如$\alpha$衰变和扫描隧道显微镜等。
-\\
-2.粒子轨道和量子态：WKB近似还可以用于计算量子力学中的粒子轨道和量子态。
-在某些情况下，例如静电场中的粒子运动或氢原子的束缚态，WKB近似可以提供近似的能级和波函数。
-\\
-3.WKB近似法能够在不需要精确求解的情况下，通过计算得到等离子体中波的传播方程，并得出物理运动的定性描述。
+1.上面讲的这些主要是WKB近似的基本定义（做法），这个方法不仅可以用来解决量子力学的问题，对于绝大部分类薛定谔方程（Schrodinger-like differential equation）都能够很好的求解\\
+2.WKB近似法能够在不需要精确求解的情况下，通过计算得到等离子体中波的传播方程，并得出物理运动的定性描述。
 WKB近似法的优势在于它比其他精确方法更快和更简单，并且可以解决一些无法通过其他方法计算的难点问题。
+\\
+3.带有标量场的封闭弗里德曼宇宙的变形Wheeler–DeWitt方程的WKB解，并在隧道建议的背景下讨论了量子引力对充分膨胀概率的影响。\cite{LU2018502}
+
 \section{WKB近似在激光等离子体中的应用}
-接下来考虑在背景密度和磁场随位置但不随时间变化的情况下，略微不均匀的冷等离子体中的波传播，并且揭示等离子体中的波传播特性。
-\subsection{不均匀等离子体中波的传播机制}
-1.折射：当波从一个介质传播到另一个介质时，波会受到折射现象的影响。在不均匀冷等离子体中，由于等离子体的密度或折射率分布不均匀，
-波在介质中传播时会遇到密度或折射率的变化。这会导致波的传播方向发生改变，遵循折射定律。折射现象在不均匀冷等离子体中是波传播的重要机制之一。
+WKB近似描述波的传播较为直观，可以通过局域色散关系定义一个波的波数、群速度、振幅、相位等
+对于线性密度变化的等离子体，可以得到精确解，但WKB方法仍然有其局限性，即仅在缓慢的密度变化成立，但临界点不成立
+\subsection{非均匀等离子体中波的传播}
+一般来说等离子体非均匀密度问题需要数值计算，但是在特殊情况可以有解析解：
+1.密度分布缓变，$kL\gg 1$，使用WKB近似可以分析，不过在共振点时会失效\cite{lasertextbook11223}
 \\
-2.衍射：衍射是波在通过障碍物或通过波前上的不规则结构时发生的现象。在不均匀冷等离子体中，波通过介质中的非均匀性分布时，
-会遇到空间上的不规则结构，如孔隙、缺陷或波动性变化。这些不规则结构会导致波的传播方向和强度的变化，产生衍射现象。
+2.密度分布剧变，$kL\ll 1$，即表面鞘场
+\subsubsection{过程介绍}
+我们接下来考虑下面形式的高频场：
+\begin{center}
+    $\displaystyle E = E(\vec{x})\exp (-\mathrm{i\omega t})$
+\end{center}
+由波动方程$\displaystyle \nabla^{2}E-\nabla(\nabla\cdot E)=\frac{4\pi}{c^{2}}\frac{\partial J}{\partial t}+\frac{1}{c^{2}}\frac{\partial^{2}E}{\partial t}$和$\displaystyle J = \frac{ie^2n}{\omega}E = \sigma E$
+，$\displaystyle \varepsilon\equiv 1+\frac{4\pi i \sigma}{\omega}$，可以得到
+
+\begin{center}
+    $\displaystyle \nabla^{2}E-\nabla(\nabla\cdot E)+{\frac{\omega^{2}}{c^{2}}}\varepsilon E=0$
+\end{center}
+\begin{center}
+    $\displaystyle \nabla\times(\nabla\times B)=-{\frac{-i\omega}{c}}\nabla\times(\varepsilon E)$
+\end{center}
+后者可以得到
+\begin{center}
+    $\displaystyle \nabla^2 B + \frac{\omega^2}{c^2}\varepsilon B + \frac{1}{\varepsilon}\nabla \varepsilon \times(\nabla \times B) = 0$
+\end{center}
+电场的空间形式$\displaystyle \exp(ik\cdot \vec{x})$可以给出色散关系:$\displaystyle \omega^2 = \omega_{pe}^2+k^2c^2$
+接着我们假定等离子体的密度只在Z方向上有变化，对于线偏振激光电场E满足以下关系
+\begin{center}
+    $\displaystyle\frac{d^{2}E}{d z^{2}}+k^{2}(z)E=0$
+\end{center}
+\begin{center}
+    $\displaystyle k^{2}(z)=\frac{\omega^{2}-\omega_{p}^{2}(z)}{c^{2}}=\frac{\omega^{2}}{c^{2}}\varepsilon$
+\end{center}
+并且假定等离子体密度对Z是缓变的，这样可以给出一个形式解
+\begin{center}
+    $\displaystyle E(z)=E_0(z)\exp[\frac{i\omega}{c}\int\psi(z')dz']$
+\end{center}
+因为这里$E_0, \psi$是缓变函数，将其带入波动方程会得到
+\begin{center}
+    $\displaystyle E_{0}^{''}+\frac{2i\omega}{c}\psi E_{0}^{'}-\frac{\omega^{2}}{c^{2}}\psi^{2}E_{0}+\frac{i\omega}{c}\psi^{'}E_{0}+\frac{\omega^{2}}{c^{2}}\varepsilon E_{0}=0$
+\end{center}
+方程有零阶和一阶解，对于零阶有$\displaystyle \psi = \sqrt{\varepsilon(\omega, z)}$
+对于一阶有$\displaystyle \frac{2i\omega}{c}\psi E_0+\frac{i\omega\psi'E_0}{c}=0$可以由此得到$\displaystyle E_0(z)=\frac{cons\tan t}{\sqrt{\psi}}$
+最终获得WKB解:
+\begin{center}
+    $\displaystyle E(z)=\frac{E_{F S}}{\varepsilon^{1/4}}\exp[\frac{i\omega}{c}\int\sqrt{\varepsilon(\omega,z')}d z']$
+\end{center}
+1.从能流守恒解释：
 \\
+$\displaystyle \frac{\nu_{g}\mid E(z)\mid^{2}}{8\pi}=\frac{c E_{F S}^{2}}{8\pi},\quad\nu_{g}/c=\sqrt{\varepsilon(\omega,z)}$
+因此：$\displaystyle E(z) = \frac{E_{FS}}{\varepsilon^{1/4}}$与WKB结果吻合，也可写为磁场形式：$\displaystyle |B_0(z)| = B_{FS}\varepsilon^{1/4}$磁场振幅随激光向高密度传播降低
+
+2.讨论WKB的适用条件：
+\\
+我们在前面的推导中假定：$\displaystyle E_{0}<<\frac{\omega}{c}\psi"E_{0},\frac{\omega}{c}\psi E_{0}$
+从$\displaystyle E(z)=\frac{E_{F S}}{\varepsilon^{1/4}}\mathbf{exp}[\frac{i\omega}{c}^{z}]\sqrt{\varepsilon(\omega,z^{\prime})}d z^{\prime}$
+可以得到$\mathbf{k}(z)=\omega\psi/\mathbf{c}$，有：$E_0''\ll k'E_0,kE'_0$
+因此可以知道WKB近似的适用条件：$\displaystyle \frac{\partial E_0}{\partial z}\ll kE_0$
 
 
-\subsection{冷等离子体波、WKB近似和射线追踪的应用}
-在冷等离子波笔记中，我们假设波的电磁场具有以下形式:
+\subsection{波在固定密度梯度等离子体的解析解}
+我们接下来考虑一个线性密度的等离子体$(n = n_{cr}z/L)$其中$n_{cr} = m\omega^2/4\pi e^2$\cite{lasertextbook1122}
+可以得到$\displaystyle \frac{\mathrm{d}^2E}{\mathrm{d}z^2}+\frac{\omega^2}{c^2}\left(1-\frac{z}{L}\right)E=0.$
+我们令$\eta = (\omega^2/c^2L)^{1/3}(z-L)$有$\displaystyle \frac{\mathrm{d}^2E}{\mathrm{d}\eta^2}-\eta E=0.$
+这是艾里方程，其解称为艾里函数。因为艾里方程是一个二阶微分方程，所以有两个线性独立的艾里函数，Ai(z)和 Bi(z)（见图）。
+\begin{figure}
+    \centering
+	\includegraphics[width=10cm]{airyfunction.jpg}
+	\caption{Airy Function}
+\end{figure}
+
+对波函数在转折点（E=V）处进行处理， “经典”区和“非经典”区在此处相接
+透过处理这个方程可以（过程略，详细可参见\cite{griffiths_schroeter_2018}的8.3 THE CONNECTION FORMULAS）將 $E(z = 0)$ 表示為振幅為$E_{FS}$的入射波和具有相同振幅但相位偏移的反射波之和，即，
 \begin{center}
-    $\displaystyle \delta\mathbf{E}=\tilde{\mathbf{E}}\exp(\text{i}\mathbf{k}\cdot\mathbf{r}-\text{i}\omega t),$
+    $\displaystyle E(z=0)=E_{\text{Fs}}\left[1+\exp-i\left(\frac{4}{3}\frac{\omega L}{c}-\frac{\pi}{2}\right)\right],$
 \end{center}
+这里$E_{FS}$是入射光波电场的自由空间的值，且$\varphi$只是一个相位因子且无法影响$|E|$，因此，
 \begin{center}
-    $\displaystyle \delta\mathbf{B}=\tilde{\mathbf{B}}\exp(\text{i}\mathbf{k}\cdot\mathbf{r}-\text{i}\omega t).$
+    $\displaystyle E(\eta)=2\sqrt{\pi}\left(\frac{\omega L}{c}\right)^{1/6}E_{\text{FS}}e^{i\varphi}\mathbf{A}_i(\eta).$
 \end{center}
-在非均匀的稳态等离子体中，我们不能简单地假设波函数是$\displaystyle \exp(\text{i}\mathbf{k}\cdot\mathbf{r}-\text{i}\omega t)$，
-而要考虑另一种形式，即
+图中可以看出电场的振幅在$\eta = 1$时可以达到最大值，即$(z-L) = -(\omega^2/c^2L)^{-1/3}$
 \begin{center}
-    $\displaystyle\delta\mathbf{E}=\tilde{\mathbf{E}}(\mathbf{r})\exp(\mathrm{i}S(\mathbf{r})-\mathrm{i}\omega t),$
+    $\displaystyle \left|\frac{E_{\max}}{E_{\text{FS}}}\right|^2\simeq3.6\left(\frac{\omega L}{c}\right)^{1/3}.$
 \end{center}
+因为驻波的形成，$E^2$的期望值增大四倍，这是因为介电函数变小和群速度变小。
+接着，可以基于WKB理论获得峰值电场幅度的类似膨胀。 这里我们使用$k = \sqrt{\epsilon}(\omega/c)$和$|E| = E_{FS}/\epsilon^{1/4}$
+随着$\epsilon$变小，波长变长。 
+同样的，如果我们简单地减去$\pi/2$以说明临界密度表面的反射，则入射波和反射波之间的相移由 WKB 解给出。即
 \begin{center}
-    $\displaystyle \delta\mathbf{B}=\tilde{\mathbf{B}}(\mathbf{r})\exp(\mathrm{i}S(\mathbf{r})-\mathrm{i}\omega t).$
+    $\displaystyle \Psi=2\frac{\omega}{c}\int_{0}^{L}\sqrt{\epsilon}\mathrm{d}z-\frac{\pi}{2}=\frac{4}{3}\frac{\omega L}{c}-\frac{\pi}{2}.$
 \end{center}
-我们假设 S为 eikonal 函数\cite{DETRIXHE201346}并且系数E和B具有L量级的特征长度，
 
+光波的磁场很容易从 E 的解中计算出来。注意到电矢量在 x 方向上并且波在 z 方向上传播，我们采用法拉第定律的 y 分量来获得
 \begin{center}
-    $\displaystyle \frac{|\nabla S|}{S}\sim\frac{|\nabla\tilde{\mathbf{E}}|}{|\tilde{\mathbf{E}}|}\sim\frac{|\nabla\tilde{\mathbf{B}}|}{|\tilde{\mathbf{B}}|}\sim\frac{1}{L},$
-\end{center}
-同时方程S(r)很大
-
+    $\displaystyle B=-\frac{ic}{\omega}\frac{\partial E}{\partial z}.$
+\end{center}即
 \begin{center}
-    $\displaystyle S(\mathbf{r})\sim kL \gg  1$
+    $\displaystyle B(\eta)=-i2\sqrt{\pi}\left(\frac{c}{\omega L}\right)^{1/6}E_{\text{FS}}e^{i\varphi}\mathrm{A}_i'(\eta),$
 \end{center}
-，所以考虑
-\begin{center}
-    $\displaystyle |\nabla S|\sim k\gg\frac{1}{L}$
-\end{center}
-这样就可以重写冷等离子体方程，将$\displaystyle \mathrm{ik}\tilde{\mathbf{E}}$变成$\mathrm{i}\nabla S\tilde{\mathbf{E}}+\nabla\tilde{\mathbf{E}}$
-我们就可以得到：
-\begin{center}
-    $\displaystyle\frac{c^2}{\omega^2}(\mathbf{k}-\mathrm i\nabla)\times[(\mathbf k-\mathrm i\nabla)\times\tilde{\mathbf E}]+\epsilon\cdot\tilde{\mathbf E}=0,$
-\end{center}
-其中$K = \nabla S$
 
-
-
-
-\subsection{求得解析解}
-\subsection{}
-
-
+这是一个非常棒的例子，不仅严格的按照WKB近似的步骤，并且非常合理的说明了波在等离子体中传播的问题。
 
 \section{结论}
+综上所述，WKB（Wentzel-Kramers-Brillouin）近似是一种强大的工具，用于解决量子力学中的薛定谔方程的近似解。
+在均匀介质中，WKB近似已经得到广泛的应用，能够描述量子现象和波动行为。
+WKB近似相对于其他精确的方法，WKB近似更简单、更直观，并且可以解决一些难以通过其他方法计算的问题。
+然而，许多实际系统，特别是非均匀等离子体，具有空间上的变化性质，会需要解决更为复杂的物理行为。
+通过WKB近似，我们可以得到非均匀等离子体中波的传播方程，并对物理运动进行定性描述。
+
+并且，WKB近似可以应用于解决类薛定谔的偏微分方程的近似解。将WKB近似扩展到非均匀介质，
+特别是在非均匀等离子体中的应用，可以更准确地描述系统的性质和行为。尽管WKB近似在一些情况下存在局限性，
+但它仍然是研究非均匀等离子体中波动行为的非常有用的方法。
+
+
+
+
+
 
 
 

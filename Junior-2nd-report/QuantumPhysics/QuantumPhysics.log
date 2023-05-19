@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  18 MAY 2023 23:50
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  19 MAY 2023 22:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -618,28 +618,22 @@ LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <12> not available
 (Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 46.
  [1
 
-] [2]
-Overfull \hbox (2.48787pt too wide) in paragraph at lines 65--67
-[]\TU/SimSun(0)/m/n/12 中 间 省 略 了 很 多 步 骤，|  详 细 过 程 参 见 各 大 量 子 力 学 课 本 \TU/lmr/m/n/12 [[][]1[][]] \TU/SimSun(0)/m/n/12 对 于 一 维 定 态 \TU/lmr/m/n/12 Schrödinger
- []
-
+] [2] [3]
 Missing character: There is no ⎯ in font [lmroman12-regular]:mapping=tex-text;!
-[3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 135--141
-
- []
-
-[5] (QuantumPhysics.bbl [6]) [7] (QuantumPhysics.aux)
+[4] [5] [6]
+File: airyfunction.jpg Graphic file (type bmp)
+<airyfunction.jpg>
+ [7] [8] (QuantumPhysics.bbl) [9] (QuantumPhysics.aux)
 Package rerunfilecheck Info: File `QuantumPhysics.out' has not changed.
-(rerunfilecheck)             Checksum: 08C9E6FAA08D7046F068EB5731E19F61;1120.
+(rerunfilecheck)             Checksum: 03449A92B137D100969B255FEE117C47;1033.
  ) 
 Here is how much of TeX's memory you used:
- 17692 strings out of 410939
- 363282 string characters out of 2830432
- 705405 words of memory out of 3000000
- 38229 multiletter control sequences out of 15000+600000
- 478753 words of font info for 91 fonts, out of 8000000 for 9000
+ 17770 strings out of 410939
+ 367267 string characters out of 2830432
+ 706400 words of memory out of 3000000
+ 38303 multiletter control sequences out of 15000+600000
+ 478761 words of font info for 92 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,8n,97p,469b,599s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 89i,8n,97p,469b,635s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on QuantumPhysics.xdv (7 pages, 58564 bytes).
+Output written on QuantumPhysics.xdv (9 pages, 82308 bytes).

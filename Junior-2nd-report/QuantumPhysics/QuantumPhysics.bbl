@@ -26,12 +26,21 @@ D.~J. Griffiths and D.~F. Schroeter, \emph{Introduction to Quantum Mechanics},
   3rd~ed.\hskip 1em plus 0.5em minus 0.4em\relax Cambridge University Press,
   2018.
 
-\bibitem{DETRIXHE201346}
+\bibitem{LU2018502}
 \BIBentryALTinterwordspacing
-M.~Detrixhe, F.~Gibou, and C.~Min, ``A parallel fast sweeping method for the
-  eikonal equation,'' \emph{Journal of Computational Physics}, vol. 237, pp.
-  46--55, 2013. [Online]. Available:
-  \url{https://www.sciencedirect.com/science/article/pii/S002199911200722X}
+F.~Lu, B.~Lv, P.~Wang, and H.~Yang, ``Wkb approximation for a deformed
+  schrodinger-like equation and its applications to quasinormal modes of black
+  holes and quantum cosmology,'' \emph{Nuclear Physics B}, vol. 937, pp.
+  502--532, 2018. [Online]. Available:
+  \url{https://www.sciencedirect.com/science/article/pii/S0550321318301597}
 \BIBentrySTDinterwordspacing
+
+\bibitem{lasertextbook11223}
+W.~L. Kruer, \emph{The physics of laser plasma interactions}.\hskip 1em plus
+  0.5em minus 0.4em\relax CRC Press, 2003, p.~32.
+
+\bibitem{lasertextbook1122}
+------, \emph{The physics of laser plasma interactions}.\hskip 1em plus 0.5em
+  minus 0.4em\relax CRC Press, 2003.
 
 \end{thebibliography}

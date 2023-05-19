@@ -1,10 +1,9 @@
 \contentsline {section}{\numberline {1}引言}{2}{section.1}%
-\contentsline {section}{\numberline {2}WKB近似的基本原理}{2}{section.2}%
+\contentsline {section}{\numberline {2}WKB近似的基本原理}{3}{section.2}%
 \contentsline {subsection}{\numberline {2.1}基本思想}{3}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}解释和物理意义}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}解释和物理意义}{5}{subsection.2.2}%
 \contentsline {section}{\numberline {3}WKB近似在激光等离子体中的应用}{5}{section.3}%
-\contentsline {subsection}{\numberline {3.1}不均匀等离子体中波的传播机制}{5}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}冷等离子体波、WKB近似和射线追踪的应用}{5}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}求得解析解}{7}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}}{7}{subsection.3.4}%
-\contentsline {section}{\numberline {4}结论}{7}{section.4}%
+\contentsline {subsection}{\numberline {3.1}非均匀等离子体中波的传播}{5}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}过程介绍}{5}{subsubsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.2}波在固定密度梯度等离子体的解析解}{7}{subsection.3.2}%
+\contentsline {section}{\numberline {4}结论}{8}{section.4}%

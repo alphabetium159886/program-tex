@@ -866,6 +866,9 @@ INPUT C:\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT .\airyfunction.jpg
+INPUT .\airyfunction.jpg
+INPUT airyfunction.jpg
 INPUT .\QuantumPhysics.bbl
 INPUT QuantumPhysics.bbl
 INPUT .\QuantumPhysics.bbl
