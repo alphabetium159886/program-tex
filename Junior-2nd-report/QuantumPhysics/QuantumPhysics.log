@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  23 MAY 2023 19:03
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  23 MAY 2023 21:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -620,14 +620,14 @@ LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <12> not available
 
 ] [2] [3]
 Missing character: There is no ⎯ in font [lmroman12-regular]:mapping=tex-text;!
-[4]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 145.
+[4] [5]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 151.
  (C:\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [5] [6] [7] [8]
+) [6] [7] [8] [9]
 File: airyfunction.jpg Graphic file (type bmp)
 <airyfunction.jpg>
- [9] [10] [11] (QuantumPhysics.bbl) [12] (QuantumPhysics.aux)
+ [10] [11] (QuantumPhysics.bbl [12]) [13] (QuantumPhysics.aux)
 Package rerunfilecheck Info: File `QuantumPhysics.out' has not changed.
 (rerunfilecheck)             Checksum: DFAE53E2992126AEEB0188C7466D44A5;1814.
  ) 
@@ -640,4 +640,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  89i,10n,97p,469b,602s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on QuantumPhysics.xdv (12 pages, 119800 bytes).
+Output written on QuantumPhysics.xdv (13 pages, 123924 bytes).
