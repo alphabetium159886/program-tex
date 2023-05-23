@@ -36,7 +36,7 @@
 \lstset{style=mystyle}
 
 
-\title{WKB近似的介绍讲解以及它在不同领域的应用}
+\title{量子力学中的WKB近似方法的介绍讲解以及它在不同领域的应用}
 \date{\today}
 \author{202011010101物理2001孙陶庵}
 \begin{document}
@@ -124,12 +124,97 @@ $\displaystyle \psi(x) = e^{\phi(x)/\hbar} \,\!$。将其代回原方程可以�
 
 \subsection{解释和物理意义}
 1.上面讲的这些主要是WKB近似的基本定义（做法），这个方法不仅可以用来解决量子力学的问题，对于绝大部分类薛定谔方程（Schrodinger-like differential equation）都能够很好的求解\\
-2.WKB近似法能够在不需要精确求解的情况下，通过计算得到等离子体中波的传播方程，并得出物理运动的定性描述。
-WKB近似法的优势在于它比其他精确方法更快和更简单，并且可以解决一些无法通过其他方法计算的难点问题。
-\\
-3.带有标量场的封闭弗里德曼宇宙的变形Wheeler–DeWitt方程的WKB解，并在隧道建议的背景下讨论了量子引力对充分膨胀概率的影响。\cite{LU2018502}
 
-\section{WKB近似在激光等离子体中的应用}
+2.WKB近似可以用于描述散射问题，即粒子与势场相互作用后的散射行为。通过将薛定谔方程转化为WKB形式，
+并应用散射边界条件，可以计算出散射截面和散射相移等散射性质。
+\\
+3.WKB近似法能够在不需要精确求解的情况下，通过计算得到等离子体中波的传播方程，并得出物理运动的定性描述。
+WKB近似法的优势在于它比其他精确方法更快和更简单，并且可以解决一些无法通过其他方法计算的难点问题。
+
+\section{量子力学中的WKB近似方法在散射问题上面的处理}
+WKB近似处理散射问题时，提供了一种半经典的近似方法，可以用于计算散射截面、散射相移以及散射振幅的近似解析形式。
+我们的主要的方向是在存在随机分布的粒子的情况下波的传播和散射特性。为了分析这个问题，我们遵循两个步骤。\cite{5472149}
+首先，我们考虑单个粒子并检查其散射和吸收特性。其次，我们考虑了大量粒子的贡献，并得到包含随机粒子的介质中的波的一般公式。
+
+\subsection{前向散射理论(forward scattering theorem)}
+
+总横截面$\sigma$表示由于粒子对波的散射和吸收而导致的入射波的总功率损失。这种损失与散射波在前向的行为密切相关，这种一般关系称为“前向散射定
+理”。前向散射定理表明，总横截面$\sigma$与前向散射振幅的虚部$f(i,1)$的关系如下：
+
+\begin{center}
+    $\sigma_\mathfrak{i}=(4\pi/k)\text{Im}[\mathbf{f}(\mathbf{i},\mathbf{i})]\cdot\mathfrak{e}_i$
+\end{center}
+这个理论一般用来计算当散射振幅已知时的总散射截面
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{WKB interior wave number technique}
+前向散射定理适用于任意形状和大小的散射体。然而，在瑞利和玻恩近似中，前向散射定理不能得到总横截面。
+在这些近似中，散射振幅$f(\hat{0} , \hat{i})$对无损粒子是实数。这是因为散射振幅的实部描述了散射的角度特征，而虚部较小，
+代表总功率损耗，包括散射和吸收。因此，Rayleigh和Born近似能够描述角特性，但不能提供虚部。
+
+然而，通过对整个立体角上的瑞利或玻恩散射振幅进行积分，可以得到总散射截面和消光截面。为了更好地描述散射特性，
+WKB近似提供了更准确的近似方法。瑞利近似适用于小颗粒 $(kd\ll 1)$，而玻恩近似适用于$(\varepsilon_r-1)kD < 1$的情况，其中KD可能很大。
+相反，WKB近似在以下情况下更为有效，即：
+\begin{center}
+    $\displaystyle (\varepsilon_\mathsf{r}-1)kD\gg1\quad\text{and}\quad\varepsilon_\mathsf{r}-1<1.$
+\end{center}
+在 WKB 近似中，粒子内部的场$E(r)$近似为在粒子内部传播的场，该场具有粒子介质的传播常数。还假设，由于$\varepsilon_\mathsf{r}-1<1$，折射角等于入射角，并且 - 波沿入
+射波的方向传播。粒子表面的透射系数 T 近似于垂直入射的透射系数。因此，如果入射波由下式给出
+
+\begin{center}
+    $\mathbf{E}_\mathbf{i}(r)=E_\mathbf{i}e^{ikz}\mathbf{\hat{e}}$
+\end{center}
+则$\mathbf{E}_\mathbf{i}(r)$在z点可以近似为：
+\begin{center}
+    $\displaystyle \mathbf{E}(r)=TE_i\exp[ikz_1+ikn(z-z_1)]\mathbf{\hat{e}}_i\quad\text{for}\quad z_1<z<z_2$
+\end{center}
+其中n是折射率，T是透射系数，可以被表示为：
+\begin{center}
+    $\displaystyle T=2/(n+1).$
+\end{center}
+接着将$\mathbf{E}_\mathbf{i}(r)$代入前向散射的公式里面可以得到：
+\begin{center}
+    $\displaystyle \mathbf{f}(\mathbf{\hat{0}},\mathbf{\hat{i}})=\frac{k^2}{4\pi}[-\mathbf{\hat{0}}\mathbf{\times}(\mathbf{\hat{0}}\mathbf{\times}\mathbf{\hat{e}_i})]VS(\mathbf{\hat{0}},\mathbf{\hat{z}})$
+\end{center}
+其中
+\begin{center}
+    $\displaystyle S(\mathbf{\hat{0}},\mathbf{\hat{z}})=V^{-1}\int_{V}2[n(\mathbf{r}^{\prime})-1]\exp[i k z_{1}+i k n(z-z_{1})-i k\mathbf{r}^{\prime}\cdot\mathbf{\hat{0}}]d V^{\prime}.$
+\end{center}
+
+这样就可以从前向散射理论得到总的散射截面：
+\begin{center}
+    $\displaystyle \begin{aligned}\sigma_i&=\frac{4\pi}{k}\operatorname{Im}[f(\mathbf{i},\mathbf{1})]\cdot\hat{\mathbf{e}}_i\\ 
+        &=k\operatorname{Im}\int_V2(n-1)\exp[-ik(n-1)z_1+ik(n-1)z]dV'.\end{aligned}$
+\end{center}
+
+对于散射吸收截面，我们有：
+\begin{center}
+    $\displaystyle \sigma_a=\int_V k\varepsilon_r''(\mathbf{r'})\frac{4}{|n(\mathbf{r})+1|^2}\exp[-2kn_i(z-z_1)]dV'$
+\end{center}
+接着，我们考虑以均匀球体（半径为a）作为例子，其中$z_1 = -\sqrt{a^2-(\rho')^2}$和$dV' = \mathrm{dz'}\rho'\mathrm{d\rho'}\mathrm{d\phi'}$，$Z = k(n-1)a$，$Y = 4kn_ia$，最终可以得到
+\begin{center}
+    $\displaystyle \frac{\sigma_t}{\pi a^2}=2\text{Re}\left\{1+\frac{i\text{exp}(i2Z)}{Z}+\frac{1-\text{exp}(i2Z)}{2Z^2}\right\}$
+\end{center}
+
+\begin{center}
+    $\displaystyle\frac{\sigma_\mathbf a}{\pi a^2}=\left\{\frac{4n_\mathbf t}{(n_\mathbf r+1)^2+n_\mathbf i^2}\right\}\left\{1+\frac{2\exp(-Y)}{Y}+\frac{2}{Y^2}\left[\exp(-Y)-1\right]\right\}.$
+\end{center}
+
+通常WKB解给出的值稍微大于实际值\cite{5472149}。对于k(n - 1)a的值较小的情况，它的准确性较低，此时应该就会使用瑞利或玻恩的解。
+但是这不影响WKB解的实用性。
+
+
+\section{量子力学中的WKB近似方法在激光等离子体中的应用}
 WKB近似描述波的传播较为直观，可以通过局域色散关系定义一个波的波数、群速度、振幅、相位等
 对于线性密度变化的等离子体，可以得到精确解，但WKB方法仍然有其局限性，即仅在缓慢的密度变化成立，但临界点不成立
 \subsection{非均匀等离子体中波的传播}

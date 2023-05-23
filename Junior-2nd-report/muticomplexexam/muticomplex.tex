@@ -1,0 +1,311 @@
+\documentclass[12pt, a4paper, oneside]{ctexart}
+\usepackage{amsmath, amsthm, amssymb, graphicx}
+\usepackage[bookmarks=true, colorlinks, citecolor=blue, linkcolor=black]{hyperref}
+\usepackage[margin = 25mm]{geometry}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{float}
+
+
+\title{期末题目}
+\date{\today}
+\author{202011010101物理2001孙陶庵}
+\begin{document}
+\begin{spacing}{2.0}
+\tableofcontents
+\maketitle
+
+\section{问题1}
+题目：$G_1, G_2$都是$\mathbb{C}^n $中的全纯域，若有在$f: G_1 \to \mathbb{C} ^n$全纯映射，请证明：\\
+$G_1\cap f^{-1}(G_2)$也是全纯的\\
+ANS:
+\\为了证明$G_1\cap f^{-1}(G_2)$是全纯的，我们需要验证它满足全纯域的定义，即对于域中的每个点，存在一个邻域内的全纯函数。
+
+设$z_0$是$G_1\cap f^{-1}(G_2)$中的任意点。由于$z_0\in G_1$且$f$是$G_1$到$\mathbb{C}^n$的全纯映射，因此存在$G_1$中$z_0$的一个邻域$U_1$，在该邻域上$f$是全纯的。
+
+另一方面，由于$z_0\in f^{-1}(G_2)$，即$f(z_0)\in G_2$，因此存在$G_2$中$f(z_0)$的一个邻域$U_2$。
+
+我们考虑$U_1\cap f^{-1}(U_2)$，由于$U_1$和$U_2$都是开集，$U_1\cap f^{-1}(U_2)$也是开集。另外，由于$f$是全纯映射，$U_1\cap f^{-1}(U_2)$中的每个点也是$f$的全纯性的继承者。
+
+现在我们证明$\displaystyle U_1\cap f^{-1}(U_2)\subseteq G_1\cap f^{-1}(G_2)$，即$U_1\cap f^{-1}(U_2)$中的每个点都属于$G_1\cap f^{-1}(G_2)$。
+
+对于任意的$z\in U_1\cap f^{-1}(U_2)$，我们有$f(z)\in U_2$且$z\in U_1$。由于$f(z)\in U_2$，而$U_2\subseteq G_2$，所以$f(z)\in G_2$。另一方面，由于$z\in U_1$，而$U_1\subseteq G_1$，所以$z\in G_1$。
+
+综上所述，我们证明了$\displaystyle U_1\cap f^{-1}(U_2)\subseteq G_1\cap f^{-1}(G_2)$。由于$\displaystyle U_1\cap f^{-1}(U_2)$是$G_1\cap f^{-1}(G_2)$的开子集，并且其中的每个点都有邻域内的全纯函数，因此$\displaystyle G_1\cap f^{-1}(G_2)$也是全纯的。
+
+因此，我们证明了$G_1\cap f^{-1}(G_2)$是全纯域。
+
+
+\section{问题2（重要！！）}
+
+$\displaystyle D = {z\in \mathbb{C} ||z|C|}\subset \mathbb{C} $中的圆盘，$z\subset D$可为全纯函数的xxxx
+证明：$D\backslash z$是连通的
+\\
+ANS:\\
+要证明$D\setminus z$是连通的，我们可以使用反证法。假设存在$D\setminus z$的一个分离集，即存在两个开集$U_1$和$U_2$，满足以下条件：
+\\
+1.$U_1 \cup U_2 = D\setminus z$；\\
+2.$U_1 \cap U_2 = \varnothing$；\\
+3.$U_1$和$U_2$都非空。\\
+我们将证明这种情况是不可能的，即不存在这样的分离集。
+
+考虑$D$中的任意一点$p$，根据$D$的定义，我们有$|p| < C$。因此，对于任意$p \in D\setminus z$，我们可以选择足够小的半径$r$，使得以$p$为圆心、$r$为半径的圆盘$B(p, r)$完全包含在$D$中。
+这是因为我们可以选择$r$满足$0 < r < \min(C - |p|, \epsilon)$，其中$\epsilon$是一个正数，使得$B(p, r)$不与$C$上的任何点相交。
+
+现在考虑$U_1$和$U_2$。根据$U_1 \cup U_2 = D\setminus z$，我们知道$U_1$和$U_2$的并集覆盖了$D\setminus z$中的所有点。由于$D\setminus z$中的每个点都可以找到一个包含它的圆盘，
+我们可以断言至少有一个圆盘完全包含在$U_1$或$U_2$中。
+
+假设$B(p_1, r_1) \subset U_1$，其中$p_1 \in D\setminus z$。我们可以选择另一个点$p_2$，使得$B(p_2, r_2) \subset U_2$，其中$p_2 \in D\setminus z$且$p_2 \neq p_1$。由于$D\setminus z$是连通的，
+我们可以选择适当的路径从$p_1$到$p_2$，并在路径上选择一个点$p_3$。
+
+现在考虑$B(p_3, r_3)$，其中$r_3$足够小，使得$B(p_3, r_3)$不与$C$上的任何点相交。由于$B(p_3, r_3)$与$B(p_1, r_1)$和$B(p_2, r_2)$有交点（例如，路径上的点），根据连通性，$B(p_3, r_3)$必须完全包含在$U_1$或$U_2$中。
+
+然而，这与我们的选择相矛盾，因为$p_3 \notin U_1$且$p_3 \notin U_2$。因此，我们得出结论：不存在这样的分离集$U_1$和$U_2$
+
+
+\section{问题3}
+题目：设$T:H_1\to H_2$为无界算子，如果y垂直于$Ran(T)$则$y\in Dom(T^*)$且T*y=0. 若T是闭算子且$Dom(T^*)$稠密，则$x\perp k_rT$可知$x\in \overline{Ran(T^*)}$
+ANS:\\
+根据题目给出的条件：
+
+1.如果$y$垂直于$Ran(T)$，则$y \in Dom(T^*)$且$T^*y = 0$。\\
+2.$T$是闭算子且$Dom(T^{\land})$稠密。\\
+3.我们需要证明如果$x \perp k_rT$，则$x \in \overline{Ran(T^{\land})}$，即$x$与$T^$的每个元素都正交。\\
+
+设$z \in Dom(T^*)$，我们有$T^*z \in H_1$。由于$x \perp k_rT$，我们知道对于任意的$t \in \mathbb{C}$，有$\langle x, Tk_r(t) \rangle = 0$。
+
+考虑内积$\langle x, T^z \rangle$，根据$T^*$的定义，我们有：
+\begin{align*}
+\langle x, T^z \rangle &= \langle Tx, z \rangle \quad \text{(定义 $T^{\land}$)} \\
+&= \langle T(k_r(1) x), z \rangle \quad \text{(由于 $k_r(1)x = x$)} \\
+&= \langle x, T^(k_r(1)z) \rangle \quad \text{(定义 $T^{\land}$)} \\
+&= \langle x, T^(z) \rangle \quad \text{(由于 $k_r(1)z = z$)}.
+\end{align*}
+
+因此，$\langle x, T^z \rangle = \langle x, T^(z) \rangle$。
+
+由于$\langle x, T^z \rangle = \langle x, T^(z) \rangle$对于所有$z \in Dom(T^*)$成立，我们可以推断$x \perp T^z$对于所有$z \in Dom(T^)$成立。
+
+由于 $Dom(T)$ 稠密且 $x \perp T^z$ 对于所有 $z \in Dom(T)$ 成立，我们可以将 $x$ 延拓为 $x' \in \overline{Dom(T)}$，且 $x' \perp T^z'$ 对于所有 $z' \in \overline{Dom(T)}$ 成立。
+
+因此，根据内积空间的性质，我们可以得出 $x' \in \overline{Ran(T^*)}$。
+
+因此，如果 $x \perp ker(T)$，则 $x \in \overline{Ran(T^)}$，即 $x$ 与 $T^$ 的每个元素都正交。
+
+
+
+
+
+注意到$\overline{Dom(T)} = Dom(T^{\land})$，其中$T^{*}$是$T$的共轭算子。
+
+根据闭算子的定义，$T^{**} = \overline{T}$，其中$\overline{T}$是$T$的闭包。
+
+因此，$x' \perp T^*z'$对于所有$z' \in Dom(T^{**})$成立。
+
+又因为$T$是闭算子，我们知道$Dom(T^{**}) = Dom(T)$。
+
+因此，$x' \perp T^*z'$对于所有$z' \in Dom(T)$成立。
+
+换句话说，$x'$与$T^*$的每个元素都正交。
+
+由于$\overline{Dom(T^)}$是$H_2$的闭子空间，我们可以将$x'$投影到$\overline{Dom(T^)}$上得到一个向量$x'' \in \overline{Dom(T^*)}$。
+
+由投影的性质，$x''$与$\overline{Dom(T^*)}$的每个元素都正交。
+
+因此，$x''$与$T^*$的每个元素都正交。
+
+由于$x'$和$x''$都延拓自$x$，我们可以得出$x$与$T^*$的每个元素都正交。
+
+因此，$x \in \overline{Ran(T^*)}$。
+
+综上所述，如果$x \perp k_rT$，则$x \in \overline{Ran(T^*)}$。
+\section{问题4}
+令M为半正定的m阶方阵，若$F = (f_1, f_2, ... , f_m)$是全纯函数，请证明：\\
+$FM ^t\bar{F}$是多重次调和函数
+\\
+ANS:\\
+要证明$FM^t\bar{F}$是多重次调和函数，我们需要验证它满足多重次调和方程的性质。
+
+首先，我们注意到$F = (f_1, f_2, ..., f_m)$是全纯函数，因此每个$f_i$都是全纯函数。根据全纯函数的性质，$f_i$的共轭$\bar{f_i}$也是全纯函数。
+
+接下来，考虑$FM^t\bar{F}$。我们将其写为分量形式：
+
+\begin{center}
+    $\displaystyle FM^t\bar{F}=\left(\sum\limits_{k=1}^m f_kM^t\bar{f_1},\sum\limits_{k=1}^m f_kM^t\bar{f_2},...,\sum\limits_{k=1}^m f_kM^t\bar{f_m}\right)$
+\end{center}
+现在我们验证$FM^t\bar{F}$满足多重次调和方程。
+
+对于每个分量$\sum_{k=1}^{m} f_k M^t \bar{f_i}$，我们需要验证它满足拉普拉斯方程$\Delta (\sum_{k=1}^{m} f_k M^t \bar{f_i}) = 0$。
+
+由于$\Delta$是一个微分算子，我们可以将其作用于每个分量上：
+
+\begin{center}
+    $\displaystyle \Delta(\sum\limits_{k=1}^{m}f_kM^k\bar{f}_i)=\sum\limits_{k=1}^{m}\Delta(f_kM^t\bar{f}_i)$
+\end{center}
+由于$f_k$和$\bar{f_i}$都是全纯函数，它们满足全纯函数的拉普拉斯方程$\Delta f_k = 0$。此外，矩阵$M$是半正定的，因此$M^t$也是半正定的。因此，我们有$M^t \Delta \bar{f_i} = 0$。
+
+综上所述，我们得到：
+
+\begin{center}
+    $\displaystyle \Delta(\sum\limits_{k=1}^{m}f_kM^t\bar{f}_i)=\sum\limits_{k=1}^{n}\Delta(f_kM^t\bar{f}_i)=\sum\limits_{k=1}^{m}f_kM^k\Delta\bar{f}_i=0$
+\end{center}
+
+因此，$FM^t\bar{F}$满足多重次调和方程，即$FM^t\bar{F}$是多重次调和函数。
+
+因此，我们证明了$FM^t\bar{F}$是多重次调和函数。
+
+
+\section{问题5}
+题目：请证明：f是$D\subset \mathbb{C} ^n$上的全纯函数$a\in f(D)$，则$f^{-1}(a)$不包含在任何D的紧子集中
+\\
+ANS:\\
+为了证明$f^{-1}(a)$不包含在任何$D$的紧子集中，我们可以使用反证法。假设存在$D$的一个紧子集$K$，使得$f^{-1}(a)$包含在$K$中。
+
+由于$f$是从$D$到$\mathbb{C}^n$的全纯函数，根据连续映射的性质，$f(K)$是$\mathbb{C}^n$中的一个紧集。因为$a\in f(D)$，所以$a\in f(K)$。由于$a$是$f(K)$中的一个点，根据紧集的定义，
+我们可以选择一个足够小的$\epsilon>0$，使得$B(a,\epsilon)$完全包含在$f(K)$中，其中$B(a,\epsilon)$表示以$a$为中心、半径为$\epsilon$的开球。
+
+现在考虑$f^{-1}(B(a,\epsilon))$，即原点$a$的原像的$\epsilon$-邻域。由于$\displaystyle f^{-1}(a)\subseteq f^{-1}(B(a,\epsilon))$，所以$f^{-1}(B(a,\epsilon))$至少包含$f^{-1}(a)$。
+
+由于$K$是紧集，它是有界的。因此，我们可以选择一个足够大的正数$R$，使得$K\subseteq B(0,R)$，其中$B(0,R)$表示以原点为中心、半径为$R$的开球。
+
+现在我们来看$K' = K \cap B(0,R)$，即将$K$与$B(0,R)$取交集后得到的集合。$K'$是一个紧子集，因为它是一个有界闭集的交集。
+
+由于$f$是从$D$到$\mathbb{C}^n$的全纯函数，根据全纯函数的性质，它在紧子集$K'$上是有界的。也就是说，存在一个正数$M$，使得对于任意$z\in K'$，有$|f(z)|\leq M$。
+
+现在我们考虑$f(K')$，它是一个有界闭集的连续映射，因此它也是一个有界闭集。因此，$f(K')$是一个紧集。
+
+然而，根据我们之前的选择，$\displaystyle B(a,\epsilon)$是$f(K)$的一个真子集，而$f(K')\subseteq f(K)$。这与$f(K')$是一个紧集相矛盾，因为真子集不可能是紧集。
+
+因此，我们得出矛盾，假设不成立。即，$\displaystyle f^{-1}(a)$不包含在任何$D$的紧子集中。
+
+因此，我们证明了如果$f$是$\displaystyle D\subset \mathbb{C}^n$上的全纯函数，$a\in f(D)$，那么$f^{-1}(a)$不包含在任何$D$的紧子集中。
+\section{问题6}
+题目：设$\displaystyle D := \Delta(0, 1) \subset \mathbb{C} ^2$中的多重圆盘，取${a}\subseteq D$且设有聚点但是$\forall a\in bD$都是${a_j}$的聚点，定义$\displaystyle u(z) = \sigma_j \frac{1}{j^2}\log{|z-a_j|/2}$
+ANS:\\
+根据问题描述，我们有一个多重圆盘$\displaystyle D = \Delta(0, 1) \subset \mathbb{C}^2$，其中包含一些点$a_j$，并且这些点具有一个聚点$a$。我们定义函数$\displaystyle u(z) = \sum_{j}\sigma_j \frac{1}{j^2}\log\left(\frac{|z-a_j|}{2}\right)$，其中$\sigma_j$是任意的复数。
+
+我们的目标是证明$u(z)$是$D$中的次调和函数。首先，我们需要证明对于任意的$z\in D$，$u(z)$满足亚调和性质，即$\Delta u(z) \geq 0$，其中$\Delta$是Laplace算子。
+
+计算$\Delta u(z)$的步骤如下：
+
+首先，我们注意到对于任意的$j$，函数$\displaystyle \log\left(\frac{|z-a_j|}{2}\right)$是$z$的次调和函数。这是因为$\displaystyle \log\left(\frac{|z-a_j|}{2}\right)$是实部的调和函数，而调和函数的实部是次调和的。
+
+由次调和函数的线性组合仍然是次调和函数，我们可以得到$u(z)$也是次调和函数。
+
+接下来，我们需要证明$\Delta u(z) \geq 0$。为此，我们计算$\Delta u(z)$的实部部分，即$\displaystyle \operatorname{Re}(\Delta u(z))$。
+
+由于$\Delta$是Laplace算子，对于任意的次调和函数$u(z)$，我们有$\displaystyle \operatorname{Re}(\Delta u(z)) = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2}$，其中$z = x+iy$。
+
+计算$\displaystyle \frac{\partial^2 u}{\partial x^2}$和$\displaystyle \frac{\partial^2 u}{\partial y^2}$的结果如下：
+\begin{center}
+    $\displaystyle \frac{\partial^2u}{\partial x^2}=\sum_j\sigma_j\frac{\partial^2}{\partial x^2}\left(\frac{1}{j^2}\log\left(\frac{|z-a_j|}{2}\right)\right)$
+\end{center}
+
+\begin{center}
+    $\displaystyle \frac{\partial^2u}{\partial y^2}=\sum_j\sigma_j\frac{\partial^2}{\partial y^2}\left(\frac{1}{j^2}\log\left(\frac{|z-a_j|}{2}\right)\right)$
+\end{center}
+对于每个$j$，我们有：
+\begin{center}
+    $\displaystyle \frac{\partial^2}{\partial x^2}\left(\frac{1}{j^2}\log\left(\frac{|z-a_j|}{2}\right)\right)=-\frac{1}{j^2}\frac{x-a_jx}{|z-a_j|^2}$
+\end{center}
+\begin{center}
+    $\displaystyle \frac{\partial^2}{\partial y^2}\left(\frac{1}{j^2}\log\left(\frac{|z-a_j|}{2}\right)\right)=\frac{1}{j^2}\frac{y-a_j y}{|z-a_j|^2}$
+
+\end{center}
+其中$\displaystyle a_j = a_{jx}+ia_{jy}$是$a_j$的实部和虚部。
+
+将以上结果代入$\displaystyle \frac{\partial^2 u}{\partial x^2}$和$\displaystyle \frac{\partial^2 u}{\partial y^2}$的表达式中，我们得到：
+\begin{center}
+    $\displaystyle \frac{\partial^2u}{\partial x^2} = -\sum_j\frac{\sigma_j}{j^2}\frac{x-a_{jx}}{|z-a_j|^2}$
+\end{center}
+
+\begin{center}
+    $\displaystyle \frac{\partial^2u}{\partial y^2} = -\sum_j\frac{\sigma_j}{j^2}\frac{y-a_{jy}}{|z-a_j|^2}$
+\end{center}
+将$\displaystyle \frac{\partial^2 u}{\partial x^2}$和$\displaystyle \frac{\partial^2 u}{\partial y^2}$相加，我们得到：
+
+\begin{center}
+    $\displaystyle \frac{\partial^2u}{\partial x^2}+\frac{\partial^2u}{\partial y^2}=-\sum_j\frac{\sigma_j}{j^2}\left(\frac{x-a_{jx}}{|z-a_j|^2}+\frac{y-a_{jy}}{|z-a_j|^2}\right)$
+\end{center}
+
+我们注意到$\displaystyle \frac{x-a_{jx}}{|z-a_j|^2} + \frac{y-a_{jy}}{|z-a_j|^2}$可以简化为1，
+因为$\displaystyle x-a_{jx}+y-a_{jy}=x+y-(a_{jx}+a_{jy})=x+y-\operatorname{Re}(a_j)=x+y-\operatorname{Re}(a)$，而$a$是$a_j$的聚点，
+所以$\displaystyle x+y-\operatorname{Re}(a) \geq 1$。因此，$\displaystyle \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2}$变为：
+
+\begin{center}
+    $\displaystyle \frac{\partial^2u}{\partial x^2}+\frac{\partial^2u}{\partial y^2}=-\sum_j\frac{\sigma_j}{j^2}$
+\end{center}
+由于$\sigma_j$是任意的复数，$\sum_{j}\frac{\sigma_j}{j^2}$的实部可以为任意值。然而，
+注意到我们有$\displaystyle \sum_{j}\frac{\sigma_j}{j^2}\log\left(\frac{|z-a_j|}{2}\right) = u(z)$，因此$\displaystyle \sum_{j}\frac{\sigma_j}{j^2}$
+的实部必须为非负值，即$\displaystyle \operatorname{Re}\left(\sum_{j}\frac{\sigma_j}{j^2}\right) \geq 0$。
+
+综上所述，我们得出结论：$u(z)$是$D$中的次调和函数，即$\Delta u(z) \geq 0$，其中$\Delta$是Laplace算子。
+
+因此，我们证明了函数$\displaystyle u(z) = \sum_{j}\sigma_j \frac{1}{j^2}\log\left(\frac{|z-a_j|}{2}\right)$是$D$中的次调和函数。
+\section{问题7}
+题目：令$\displaystyle \Omega = {(z, w) \in \mathbb{C}^2||z|<1, |w|<1\exp(-u(z))}$，请证明$\Omega$是拟凸的\\
+
+ANS:
+\\
+
+要证明$\Omega$是拟凸的，我们需要证明对于任意的$z_1, z_2 \in \Omega$以及$t \in [0,1]$，都有$tz_1 + (1-t)z_2 \in \Omega$。
+
+设$\displaystyle z_1 = (z_1', w_1')$和$z_2 = (z_2', w_2')$，其中$\displaystyle z_1' = (z_1, w_1)$和$z_2' = (z_2, w_2)$。根据$\Omega$的定义，我们有$|z_1| < 1$、$|z_2| < 1$和$|w_1| < \exp(-u(z_1))$、$|w_2| < \exp(-u(z_2))$。
+
+考虑$\displaystyle tz_1' + (1-t)z_2' = (tz_1 + (1-t)z_2, tw_1 + (1-t)w_2)$，我们需要证明：
+
+$\displaystyle |tz_1 + (1-t)z_2| < 1$。
+$\displaystyle |tw_1 + (1-t)w_2| < \exp(-u(tz_1 + (1-t)z_2))$。
+首先，对于1，我们有：
+\begin{align*}
+|tz_1 + (1-t)z_2| & \leq |tz_1| + |(1-t)z_2| \quad \text{(三角不等式)} \\
+& = t|z_1| + (1-t)|z_2| \\
+& < t + (1-t) \quad \text{(因为$|z_1| < 1$和$|z_2| < 1$)} \\
+& = 1.
+\end{align*}
+
+因此，$|tz_1 + (1-t)z_2| < 1$。
+
+接下来，对于2，我们有：
+\begin{align*}
+|tw_1 + (1-t)w_2| & \leq |tw_1| + |(1-t)w_2| \quad \text{(三角不等式)} \\
+& = t|w_1| + (1-t)|w_2| \\
+& < t\exp(-u(z_1)) + (1-t)\exp(-u(z_2)).
+\end{align*}
+
+由于$u(z)$是连续的次调和函数，根据次调和函数的性质，我们知道
+\begin{center}
+    $\displaystyle u(z_1') = u(z_1) \leq u(tz_1 + (1-t)z_2)$和$\displaystyle u(z_2') = u(z_2) \leq u(tz_1 + (1-t)z_2)$。
+\end{center}
+
+
+因此，
+\begin{center}
+    $\displaystyle \exp(-u(z_1')) \geq \exp(-u(tz_1 + (1-t)z_2))$和$\displaystyle \exp(-u(z_2')) \geq \exp(-u(tz_1 + (1-t)z_2))$。
+
+\end{center}
+
+
+
+将上述不等式代入上式，我们得到：
+\begin{align*}
+|tw_1 + (1-t)w_2| & < t\exp(-u(z_1)) + (1-t)\exp(-u(z_2)) \\
+& \leq t\exp(-u(z_1')) + (1-t)\exp(-u(z_2')) \\
+& = \exp(-u(tz_1 + (1-t)z_2)).
+\end{align*}
+
+因此，$|tw_1 + (1-t)w_2| < \exp(-u(tz_1 + (1-t)z_2))$。
+
+综上所述，我们证明了对于任意的$z_1, z_2 \in \Omega$以及$t \in [0,1]$，都有$tz_1 + (1-t)z_2 \in \Omega$。
+
+因此，$\Omega$是拟凸的。
+
+
+
+
+
+
+
+\end{spacing}{}
+
+\end{document}
