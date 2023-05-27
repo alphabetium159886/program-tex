@@ -68,57 +68,42 @@ ANS:\\
 ANS:\\
 根据题目给出的条件：
 
-1.如果$y$垂直于$Ran(T)$，则$y \in Dom(T^*)$且$T^*y = 0$。\\
-2.$T$是闭算子且$Dom(T^{\land})$稠密。\\
-3.我们需要证明如果$x \perp k_rT$，则$x \in \overline{Ran(T^{\land})}$，即$x$与$T^$的每个元素都正交。\\
+1. 如果 $y$ 垂直于 $Ran(T)$，则 $y \in Dom(T^*)$ 且 $T^*y = 0$。
+2. $T$ 是闭算子且 $Dom(T^*)$ 稠密。
+3. 我们需要证明如果 $x \perp \text{ker}(T)$，则 $x \in \overline{\text{Ran}(T^{\land})}$，即 $x$ 与 $T^{\land}$ 的每个元素都正交。
 
-设$z \in Dom(T^*)$，我们有$T^*z \in H_1$。由于$x \perp k_rT$，我们知道对于任意的$t \in \mathbb{C}$，有$\langle x, Tk_r(t) \rangle = 0$。
+设 $z \in Dom(T^*)$，我们有 $T^*z \in H_2$。由于 $x \perp \text{ker}(T)$，我们知道对于任意的 $t \in \mathbb{C}$，有 $\langle x, Tk(t) \rangle = 0$。
 
-考虑内积$\langle x, T^z \rangle$，根据$T^*$的定义，我们有：
-\begin{align*}
-\langle x, T^z \rangle &= \langle Tx, z \rangle \quad \text{(定义 $T^{\land}$)} \\
-&= \langle T(k_r(1) x), z \rangle \quad \text{(由于 $k_r(1)x = x$)} \\
-&= \langle x, T^(k_r(1)z) \rangle \quad \text{(定义 $T^{\land}$)} \\
-&= \langle x, T^(z) \rangle \quad \text{(由于 $k_r(1)z = z$)}.
-\end{align*}
+考虑内积 $\langle x, T^z \rangle$，根据 $T^{\land}$ 的定义，我们有：
 
-因此，$\langle x, T^z \rangle = \langle x, T^(z) \rangle$。
+\[
+\langle x, T^z \rangle = \langle Tx, z \rangle \quad \text{(定义 $T^{\land}$)}
+\]
 
-由于$\langle x, T^z \rangle = \langle x, T^(z) \rangle$对于所有$z \in Dom(T^*)$成立，我们可以推断$x \perp T^z$对于所有$z \in Dom(T^)$成立。
+\[
+= \langle T(k(1)x), z \rangle \quad \text{(由于 $k(1)x = x$)}
+\]
 
-由于 $Dom(T)$ 稠密且 $x \perp T^z$ 对于所有 $z \in Dom(T)$ 成立，我们可以将 $x$ 延拓为 $x' \in \overline{Dom(T)}$，且 $x' \perp T^z'$ 对于所有 $z' \in \overline{Dom(T)}$ 成立。
+\[
+= \langle x, T^{\land}(k(1)z) \rangle \quad \text{(定义 $T^{\land}$)}
+\]
 
-因此，根据内积空间的性质，我们可以得出 $x' \in \overline{Ran(T^*)}$。
+\[
+= \langle x, T^{\land}(z) \rangle \quad \text{(由于 $k(1)z = z$)}
+\]
 
-因此，如果 $x \perp ker(T)$，则 $x \in \overline{Ran(T^)}$，即 $x$ 与 $T^$ 的每个元素都正交。
+因此，$\langle x, T^z \rangle = \langle x, T^{\land}(z) \rangle$。
+
+由于 $\langle x, T^z \rangle = \langle x, T^{\land}(z) \rangle$ 对于所有 $z \in Dom(T^*)$ 成立，我们可以推断 $x \perp T^z$ 对于所有 $z \in Dom(T^*)$ 成立。
+
+由于 $Dom(T^*)$ 稠密且 $x \perp T^z$ 对于所有 $z \in Dom(T^*)$ 成立，我们可以将 $x$ 延拓为 $x' \in \overline{Dom(T^*)}$，且 $x' \perp T^{z'}$ 对于所有 $z' \in \overline{Dom(T^*)}$ 成立。
+
+因此，根据内积空间的性质，我们可以得出 $x' \in \overline{\text{Ran}(T^*)}$。
+
+因此，如果 $x \perp \text{ker}(T)$，则 $x \in \overline{\text{Ran}(T^*)}$，即 $x$ 与 $T^*$ 的每个元素都正交。
 
 
 
-
-
-注意到$\overline{Dom(T)} = Dom(T^{\land})$，其中$T^{*}$是$T$的共轭算子。
-
-根据闭算子的定义，$T^{**} = \overline{T}$，其中$\overline{T}$是$T$的闭包。
-
-因此，$x' \perp T^*z'$对于所有$z' \in Dom(T^{**})$成立。
-
-又因为$T$是闭算子，我们知道$Dom(T^{**}) = Dom(T)$。
-
-因此，$x' \perp T^*z'$对于所有$z' \in Dom(T)$成立。
-
-换句话说，$x'$与$T^*$的每个元素都正交。
-
-由于$\overline{Dom(T^)}$是$H_2$的闭子空间，我们可以将$x'$投影到$\overline{Dom(T^)}$上得到一个向量$x'' \in \overline{Dom(T^*)}$。
-
-由投影的性质，$x''$与$\overline{Dom(T^*)}$的每个元素都正交。
-
-因此，$x''$与$T^*$的每个元素都正交。
-
-由于$x'$和$x''$都延拓自$x$，我们可以得出$x$与$T^*$的每个元素都正交。
-
-因此，$x \in \overline{Ran(T^*)}$。
-
-综上所述，如果$x \perp k_rT$，则$x \in \overline{Ran(T^*)}$。
 \section{问题4}
 令M为半正定的m阶方阵，若$F = (f_1, f_2, ... , f_m)$是全纯函数，请证明：\\
 $FM ^t\bar{F}$是多重次调和函数

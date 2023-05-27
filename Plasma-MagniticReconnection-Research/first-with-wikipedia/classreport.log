@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  27 MAY 2023 14:56
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  27 MAY 2023 23:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/muticomplexexam/muticomplex.tex
-(c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/muticomplexexam/muticomplex.tex
+**c:/Users/toby1/OneDrive/program-tex/Plasma-MagniticReconnection-Research/first-with-wikipedia/classreport.tex
+(c:/Users/toby1/OneDrive/program-tex/Plasma-MagniticReconnection-Research/first-with-wikipedia/classreport.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-04-20> (C:\MiKTeX\tex/latex/ctex\ctexart.cls (C:\MiKTeX\tex/latex/ctex/config\ctexbackend.cfg
 File: ctexbackend.cfg 2021/12/12 v2.5.8 Backend configuration file (CTEX)
@@ -448,8 +448,8 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box58
 \@float@everytoks=\toks31
 \@floatcapt=\box59
-) (muticomplex.aux)
-\openout1 = `muticomplex.aux'.
+) (classreport.aux)
+\openout1 = `classreport.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
@@ -547,9 +547,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 13.
 LaTeX Info: Redefining \pageref on input line 13.
 LaTeX Info: Redefining \nameref on input line 13.
- (muticomplex.out) (muticomplex.out)
+ (classreport.out) (classreport.out)
 \@outlinefile=\write3
-\openout3 = `muticomplex.out'.
+\openout3 = `classreport.out'.
 
 
 *geometry* driver: auto-detecting
@@ -587,48 +587,72 @@ LaTeX Info: Redefining \nameref on input line 13.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count325
-(muticomplex.toc)
+(classreport.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
+ (C:\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
+ (C:\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 \tf@toc=\write4
-\openout4 = `muticomplex.toc'.
+\openout4 = `classreport.toc'.
 
 LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <12> not available
 (Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 17.
  [1
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
- (C:\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
- (C:\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2] [3] [4] [5] [6] [7]
-Overfull \hbox (34.23976pt too wide) in paragraph at lines 223--226
-\TU/SimSun(0)/m/n/12 由 于 $\OML/cmm/m/it/12 ^^[[]$ \TU/SimSun(0)/m/n/12 是 任 意 的 复 数，| $[][] []$ 的 实 部 可 以 为 任 意 值。|  然 而，|  注 意 到 我 们 有 $[] [] [] [] \OT1/cmr/m/n/12 =
- []
+Missing character: There is no η in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no ≡ in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no σ in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no τ in font [lmroman12-regular]:mapping=tex-text;!
+[2]
+Missing character: There is no τ in font [lmroman12-regular]:mapping=tex-text;!
 
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 231--232
+Underfull \hbox (badness 10000) in paragraph at lines 51--57
 
  []
 
+[3]
+Missing character: There is no ≡ in font [lmroman12-regular]:mapping=tex-text;!
+[4]
+Missing character: There is no β in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no β in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no η in font [lmroman12-regular]:mapping=tex-text;!
+Missing character: There is no α in font [lmroman12-regular]:mapping=tex-text;!
 
-Underfull \hbox (badness 10000) in paragraph at lines 233--235
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 89.
 
- []
 
-[9] [10] (muticomplex.aux)
-Package rerunfilecheck Info: File `muticomplex.out' has not changed.
-(rerunfilecheck)             Checksum: FA3C8B1B146AA19134EFF5BC36F32B9B;496.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\alpha' on input line 89.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\omega' on input line 89.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 89.
+
+Missing character: There is no φ in font [lmroman12-regular]:mapping=tex-text;!
+LaTeX Font Info:    Trying to load font information for U+euf on input line 101.
+(C:\MiKTeX\tex/latex/amsfonts\ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [5] [6] [7] [8] (classreport.aux)
+Package rerunfilecheck Info: File `classreport.out' has not changed.
+(rerunfilecheck)             Checksum: 63DD6FFF2120E8CDF9FC05E067D0CEEA;1263.
  ) 
 Here is how much of TeX's memory you used:
- 17340 strings out of 410939
- 367228 string characters out of 2830432
- 698796 words of memory out of 3000000
- 37884 multiletter control sequences out of 15000+600000
- 479382 words of font info for 92 fonts, out of 8000000 for 9000
+ 17294 strings out of 410939
+ 363430 string characters out of 2830432
+ 696604 words of memory out of 3000000
+ 37832 multiletter control sequences out of 15000+600000
+ 481007 words of font info for 100 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 89i,13n,97p,467b,593s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 89i,7n,97p,491b,519s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on muticomplex.xdv (10 pages, 75548 bytes).
+Output written on classreport.xdv (8 pages, 82852 bytes).
