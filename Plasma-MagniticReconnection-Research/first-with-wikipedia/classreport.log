@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  31 MAY 2023 13:32
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  31 MAY 2023 14:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -621,7 +621,6 @@ Missing character: There is no ≡ in font [lmroman12-regular]:mapping=tex-text;
 Missing character: There is no β in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no β in font [lmroman12-regular]:mapping=tex-text;!
 Missing character: There is no η in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no α in font [lmroman12-regular]:mapping=tex-text;!
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 89.
@@ -642,14 +641,7 @@ Missing character: There is no φ in font [lmroman12-regular]:mapping=tex-text;!
 LaTeX Font Info:    Trying to load font information for U+euf on input line 101.
 (C:\MiKTeX\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [5] [6] [7]
-Missing character: There is no ω in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no α in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ω in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no α in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no ω in font [lmroman12-regular]:mapping=tex-text;!
-Missing character: There is no α in font [lmroman12-regular]:mapping=tex-text;!
-[8] [9] (classreport.aux)
+) [5] [6] [7] [8] [9] (classreport.aux)
 Package rerunfilecheck Info: File `classreport.out' has not changed.
 (rerunfilecheck)             Checksum: 84077B4EFEA280E23586C498A2519390;1563.
  ) 
@@ -662,4 +654,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  89i,7n,97p,491b,519s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on classreport.xdv (9 pages, 94428 bytes).
+Output written on classreport.xdv (9 pages, 94248 bytes).
