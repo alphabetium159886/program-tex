@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}摘要}{2}{section.1}%
+\contentsline {section}{\numberline {2}设计背景}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}系统原理}{4}{subsection.2.1}%
+\contentsline {section}{\numberline {3}设计目的}{5}{section.3}%
+\contentsline {section}{\numberline {4}问题的提出与分析}{5}{section.4}%
+\contentsline {section}{\numberline {5}设计方案}{7}{section.5}%
+\contentsline {subsection}{\numberline {5.1}波分前}{7}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}中间部分}{8}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}后端输出}{9}{subsection.5.3}%
+\contentsline {section}{\numberline {6}设计内容}{11}{section.6}%
+\contentsline {section}{\numberline {7}设计（计算、仿真）结果}{13}{section.7}%
+\contentsline {section}{\numberline {8}总结}{17}{section.8}%

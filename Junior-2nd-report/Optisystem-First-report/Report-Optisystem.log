@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  18 MAY 2023 11:09
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  11 JUN 2023 22:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -594,29 +594,54 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
  [1
 
-] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 42--45
+] [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 69--71
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--48
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
-[3]
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--107
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 108--111
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
+
+ []
+
+[6]
 No file Report-Optisystem.bbl.
-[4] (Report-Optisystem.aux)
+[7] (Report-Optisystem.aux)
 Package rerunfilecheck Info: File `Report-Optisystem.out' has not changed.
-(rerunfilecheck)             Checksum: 8B7D932649E4A1E23E748DAF0B12E945;775.
+(rerunfilecheck)             Checksum: 7DC65C1EC426E3DDA4DD7267907857F3;972.
  ) 
 Here is how much of TeX's memory you used:
- 16554 strings out of 410939
- 337278 string characters out of 2830432
- 683175 words of memory out of 3000000
- 37106 multiletter control sequences out of 15000+600000
+ 16572 strings out of 410939
+ 338404 string characters out of 2830432
+ 685404 words of memory out of 3000000
+ 37124 multiletter control sequences out of 15000+600000
  478713 words of font info for 86 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,6n,97p,451b,525s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on Report-Optisystem.xdv (4 pages, 24980 bytes).
+Output written on Report-Optisystem.xdv (7 pages, 62384 bytes).
