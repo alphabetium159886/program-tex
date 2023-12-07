@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  23 MAY 2023 21:45
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  20 SEP 2023 23:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -634,10 +634,10 @@ Package rerunfilecheck Info: File `QuantumPhysics.out' has not changed.
 Here is how much of TeX's memory you used:
  17792 strings out of 410939
  367590 string characters out of 2830432
- 710265 words of memory out of 3000000
+ 710260 words of memory out of 3000000
  38315 multiletter control sequences out of 15000+600000
  479493 words of font info for 98 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  89i,10n,97p,469b,602s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on QuantumPhysics.xdv (13 pages, 123924 bytes).
+Output written on QuantumPhysics.xdv (13 pages, 123836 bytes).

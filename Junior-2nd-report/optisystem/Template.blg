@@ -15,44 +15,44 @@ Database file #1: qp.bib
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 3 entries,
+You've used 1 entry,
             4087 wiz_defined-function locations,
-            845 strings with 8001 characters,
-and the built_in function-call counts, 2014 in all, are:
-= -- 171
-> -- 30
-< -- 8
-+ -- 15
-- -- 6
-* -- 106
-:= -- 361
-add.period$ -- 7
-call.type$ -- 3
-change.case$ -- 6
-chr.to.int$ -- 15
-cite$ -- 3
-duplicate$ -- 145
-empty$ -- 160
-format.name$ -- 7
-if$ -- 441
+            830 strings with 7628 characters,
+and the built_in function-call counts, 791 in all, are:
+= -- 68
+> -- 13
+< -- 2
++ -- 6
+- -- 3
+* -- 51
+:= -- 144
+add.period$ -- 2
+call.type$ -- 1
+change.case$ -- 1
+chr.to.int$ -- 0
+cite$ -- 1
+duplicate$ -- 57
+empty$ -- 49
+format.name$ -- 4
+if$ -- 163
 int.to.chr$ -- 0
-int.to.str$ -- 3
-missing$ -- 25
-newline$ -- 38
-num.names$ -- 5
-pop$ -- 59
+int.to.str$ -- 1
+missing$ -- 9
+newline$ -- 28
+num.names$ -- 1
+pop$ -- 19
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 157
+skip$ -- 61
 stack$ -- 0
-substring$ -- 52
-swap$ -- 106
-text.length$ -- 3
+substring$ -- 13
+swap$ -- 44
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 3
+type$ -- 1
 warning$ -- 0
-while$ -- 8
-width$ -- 4
-write$ -- 59
+while$ -- 2
+width$ -- 2
+write$ -- 35

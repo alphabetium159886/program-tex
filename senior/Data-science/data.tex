@@ -1,0 +1,113 @@
+\documentclass[12pt, a4paper, oneside]{article}
+\usepackage{amsmath, amsthm, amssymb, graphicx}
+\usepackage[bookmarks=true, colorlinks, citecolor=blue, linkcolor=black]{hyperref}
+\usepackage[margin = 25mm]{geometry}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{ctex}
+\usepackage{cite}
+\usepackage{color}
+\usepackage{float}
+
+\title{}
+\date{\today}
+\author{孙陶庵 202011010101}
+\begin{document}
+\begin{spacing}{2.0}
+\tableofcontents
+\maketitle
+
+
+\section{背景介绍及数据分类}
+\subsection{背景介绍}
+The purpose of making the dataset is to prove that the stars follows a certain graph in the celestial Space ,
+specifically called Hertzsprung-Russell Diagram or simply HR-Diagram
+so that we can classify stars by plotting its features based on that graph.\\
+\\
+Data Collection and Preparation techniques:
+The dataset is created based on several equations in astrophysics. They are given below:\\
+\\
+Stefan-Boltzmann's law of Black body radiation (To find the luminosity of a star)\\
+Wienn's Displacement law (for finding surface temperature of a star using wavelength)\\
+Absolute magnitude relation\\
+Radius of a star using parallax .\\
+The dataset took 3 weeks to collect for 240 stars which are mostly collected from web.\\
+The missing data were manually calculated using those equations of astrophysics given above.\\
+
+
+\subsection{数据分类}
+
+
+数据文件包含以下元素，分别为：
+1. Temperature (K)：温度(Kelvin)\\
+2. Luminosity(L/Lo)：亮度\\
+3. Radius(R/Ro)：半径；天文学中会使用“太阳半径”（Solar radius），通常表示为R/Ro，其中Ro是太阳的半径。这个比率将每颗恒星的半径与太阳的半径进行比较，使得比较更为标准化。\\
+4. Absolute magnitude(Mv)：绝对星等；是一个天体的亮度，以一定的距离为标准，用于消除距离对亮度的影响。\\
+5. Star type：Red Dwarf, Brown Dwarf, White Dwarf, Main Sequence , SuperGiants, HyperGiants分别为红矮星、褐矮星、
+白矮星、主序星、超巨星、特超巨星\\
+6. Star color：星体颜色\\
+7. Spectral Class：星体光谱；一般会从高温到低温分为OBAFGKM分成七个主要类别
+
+\section{理论基础}
+\subsection{温度与颜色关系} 
+温度 (Temperature) 和星星的颜色 (Star color) 之间可能存在关联。通常，更高温度的恒星呈现蓝色，而较低温度的恒星呈现红色。\\
+1.光谱分类： 恒星的光谱类型是根据它们的光谱特征来分类的，通常采用哈佛光谱分类系统，从高温到低温分为OBAFGKM七个主要类别。这个分类与恒星的表面温度有关，高温星体的光谱呈现蓝色，低温星体呈现红色。\\
+2.黑体辐射定律： 黑体辐射定律描述了一个理想的黑体（完美吸收所有入射辐射的物体）的辐射强度分布。恒星的表面温度决定了它的光谱，因为星体的辐射与其表面温度有关。
+\subsection{亮度和距离} 
+亮度与绝对星等关系： 亮度 (Luminosity) 和绝对星等 (Absolute magnitude) 之间可能存在关联。
+这两个参数通常与星星的亮度有关。亮度是一个物体发光的强度，通常用光度（Luminosity）表示。
+绝对星等（Absolute magnitude）则是一个天体的亮度，但是以一定的距离为标准，用于消除距离对亮度的影响。
+这两个参数通常在天文学中用来描述天体的亮度水平。\\
+1.目视亮度（视星等）：即以地球为观察点测得的星等，以m表示\\
+2.绝对亮度（绝对星等）：从距离星体10个秒差距（32.6光年）的地方看到的目视亮度（也就是视星等），叫做该星体的绝对星等以M表示\\
+3.$M=m+5-\log\left(\frac{d_0}{d}\right)$，$d$为恒星距离(秒差距)，$d_0$ 为一秒差距\\
+4.这个实验以此理论为处理数据的依据\\
+5.赫罗图： 赫罗图是一种将亮度和温度（或颜色指数）相对应的图表，用于展示不同类型的星体在这个图上的分布。主序带是赫罗图上最为明显的特征，显示了主序星的分布。
+\subsection{半径与亮度关系}
+半径 (Radius) 和亮度 (Luminosity) 之间可能存在一些关联。更大的恒星可能更亮，但也可能有其他因素影响这种关系。你可以绘制一个半径和亮度的散点图，以查看它们之间的关系。\\
+1.半径与亮度关系： 恒星的半径与其亮度之间存在关系，这通常涉及到恒星的物理特性。较大的恒星通常具有更高的亮度，但具体的关系也受到其他因素的影响，比如温度和光度。\\
+2.半径与亮度的物理原理： 根据斯特凡-玻尔兹曼定律，恒星的亮度（Luminosity）与其表面温度的四次方成正比，而表面积（与半径平方成正比）也会影响亮度。这表明半径与亮度之间的关系并非线性。\\
+3.恒星分类与其他参数的关系： 恒星分类 (Star type) 与温度、亮度等参数之间可能存在一些模式。你可以使用统计方法或绘制图表来研究这些关系。
+\subsection{恒星光谱分类} 
+恒星的光谱分类是根据它们的光谱特征进行的，通常使用哈佛光谱分类系统，将恒星分为七个主要类别：O、B、A、F、G、K、M。这个分类与恒星的温度和表面特性有关，高温星体光谱呈蓝色，低温星体呈红色。\\
+1.恒星分类与温度关系： 恒星的光谱类型与其表面温度有密切关系。通常来说，O型恒星温度较高，而M型恒星温度较低。
+\subsection{光谱类型与其他参数的关系} 
+光谱类型 (Spectral Class) 通常与温度相关。你可以研究不同光谱类型的恒星的温度分布，并查看其他参数是否与光谱类型有关。\\
+1.光谱类型与温度： 恒星的光谱类型通常与其表面温度有关。恒星的光谱类型按照OBAFGKM的顺序，从高温到低温排列。你可以创建一个箱线图或直方图，将光谱类型划分为不同的组别，然后观察每个组别中温度的分布情况。\\
+2.光谱类型与亮度： 不同光谱类型的恒星可能具有不同的亮度。通过绘制光谱类型和亮度之间的散点图，你可以看到它们之间是否存在某种趋势或模式。\\
+3.光谱类型与半径： 光谱类型也可能与恒星的半径有关。通过绘制光谱类型和半径之间的散点图，你可以研究它们之间的关系，看看是否存在某种相关性。\\
+4.光谱类型与星星的颜色： 光谱类型和星星的颜色之间可能存在某种对应关系。你可以创建一个交叉表或堆叠条形图，将光谱类型和星星颜色进行比较，以便更好地理解它们之间的联系。
+
+\section{代码思路}
+\subsection{温度与颜色关系}
+1.1.根据温度生成Wiens位移定律的图形。\\
+1.2.根据给定数据集中的温度和颜色信息，画出恒星的颜色分布。\\
+1.3.将这两个图形绘制在一张图上进行比较。\\
+\\
+2.亮度与绝对星等关系\\
+2.1.散点图可视化： 使用散点图来展示亮度和绝对星等之间的关系。每个点代表一个星体，横轴是绝对星等，纵轴是亮度。这样的图表有助于观察数据的分布趋势。\\
+2.2.相关性分析： 使用相关性系数来量化半径和亮度之间的线性关系。相关性系数越接近1或-1，表示两者之间的关系越强。\\
+2.3.赫罗图绘制： 有温度或颜色指数的数据，可以绘制赫罗图，将绝对星等和温度进行对应，以显示不同类型星体的分布。\\
+\\
+3.半径与亮度关系\\
+3.1.散点图可视化： 使用散点图来直观地展示半径和亮度之间的关系。每个点代表一个恒星，横轴是半径，纵轴是亮度。\\
+3.2.相关性分析： 使用相关性系数来量化半径和亮度之间的线性关系。相关性系数越接近1或-1，表示两者之间的关系越强。\\
+3.3.分组分析： 如果你有其他分类信息，比如恒星的类型，可以尝试按照这些类型进行分组，然后绘制每个组的半径与亮度的关系图，以便更详细地了解不同类型恒星之间的差异。\\
+\\
+4.恒星分类与其他参数的关系\\
+4.1.数据分组： 将数据按照恒星分类进行分组。\\
+4.2.探索性分析： 针对每个恒星分类，分析温度、亮度、半径等参数的分布情况。你可以使用直方图、箱线图或核密度图来可视化这些分布。\\
+4.3.相关性分析： 使用统计方法（如相关系数）来量化不同参数之间的关联程度。你可以计算不同恒星分类下温度、亮度、半径之间的相关系数。\\
+\\
+5.光谱类型与其他参数的关系\\
+5.1.光谱类型与温度关系的散点图： 使用散点图展示光谱类型与温度之间的关系。横轴是光谱类型，纵轴是温度。你可以使用不同颜色或标记不同的光谱类型，以更清晰地显示数据。\\
+5.2.光谱类型和温度的箱线图： 通过箱线图来展示不同光谱类型下温度的分布情况。这有助于观察每个光谱类型中温度的变化范围和分布情况。\\
+
+
+
+
+\end{spacing}{}
+%\bibliographystyle{IEEEtran}
+%\bibliography{re1}
+
+\end{document}

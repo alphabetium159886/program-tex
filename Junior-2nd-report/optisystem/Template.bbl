@@ -21,21 +21,6 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{enwiki:1158016020}
-\BIBentryALTinterwordspacing
-{Wikipedia contributors}, ``Bit error rate --- {Wikipedia}{,} the free
-  encyclopedia,'' 2023, [Online; accessed 14-June-2023]. [Online]. Available:
-  \url{https://en.wikipedia.org/w/index.php?title=Bit_error_rate&oldid=1158016020}
-\BIBentrySTDinterwordspacing
-
-\bibitem{HICKMAN199025}
-\BIBentryALTinterwordspacing
-I.~Hickman, ``Chapter 2 - passive circuits,'' in \emph{Analog Electronics},
-  I.~Hickman, Ed.\hskip 1em plus 0.5em minus 0.4em\relax Newnes, 1990, pp.
-  25--43. [Online]. Available:
-  \url{https://www.sciencedirect.com/science/article/pii/B9780434907236500079}
-\BIBentrySTDinterwordspacing
-
 \bibitem{BHATTACHARJEE2022168598}
 \BIBentryALTinterwordspacing
 R.~Bhattacharjee, P.~Dey, and A.~Saha, ``Implementation of an enhanced 32

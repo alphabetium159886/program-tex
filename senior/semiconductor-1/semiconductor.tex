@@ -1,0 +1,372 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, left=3.17cm, right=3.17cm, top=2.54cm, bottom=2.54cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{amsmath, amsthm, amssymb, graphicx}
+\usepackage{amsfonts}
+\usepackage{chemformula}
+\usepackage{cite}
+\usepackage{ctex}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{setspace}
+\usepackage[colorlinks, linkcolor=black, anchorcolor=black, citecolor=black]{hyperref}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\setlength{\parskip}{0.5em}
+\doublespacing
+\title{Quartus II、Modelsim、FPGA操作入门}
+\author{第一组 物理2001孙陶庵 202011010101}
+\begin{document}
+\def\hbar{\text{\textit{ħ}}}
+
+    %——————————————————————————————————设置公式编号———————————————————————————————————————%
+    \numberwithin{equation}{subsection}
+    \renewcommand\theequation{\thesubsection.\arabic{equation}}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \newtheorem{mythm}{定理}[section]  %定义一个定理环境
+    %\maketitle  
+
+\begin{titlepage}
+	\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+	\includegraphics[width=12.5cm]{sc_logo.jpg}\\[0cm] 
+	\center 
+	\quad\\[1.5cm]
+	\textsl{\Large 集成电路实验一 }\\[0.5cm] 
+	\textsl{\large 数字系统综合实验}\\[0.5cm] 
+	\makeatletter
+	\HRule \\[0.4cm]
+	{ \huge \bfseries \@title}\\[0.4cm] 
+	\HRule \\[1.5cm]
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft} \large
+			\emph{报告人}\\
+			\@author 
+		\end{flushleft}
+	\end{minipage}
+	~
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushright} \large
+			\emph{实验时间地点} \\
+			\textup{2023/12/05\\物电院A116}
+		\end{flushright}
+	\end{minipage}\\[3cm]
+	\makeatother
+	{\large \emph{集成电路实验一}}\\[0.5cm]
+	{\large \today}\\[2cm] 
+	\vfill 
+\end{titlepage}
+\thispagestyle{empty}
+\clearpage     %另起一页  
+\pagenumbering{roman}
+\tableofcontents        %输出目录
+\clearpage     %另起一页 
+
+
+\pagestyle{headings}
+\pagenumbering{arabic}
+
+
+\section{实验原理}
+\section{实验内容}
+\subsection{实验步骤}
+使用Quartus II编程，写出一份可以操控电路板上led灯的程序，并调控参数观察现象。\\
+实验步骤：\\
+1.	电脑创建程序写出程序\\
+2.	编译，debug\\
+3.	使用Modelsim 仿真并观察波形， 确认无误后将电路板接进电脑\\
+4.	使用Quartus II 将程序导入电路板\\
+
+\subsection{实验结果}
+实验中使用的代码：
+1.
+\begin{lstlisting}
+
+module led (input wire clk,input wire rst_n,output  reg[3:0] led);
+
+reg [25:0] cnt_1s;    //1秒计数器
+
+parameter END_CNT_1S = 499999999;  //1秒计数结束标识
+
+always @(posedge clk or negedge rst_n)
+	if(!rst_n)
+	cnt_1s <='d0;
+	else if(cnt_1s==END_CNT_1S)
+	cnt_1s <='d0;
+	else cnt_1s <= cnt_1s+1'b1;
+always @(posedge clk or negedge rst_n)
+	if(!rst_n)
+	led <= 4'b0000;
+	else if(cnt_1s==END_CNT_1S)
+		case(led)
+		4'b0001:  led<=4'b1000;
+		4'b0010:  led<=4'b0001;
+		4'b0100:  led<=4'b0010;
+		4'b1000:  led<=4'b0100;
+		default:  led<=4'b0000;
+		endcase
+	else led <= led;
+endmodule
+\end{lstlisting}
+$cnt\_1s$ 是一个 26 位的计数器，用于计算时钟信号 clk 的上升沿。在正常运行时，计数器逐次递增，表示经过的时钟周期数。
+
+$END\_CNT\_1S$ 是一个参数，它定义了计数器的结束标识。在这个例子中，计数器 $cnt\_1s$ 的结束标识是 $END\_CNT\_1S$，当计数器达到这个值时，将重新计数。
+
+$always @(posedge\ clk\ or\ negedge\ rst\_n)$ 语句块用于处理时钟和异步复位信号。在时钟的上升沿或异步复位信号 $rst\_n$ 的下降沿触发时执行相应的逻辑。
+
+在第一个 always 块中，计数器 $cnt\_1s$ 在每个时钟周期上升沿时递增。在异步复位信号 $rst\_n$ 的下降沿时，计数器被清零。
+
+在第二个 always 块中，LED状态机的逻辑被实现。当异步复位信号 $rst\_n$ 的下降沿发生时，LED被初始化为全灭状态 (4'b0000)。
+在计数器 $cnt\_1s$ 达到结束标识 $END\_CNT\_1S$ 时，LED状态根据一个简单的状态机进行变化。LED在四种状态之间循环切换，实现了一个基本的流水灯效果。
+\begin{lstlisting}
+
+`timescale 1ns/1ns
+module tb_led;
+	reg	clk;
+	reg	rst_n;
+	wire[3:0] led;
+	
+	led led_inst(
+			.clk	(clk),
+			.rst_n (rst_n),
+			.led	(led)
+			);
+always
+	begin
+		#10;
+		clk=~clk;
+	end
+initial
+	begin
+		clk	=1'b1;
+		rst_n=1'b0;
+		#50
+		rst_n=1'b1;
+		#400000000;
+		$stop;
+	end
+endmodule
+\end{lstlisting}
+timescale 1ns/1ns：这是一个时间刻度（timescale）声明，指定了时序仿真的时间单位和时间精度。
+
+module $tb\_led$;：定义一个模块 $tb\_led$，即测试台模块。
+
+reg clk; 和 reg $rst\_n$;：声明时钟信号 clk 和异步复位信号 $rst\_n$，这些信号将用于测试。
+
+wire [3:0] led;：声明一个 4 位宽的 led 信号，用于连接被测试的 led 模块的输出。
+
+led $led\_inst$(...);：实例化被测试的 led 模块，并连接输入输出信号。
+
+always begin ... end：一个无限循环的 always 块，用于模拟时钟信号 clk 的上升沿。
+
+$\#$10;：表示延迟 10 个时间单位，模拟时钟周期。
+clk =~clk;：在每个时钟周期的上升沿和下降沿交替改变 clk 的值。
+initial begin ... end：初始块，用于在仿真开始时初始化测试环境和控制仿真流程。
+
+clk = 1'b1;：初始时钟信号为高电平。
+$rst\_n$ = 1'b0;：初始时，异步复位信号为低电平。
+$\#$50：等待一段时间，模拟异步复位信号的持续时间。
+$rst\_n$ = 1'b1;：将异步复位信号置为高电平，启动 LED 模块的正常操作。
+$\#$400000000;：等待足够的时间，以确保仿真足够长以捕获 LED 模块的运行情况。
+$\$$stop;：停止仿真。
+这个测试台通过时钟信号和异步复位信号对 led 模块进行仿真测试，可以观察模块在仿真时的行为。
+
+
+
+
+
+
+
+\subsection{拓展实验}
+读懂代码，试修改代码，完成以下实验步骤。\\
+a.	如何改变流水灯的移动速度？\\
+b.	如何改变流水灯的移动方向？\\
+c.	如何移动两个LED灯？\\
+d.	分别用$Key\_1$、 $Key\_2$、 $Key\_3$三个按键来控制移动频率1Hz、2Hz和移动方向\\
+e.	查看资源占有率及RTL视图\\
+拓展实验结果：\\
+a.LED的移动速度是通过计时器 counter 和计时结束标识 $end\_cnt$ 来控制的。所以可以透过修改这一部分来改变移动速度
+\begin{lstlisting}
+    always @(posedge clk or negedge rst_n or negedge key_1 or negedge key_2)
+    if (!rst_n)
+        counter <= 0;
+        end_cnt <= END_CNT_1S;  // 初始设置为1秒的计时结束标识
+    else if (!key_1)  // 按下后周期变为1S
+        end_cnt <= END_CNT_1S;
+    else if (!key_2)  // 按下后周期变为2S
+        end_cnt <= END_CNT_2S;
+    else if (counter == end_cnt)
+        counter <= 0;
+    else 
+        counter <= counter + 1'b1;
+
+\end{lstlisting}
+
+通过按下 $Key\_1$，LED的速度将被设置为1秒一次，而按下$Key\_2$，LED的速度将被设置为2秒一次。这是因为 $end\_cnt$ 在这里用于确定计时器何时达到结束状态，进而改变LED的状态。
+
+因此，如果希望改变LED的移动速度，可以通过按下不同的按键来选择不同的计时结束标识。\\
+
+b.LED的移动方向是通过按键输入 $key\_3$ 控制的。按下 $key\_3$ 时，direction寄存器会取反，从而改变LED的移动方向。
+
+\begin{lstlisting}
+
+always @(posedge clk or negedge rst_n or negedge key_1 or negedge key_2 or negedge key_3)
+    if (!rst_n)
+    begin
+        counter <= 0;
+        end_cnt <= END_CNT_1S;  // 初始设置为1秒的计时结束标识
+        direction <= 1'b0;  // 初始方向为0
+    end
+    else if (!key_1)  // 按下后周期变为1S
+        end_cnt <= END_CNT_1S;
+    else if (!key_2)  // 按下后周期变为2S
+        end_cnt <= END_CNT_2S;
+    else if (!key_3)  // 按下后改变方向
+        direction <= ~direction;  // 取反方向
+    else if (counter == end_cnt)
+        counter <= 0;
+    else 
+        counter <= counter + 1'b1;
+
+\end{lstlisting}
+当按下 $key\_3$ 时，direction 的值将翻转，从而改变LED的移动方向。这是通过 direction <= ~direction; 这一语句实现的。
+
+因此，如果希望改变LED的移动方向，只需按下 $key\_3$ 即可。
+
+c.
+可以尝试使用两个计时器和两个计时结束标识来分别控制两个LED的移动。
+\begin{lstlisting}
+
+module dual_led (
+    input wire clk,
+    input wire rst_n,
+    input wire key_1,
+    input wire key_2,
+    input wire key_3,
+    output reg[3:0] led1,
+    output reg[3:0] led2
+);
+
+reg [25:0] counter1;    // 1秒计数器1
+reg [25:0] counter2;    // 1秒计数器2
+reg [25:0] end_cnt1;    // 结束时间周期1
+reg [25:0] end_cnt2;    // 结束时间周期2
+reg direction1;         // 方向1，0左1右
+reg direction2;         // 方向2，0左1右
+
+parameter END_CNT_1S = 4999999;  // 1秒计数结束标识
+parameter END_CNT_2S = 9999999;  // 2秒计数结束标识
+
+always @(posedge clk or negedge rst_n or negedge key_1 or negedge key_2 or negedge key_3)
+    if (!rst_n)
+    begin
+        counter1 <= 0;
+        end_cnt1 <= END_CNT_1S;
+        direction1 <= 1'b0;  // 初始方向为0
+    end
+    else if (!key_1)
+        end_cnt1 <= END_CNT_1S;
+    else if (!key_2)
+        end_cnt1 <= END_CNT_2S;
+    else if (!key_3)
+        direction1 <= ~direction1;
+
+    // Counter1 logic
+    if (counter1 == end_cnt1)
+        counter1 <= 0;
+    else
+        counter1 <= counter1 + 1'b1;
+
+always @(posedge clk or negedge rst_n or negedge key_1 or negedge key_2 or negedge key_3)
+    if (!rst_n)
+    begin
+        counter2 <= 0;
+        end_cnt2 <= END_CNT_1S;
+        direction2 <= 1'b0;  // 初始方向为0
+    end
+    else if (!key_1)
+        end_cnt2 <= END_CNT_1S;
+    else if (!key_2)
+        end_cnt2 <= END_CNT_2S;
+    else if (!key_3)
+        direction2 <= ~direction2;
+
+    // Counter2 logic
+    if (counter2 == end_cnt2)
+        counter2 <= 0;
+    else
+        counter2 <= counter2 + 1'b1;
+
+always @(posedge clk or negedge rst_n)
+begin
+    if (!rst_n)
+    begin
+        led1 <= 4'b0001;
+        led2 <= 4'b0001;
+    end
+    else
+    begin
+        // LED1 logic
+        case({counter1 == end_cnt1, direction1})
+            2'b10: led1 <= led1 << 1;
+            2'b01: led1 <= led1 >> 1;
+            default: led1 <= led1;
+        endcase
+
+        // LED2 logic
+        case({counter2 == end_cnt2, direction2})
+            2'b10: led2 <= led2 << 1;
+            2'b01: led2 <= led2 >> 1;
+            default: led2 <= led2;
+        endcase
+    end
+end
+
+endmodule
+\end{lstlisting}
+分别由两个计时器 counter1 和 counter2 控制。按键 $key\_3$ 仍然用于改变方向，
+而按键 $key\_1$ 和 $key\_2$ 分别用于选择1秒和2秒的计时结束标识。LED的移动逻辑分别由两个独立的 case 语句控制。\\
+d.
+$Key\_1$ 选择1Hz的计时结束标识和向左移动。
+$Key\_2$ 选择2Hz的计时结束标识和向左移动。
+$Key\_3$ 按下则切换移动方向。
+
+
+
+
+
+
+
+
+
+
+
+%\bibliographystyle{IEEEtran}
+%\bibliography{qp}
+
+\end{document}

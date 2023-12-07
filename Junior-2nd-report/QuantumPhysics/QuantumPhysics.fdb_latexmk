@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex QuantumPhysics"] 1684849506 "QuantumPhysics.aux" "QuantumPhysics.bbl" "QuantumPhysics" 1684849510
+["bibtex QuantumPhysics"] 1684849506 "QuantumPhysics.aux" "QuantumPhysics.bbl" "QuantumPhysics" 1695223613
   "C:/MiKTeX/bibtex/bst/ieeetran/IEEEtran.bst" 1440622569 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "QuantumPhysics.aux" 1684849509 2785 2e52c234191438a96fc35a1dc2fb91b9 "xelatex"
+  "QuantumPhysics.aux" 1695223611 2785 2e52c234191438a96fc35a1dc2fb91b9 "xelatex"
   "qp.bib" 1684816000 3960 e50fb63d3905662d298d0644267d54a9 ""
   (generated)
   "QuantumPhysics.bbl"
   "QuantumPhysics.blg"
-["xdvipdfmx"] 1684849510 "QuantumPhysics.xdv" "QuantumPhysics.pdf" "QuantumPhysics" 1684849510
-  "QuantumPhysics.xdv" 1684849509 123924 405503b7db70985ade491f8e684ba9f1 "xelatex"
+["xdvipdfmx"] 1695223612 "QuantumPhysics.xdv" "QuantumPhysics.pdf" "QuantumPhysics" 1695223613
+  "QuantumPhysics.xdv" 1695223611 123836 c9f1253a3a20d81d5017066f481cf1a1 "xelatex"
   (generated)
   "QuantumPhysics.pdf"
-["xelatex"] 1684849507 "c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/QuantumPhysics/QuantumPhysics.tex" "QuantumPhysics.xdv" "QuantumPhysics" 1684849510
+["xelatex"] 1695223601 "c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/QuantumPhysics/QuantumPhysics.tex" "QuantumPhysics.xdv" "QuantumPhysics" 1695223613
   "C:/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136743454 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -123,14 +123,14 @@
   "C:/MiKTeX/tex/xelatex/xecjk/xeCJK.sty" 1639329764 181053 eb8addfa85bbd37389125f93da936dc2 ""
   "C:/MiKTeX/tex/xelatex/xecjk/xeCJKfntef.sty" 1639329764 39112 d2c64c2924adb909ead58a883c2e3793 ""
   "C:/Users/toby1/AppData/Local/MiKTeX/miktex/data/le/xetex/xelatex.fmt" 1680610784 23660638 dfd036573583e4a9d53cad7d24912597 ""
-  "C:/WINDOWS/Fonts/msyh.ttc" 1575709707 19647736 ff2e53a6131130a07589812ea5b5b0d0 ""
-  "QuantumPhysics.aux" 1684849509 2785 2e52c234191438a96fc35a1dc2fb91b9 "xelatex"
+  "C:/WINDOWS/Fonts/msyh.ttc" 1689143671 19701556 07c864a5b15e68fa47639738197fae38 ""
+  "QuantumPhysics.aux" 1695223611 2785 2e52c234191438a96fc35a1dc2fb91b9 "xelatex"
   "QuantumPhysics.bbl" 1684849507 1962 059ee04d533581068a92b1a19eaeab07 "bibtex QuantumPhysics"
-  "QuantumPhysics.out" 1684849509 1814 dfae53e2992126aeeb0188c7466d44a5 "xelatex"
-  "QuantumPhysics.tex" 1684849502 21499 fcaaceab1c90212eeaf26e87c47537fa ""
-  "QuantumPhysics.toc" 1684849509 1128 48fd51928512955a97967b2815b0577d "xelatex"
+  "QuantumPhysics.out" 1695223611 1814 dfae53e2992126aeeb0188c7466d44a5 "xelatex"
+  "QuantumPhysics.tex" 1695223600 21484 5f27b3a775c576e40ad9ca601533b565 ""
+  "QuantumPhysics.toc" 1695223611 1128 48fd51928512955a97967b2815b0577d "xelatex"
   "airyfunction.jpg" 1684506693 64312 6ffe2e5ee461d4183a19485ed401464e ""
-  "c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/QuantumPhysics/QuantumPhysics.tex" 1684849502 21499 fcaaceab1c90212eeaf26e87c47537fa ""
+  "c:/Users/toby1/OneDrive/program-tex/Junior-2nd-report/QuantumPhysics/QuantumPhysics.tex" 1695223600 21484 5f27b3a775c576e40ad9ca601533b565 ""
   (generated)
   "QuantumPhysics.aux"
   "QuantumPhysics.log"

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  14 JUN 2023 17:20
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.3) (preloaded format=xelatex 2023.4.4)  18 JUN 2023 23:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -767,12 +767,6 @@ LaTeX Warning: Label `fig:side:a' multiply defined.
 
 LaTeX Warning: Label `fig:side:b' multiply defined.
 
-
-LaTeX Warning: Label `fig:side:a' multiply defined.
-
-
-LaTeX Warning: Label `fig:side:b' multiply defined.
-
 )
 \openout1 = `Template.aux'.
 
@@ -909,25 +903,31 @@ File: figure2.png Graphic file (type bmp)
  [6] [7
 
 ] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 201--208
+Underfull \hbox (badness 10000) in paragraph at lines 202--209
 
  []
 
 [9]
 File: figure3.png Graphic file (type bmp)
 <figure3.png>
+ [10]
 File: figure4.png Graphic file (type bmp)
 <figure4.png>
 File: figure5.png Graphic file (type bmp)
 <figure5.png>
- [10] [11
+ [11
+
+] [12
 
 ]
 File: figure6.png Graphic file (type bmp)
 <figure6.png>
-File: figure7.png Graphic file (type bmp)
-<figure7.png>
- [12]
+
+Overfull \hbox (54.44789pt too wide) in paragraph at lines 267--268
+ [][] 
+ []
+
+[13]
 File: Q-factor (1).jpg Graphic file (type bmp)
 <Q-factor (1).jpg>
 File: Q-factor (2).jpg Graphic file (type bmp)
@@ -936,6 +936,9 @@ File: Q-factor (3).jpg Graphic file (type bmp)
 <Q-factor (3).jpg>
 File: Q-factor (4).jpg Graphic file (type bmp)
 <Q-factor (4).jpg>
+ [14
+
+] [15]
 File: 1-BER.jpg Graphic file (type bmp)
 <1-BER.jpg>
 File: 2-BER.jpg Graphic file (type bmp)
@@ -944,7 +947,7 @@ File: 3-BER.jpg Graphic file (type bmp)
 <3-BER.jpg>
 File: 4-BER.jpg Graphic file (type bmp)
 <4-BER.jpg>
- [13
+ [16
 
 ]
 File: sweep2BER1.png Graphic file (type bmp)
@@ -955,7 +958,7 @@ File: sweep2BER3.png Graphic file (type bmp)
 <sweep2BER3.png>
 File: sweep2BER4.png Graphic file (type bmp)
 <sweep2BER4.png>
- [14]
+ [17]
 File: sweep2Q1.png Graphic file (type bmp)
 <sweep2Q1.png>
 File: sweep2Q2.png Graphic file (type bmp)
@@ -964,12 +967,12 @@ File: sweep2Q3.png Graphic file (type bmp)
 <sweep2Q3.png>
 File: sweep2Q4.png Graphic file (type bmp)
 <sweep2Q4.png>
- [15] [16] [17
+ [18] [19] [20] [21
 
 ] (Template.bbl)
 LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <12> not available
-(Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 464.
- [18
+(Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 526.
+ [22
 
 ] (Template.aux)
 
@@ -979,12 +982,12 @@ Package rerunfilecheck Info: File `Template.out' has not changed.
 (rerunfilecheck)             Checksum: 6AA2C9B71660D3A30E133A05488B95BE;1007.
  ) 
 Here is how much of TeX's memory you used:
- 27062 strings out of 410939
- 581342 string characters out of 2830432
- 911063 words of memory out of 3000000
- 47367 multiletter control sequences out of 15000+600000
+ 27054 strings out of 410939
+ 581208 string characters out of 2830432
+ 910997 words of memory out of 3000000
+ 47360 multiletter control sequences out of 15000+600000
  483870 words of font info for 88 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 115i,7n,118p,509b,431s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 115i,9n,118p,509b,431s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on Template.xdv (19 pages, 178272 bytes).
+Output written on Template.xdv (23 pages, 178416 bytes).
